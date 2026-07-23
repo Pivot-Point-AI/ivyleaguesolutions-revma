@@ -72,8 +72,8 @@ export default function HeroSlider() {
       </div>
 
       {/* Slide 2 */}
-      <div className="absolute inset-0" style={{ opacity: active === 1 ? 1 : 0, transition: "opacity .9s ease", pointerEvents: active === 1 ? "auto" : "none" }}>
-        <Image src="/assets/landingPage/axonslider.svg" alt="AXON – AI Voice Banking Assistant" fill sizes="100vw" className="absolute inset-0 w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-[#0d0035]" style={{ opacity: active === 1 ? 1 : 0, transition: "opacity .9s ease", pointerEvents: active === 1 ? "auto" : "none" }}>
+        <Image src="/assets/landingPage/axonslider.svg" alt="AXON – AI Voice Banking Assistant" fill sizes="100vw" className="absolute inset-0 w-full h-full object-contain sm:object-cover" />
       </div>
 
       {/* Slide 3 */}

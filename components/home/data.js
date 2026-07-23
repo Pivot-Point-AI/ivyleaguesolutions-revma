@@ -14,7 +14,7 @@ export const clients = [
 
 export const allMembers = [
   { name: "Frat Iqbal", quote: "IVY LEAGUE SOLUTIONS has played a pivotal role in our journey, helping us realize our vision and delivering on our commitments with the necessary synergy.", stars: 5, img: "yousafReview.svg" },
-  { name: "Hajra Kayani", quote: "IVY LEAGUE SOLUTIONS has played a pivotal role in our journey, helping us realize our vision and delivering on our commitments with the necessary synergy.", stars: 5, img: "hajraReview.svg" },
+  { name: "Hajra Kayani", quote: "IVY LEAGUE SOLUTIONS has played a pivotal role in our journey, helping us realize our vision and delivering on our commitments with the necessary synergy.", stars: 5, img: "HajraReview.svg" },
   { name: "Ammar Tariq", quote: "IVY LEAGUE SOLUTIONS has played a pivotal role in our journey, helping us realize our vision and delivering on our commitments with the necessary synergy.", stars: 5, img: "ammarReview.svg" },
   { name: "Rubab Ahmad", quote: "IVY LEAGUE SOLUTIONS has played a pivotal role in our journey, helping us realize our vision and delivering on our commitments with the necessary synergy.", stars: 5, img: "rubabReview.svg" },
   { name: "Hassan Ali", quote: "IVY LEAGUE SOLUTIONS has played a pivotal role in our journey, helping us realize our vision and delivering on our commitments with the necessary synergy.", stars: 5, img: "hassanReview.svg" },

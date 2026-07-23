@@ -74,6 +74,23 @@ export default function HeroSlider() {
       {/* Slide 2 */}
       <div className="absolute inset-0 bg-[#0d0035]" style={{ opacity: active === 1 ? 1 : 0, transition: "opacity .9s ease", pointerEvents: active === 1 ? "auto" : "none" }}>
         <Image src="/assets/landingPage/axonslider.svg" alt="AXON – AI Voice Banking Assistant" fill sizes="100vw" className="absolute inset-0 w-full h-full object-contain sm:object-cover" />
+
+        <div className="absolute inset-0 flex flex-col items-center justify-end text-center px-4 pb-24 sm:hidden">
+          <h1 className="font-inter tracking-0 font-medium text-white leading-tight text-[clamp(1.6rem,4.5vw,60px)]">
+            AXON – AI Voice Banking Assistant
+          </h1>
+          <p className="font-inter font-light text-white mt-3 text-[clamp(.85rem,1.4vw,20px)] leading-snug">
+            Secure &bull; Seamless &bull; Intelligent
+          </p>
+          <div className="flex items-center gap-3 mt-6 flex-wrap justify-center">
+            <a href="#contact" className="font-inter font-medium text-white text-sm px-5 py-2.5 border border-white/85 rounded-[15px] no-underline bg-transparent transition-all duration-200 hover:bg-white/10">
+              Book A Strategy Call
+            </a>
+            <a href="#services" className="font-inter font-medium text-[#111] text-sm px-5 py-2.5 border border-white rounded-[15px] no-underline bg-white transition-all duration-200 hover:bg-white/85">
+              View Our Work
+            </a>
+          </div>
+        </div>
       </div>
 
       {/* Slide 3 */}

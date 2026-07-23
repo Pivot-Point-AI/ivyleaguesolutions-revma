@@ -16,7 +16,7 @@ export default function TeamAndPartners() {
             key={i}
             onMouseEnter={() => setActive(i)}
             onClick={() => setActive(i)}
-            className="team-card relative rounded-2xl overflow-hidden cursor-pointer h-[380px] sm:h-[520px] lg:h-[685px] team-card-transition"
+            className={`team-card relative rounded-2xl overflow-hidden cursor-pointer h-[380px] sm:h-[520px] lg:h-[685px] team-card-transition ${active === i ? "" : "hidden sm:block"}`}
             style={{
               flexGrow: active === i ? 0 : 1,
               flexShrink: active === i ? 0 : 1,
@@ -50,8 +50,8 @@ export default function TeamAndPartners() {
                     pointerEvents: active === i ? "auto" : "none",
                   }}
                 >
-                  <div className="w-[500px] max-w-full h-[67px] overflow-hidden mb-3">
-                    <p className="text-white font-normal text-[19px] leading-[18px] m-0">{member.quote}</p>
+                  <div className="w-[500px] max-w-full h-[110px] sm:h-[67px] overflow-hidden mb-3">
+                    <p className="text-white font-normal text-[15px] sm:text-[19px] leading-snug sm:leading-[18px] m-0">{member.quote}</p>
                   </div>
                   <div className="flex items-center justify-center gap-1 w-[123px] h-[30px] rounded-[46px] bg-black/40">
                     {Array.from({ length: member.stars }).map((_, s) => (
@@ -64,6 +64,19 @@ export default function TeamAndPartners() {
               )}
             </div>
           </div>
+        ))}
+      </div>
+
+      {/* Mobile-only slider dots */}
+      <div className="flex sm:hidden items-center justify-center gap-2.5 mt-4">
+        {allMembers.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setActive(i)}
+            aria-label={`Go to member ${i + 1}`}
+            className="rounded-full transition-all duration-300"
+            style={{ width: active === i ? "20px" : "6px", height: "6px", background: active === i ? "#4026B8" : "#d0d0d0" }}
+          ></button>
         ))}
       </div>
 

@@ -10,6 +10,7 @@ export default function ProcessCarousel() {
   const [step, setStep] = useState(0);
   const busyRef = useRef(false);
   const animatedRef = useRef(true);
+  const timerRef = useRef(null);
 
   const measure = () => {
     const first = trackRef.current?.firstElementChild;
@@ -54,13 +55,27 @@ export default function ProcessCarousel() {
     setTimeout(() => { busyRef.current = false; }, 650);
   };
 
+  const restartAutoplay = () => {
+    clearInterval(timerRef.current);
+    timerRef.current = setInterval(() => { next(); }, 3500);
+  };
+
+  useEffect(() => {
+    restartAutoplay();
+    return () => clearInterval(timerRef.current);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handlePrev = () => { prev(); restartAutoplay(); };
+  const handleNext = () => { next(); restartAutoplay(); };
+
   const cards = [];
   for (let set = 0; set < 9; set++) {
     processCards.forEach((c, idx) => cards.push({ ...c, uid: `${set}-${idx}` }));
   }
 
   return (
-    <section className="bg-[#f8f8f8] overflow-hidden pt-10 pb-10 sm:pt-20 sm:pb-16 lg:pt-[160px] lg:pb-24">
+    <section className="bg-[#f8f8f8] overflow-hidden pt-10 pb-0 sm:pt-20 sm:pb-16 lg:pt-[160px] lg:pb-24">
       <div className="px-5 sm:px-8 lg:px-[140px] mb-8 sm:mb-14 fade-up">
         <h2 className="text-[29px] sm:text-[44px] md:text-[38px] lg:text-[63px] text-[#242424] leading-[1] tracking-normal">
           A Proven Process that<span className="hidden sm:inline"><br /></span> Eliminates Risk
@@ -102,10 +117,10 @@ export default function ProcessCarousel() {
 
       <div className="px-5 sm:px-8 lg:px-[140px] mt-8 sm:mt-16 flex flex-row flex-wrap gap-x-10 gap-y-6 items-center fade-up delay-200">
         <div className="flex items-center gap-[8px] sm:gap-[10px] flex-shrink-0">
-          <button onClick={prev} className="w-[60px] h-[48px] sm:w-[120px] sm:h-[80px] rounded-full bg-[#c8c8c8] hover:bg-[#b8b8b8] flex items-center justify-center transition-colors duration-200" aria-label="Previous">
+          <button onClick={handlePrev} className="w-[60px] h-[48px] sm:w-[120px] sm:h-[80px] rounded-full bg-[#c8c8c8] hover:bg-[#b8b8b8] flex items-center justify-center transition-colors duration-200" aria-label="Previous">
             <svg className="w-5 h-5 sm:w-[30px] sm:h-[30px] text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
           </button>
-          <button onClick={next} className="w-[60px] h-[48px] sm:w-[120px] sm:h-[80px] rounded-full bg-[#c8c8c8] hover:bg-[#b8b8b8] flex items-center justify-center transition-colors duration-200" aria-label="Next">
+          <button onClick={handleNext} className="w-[60px] h-[48px] sm:w-[120px] sm:h-[80px] rounded-full bg-[#c8c8c8] hover:bg-[#b8b8b8] flex items-center justify-center transition-colors duration-200" aria-label="Next">
             <svg className="w-5 h-5 sm:w-[30px] sm:h-[30px] text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
           </button>
         </div>

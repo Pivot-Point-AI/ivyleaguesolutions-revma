@@ -4,7 +4,7 @@ import "../app/pagestyles/footer.css";
 
 export default function Footer() {
   return (
-    <footer id="contact" className="footer-bg relative overflow-hidden flex flex-col min-h-[120vh]">
+    <footer id="contact" className="footer-bg relative overflow-hidden flex flex-col lg:min-h-[120vh]">
       {/* Horizon glow video */}
       <div className="absolute left-0 right-0 pointer-events-none" style={{ top: "52%" }}>
         <video autoPlay loop muted playsInline preload="none" className="footer-video">

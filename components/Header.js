@@ -23,7 +23,7 @@ export default function Header() {
   <img
     src={heroDark ? "/assets/landingPage/logo-dark.webp" : "/assets/landingPage/ivyleague.png"}
     alt="Ivy League Solutions Logo"
-    className="site-logo h-[32px] sm:h-[44px] lg:h-[80px] w-auto max-w-[140px] sm:max-w-[180px] lg:max-w-none object-contain"
+    className="site-logo h-[42px] sm:h-[50px] lg:h-[80px] w-auto max-w-[170px] sm:max-w-[200px] lg:max-w-none object-contain"
     loading="eager"
   />
 </Link>

@@ -53,7 +53,7 @@ export default function ClientSuccess() {
   }, []);
 
   return (
-    <section id="section-8" ref={sectionRef} className="relative z-10 bg-[#f8f8f8] min-h-screen">
+    <section id="section-8" ref={sectionRef} className="relative z-10 bg-[#f8f8f8] lg:min-h-screen">
       <div className="w-full px-5 sm:px-8 lg:px-[140px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           <div className="fade-up hidden lg:flex items-center sticky top-0 h-screen">

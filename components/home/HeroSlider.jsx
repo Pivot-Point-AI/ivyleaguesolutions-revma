@@ -75,14 +75,14 @@ export default function HeroSlider() {
       <div className="absolute inset-0 bg-[#0d0035]" style={{ opacity: active === 1 ? 1 : 0, transition: "opacity .9s ease", pointerEvents: active === 1 ? "auto" : "none" }}>
         <Image src="/assets/landingPage/axonslider.svg" alt="AXON – AI Voice Banking Assistant" fill sizes="100vw" className="absolute inset-0 w-full h-full object-contain sm:object-cover" />
 
-        <div className="absolute inset-0 flex flex-col items-center justify-end text-center px-4 pb-24 sm:hidden">
-          <h1 className="font-inter tracking-0 font-medium text-white leading-tight text-[clamp(1.6rem,4.5vw,60px)]">
+        <div className="absolute inset-x-0 bottom-0 flex flex-col items-center text-center px-5 pt-6 pb-10 sm:hidden">
+          <h1 className="font-inter tracking-0 font-semibold text-white leading-tight text-[clamp(1.4rem,5.5vw,2rem)] max-w-[92%]">
             AXON – AI Voice Banking Assistant
           </h1>
-          <p className="font-inter font-light text-white mt-3 text-[clamp(.85rem,1.4vw,20px)] leading-snug">
+          <p className="font-inter font-light text-white/70 mt-2 text-[clamp(.8rem,3vw,.95rem)] leading-snug">
             Secure &bull; Seamless &bull; Intelligent
           </p>
-          <div className="flex items-center gap-3 mt-6 flex-wrap justify-center">
+          <div className="flex items-center gap-3 mt-5 flex-wrap justify-center">
             <a href="#contact" className="font-inter font-medium text-white text-sm px-5 py-2.5 border border-white/85 rounded-[15px] no-underline bg-transparent transition-all duration-200 hover:bg-white/10">
               Book A Strategy Call
             </a>

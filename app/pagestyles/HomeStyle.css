@@ -189,6 +189,12 @@
         min-height: 260px !important; height: 260px !important;
     }
 }
+@media (max-width: 639px) {
+    .team-card {
+        flex-basis: 420px !important;
+        min-height: 420px !important; height: 420px !important;
+    }
+}
 
 /* ── Navbar white on slide 1 ── */
 body[data-hero-slide="0"] header *:not(button):not(.btn):not([class*="bg-brand"]):not([class*="bg-purple"]),

@@ -57,7 +57,7 @@ export default function FintechTabs() {
   const videoSrcs = ["/assets/videos/video_one.mp4", "/assets/videos/video_one.mp4", "/assets/videos/video_two.mp4", "/assets/videos/video_two.mp4"];
 
   return (
-    <section id="services" ref={sectionRef} className="relative overflow-hidden h-screen min-h-[600px]">
+    <section id="services" ref={sectionRef} className="relative overflow-hidden h-[560px] sm:h-screen sm:min-h-[600px]">
       {[0, 1, 2, 3].map((vi) => (
         <video
           key={vi}
@@ -72,8 +72,8 @@ export default function FintechTabs() {
       <div className="absolute inset-0 pointer-events-none fintech-overlay-dark"></div>
       <div className="absolute inset-0 pointer-events-none opacity-[.04] fintech-overlay-scan"></div>
 
-      <div className="relative z-10 h-full flex flex-col justify-between py-12 sm:py-20 lg:py-24 max-w-[90%] mx-auto w-full px-4 sm:px-8 lg:px-12">
-        <div className="relative min-h-[130px]">
+      <div className="relative z-10 h-full flex flex-col justify-end gap-6 sm:justify-between sm:gap-0 py-8 sm:py-20 lg:py-24 max-w-[90%] mx-auto w-full px-4 sm:px-8 lg:px-12">
+        <div className="relative min-h-[100px] sm:min-h-[130px]">
           {fintechSlides.map((slide, i) => (
             active === i && (
               <div key={i} className="absolute top-0 left-0">

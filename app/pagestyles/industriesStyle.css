@@ -1,0 +1,687 @@
+/* ============================================================
+   industriesStyle.css
+   ============================================================ */
+
+/* ── Page wrapper ── */
+.ind-page {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+
+.ind-hero-section {
+    position: relative;   /* add this */
+    overflow: hidden;     /* add this */
+    background-color: #f8f8f8;
+    padding-top: 280px;
+    padding-bottom: 280px;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+/* Decorative dotted background artwork — 1305 × 735 px, pinned to the top-right */
+.ind-hero-bg {
+    position: absolute;
+    top: 100px;
+    right: -15px;
+    width: 1305px;
+    height: 735px;
+    max-width: none;
+    opacity: 1;
+    transform: rotate(0deg);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+}
+
+@media (max-width: 1024px) {
+    .ind-hero-bg { width: 700px; height: 394px; opacity: .5; }
+}
+@media (max-width: 640px) {
+    .ind-hero-bg { display: none; }
+}
+
+.ind-hero-max-w {
+    position: relative;   /* add this */
+    z-index: 1;           /* add this */
+    max-width: 1150px;
+    min-height: 183px;
+    display: flex;
+    align-items: center;
+}
+
+
+.ind-hero-heading {
+    font-size: 63px;
+    line-height: 58px;
+    letter-spacing: 0;
+    font-weight: 400;
+    color: #242424;
+    margin: 0;
+}
+
+/* ============================================================
+   PURPLE BANNER SECTION
+   ============================================================ */
+
+.ind-banner-section {
+    width: 100%;
+    background-color: #4026B8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 140px;
+    box-sizing: border-box;
+}
+
+/* Left column — 300 × 161 px */
+.ind-banner-heading-w {
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 161px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.ind-banner-heading {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Right column — 812 × 90 px */
+.ind-banner-body-w {
+    max-width: 812px;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.ind-banner-body {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* ============================================================
+   ACCORDION — INDUSTRIES SECTION
+   ============================================================ */
+
+.ind-accordion-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Each panel ── */
+.ind-acc-item {
+    position: relative;
+    height: 386px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: height 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+    /* thin separator between panels */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.ind-acc-item:last-child {
+    border-bottom: none;
+}
+
+/* Expanded state */
+.ind-acc-item.ind-acc-active {
+    height: 100vh;
+}
+
+/* ── Background image layer ── */
+.ind-acc-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* very subtle scale-up on expand for visual depth */
+    transform: scale(1);
+    transition: transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ind-acc-item.ind-acc-active .ind-acc-bg {
+    transform: scale(1.02);
+}
+
+/* ── Gradient overlay — ensures text readability ── */
+.ind-acc-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* darker on left where text lives, fades to transparent on right */
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.45) 0%,
+        rgba(0, 0, 0, 0.25) 45%,
+        rgba(0, 0, 0, 0.05) 100%
+    );
+}
+
+/* ── CLOSED-STATE heading ── */
+.ind-acc-closed {
+    position: absolute;
+    bottom: 52px;
+    left: 140px;
+    z-index: 2;
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity  0.25s ease,
+        transform 0.25s ease;
+}
+
+/* Hide closed heading when panel is expanded */
+.ind-acc-item.ind-acc-active .ind-acc-closed {
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+}
+
+.ind-acc-closed-heading {
+    font-size: 63px;
+    line-height: 63px; /* line-height: 100% */
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 0;
+}
+
+/* ── OPEN-STATE content (heading + body + arrow) ── */
+.ind-acc-open {
+    position: absolute;
+    bottom: 80px;
+    left: 140px;
+    right: 140px;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 48px;
+    /* hidden by default */
+    opacity: 0;
+    transform: translateY(16px);
+    pointer-events: none;
+    /* delay fade-in until height expansion is well underway */
+    transition:
+        opacity   0.35s ease 0.38s,
+        transform 0.35s ease 0.38s;
+}
+
+/* Reveal open content when panel is expanded */
+.ind-acc-item.ind-acc-active .ind-acc-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+/* Text block (heading + body) */
+.ind-acc-open-text {
+    flex: 1;
+    max-width: 1059px;
+}
+
+/* Open heading — same typeface/size as closed heading */
+.ind-acc-open-heading {
+    font-size: 63px;
+    line-height: 63px;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0 0 28px 0;
+    letter-spacing: 0;
+}
+
+/* Open description — 1059 × 68 px spec */
+.ind-acc-open-body {
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 300;
+    color: #ffffff;
+    margin: 0;
+    max-width: 1059px;
+}
+
+/* ── Arrow button ── */
+.ind-acc-arrow {
+    flex-shrink: 0;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background-color: #4026B8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    /* nudge arrow up slightly so it sits at mid-height of the text block */
+    margin-bottom: 8px;
+}
+
+.ind-acc-arrow:hover {
+    background-color: #3320a2;
+    transform: scale(1.07);
+}
+
+/* ============================================================
+   RESPONSIVE — tablet  ≤ 1024 px
+   ============================================================ */
+@media (max-width: 1024px) {
+
+    /* ── Hero ── */
+    .ind-hero-section {
+        padding-top: 160px;
+        padding-bottom: 80px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .ind-hero-max-w {
+        max-width: 100%;
+        min-height: auto;
+    }
+
+    .ind-hero-heading {
+        font-size: 45px;
+        line-height: 45px;
+    }
+
+    /* ── Banner ── */
+    .ind-banner-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .ind-banner-heading-w,
+    .ind-banner-body-w {
+        max-width: 100%;
+        min-width: unset;
+        min-height: auto;
+    }
+
+    .ind-banner-heading {
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    .ind-banner-body {
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    /* ── Accordion ── */
+    .ind-acc-item {
+        height: 260px;
+    }
+
+    .ind-acc-item.ind-acc-active {
+        height: 80vh;
+    }
+
+    .ind-acc-closed {
+        bottom: 36px;
+        left: 40px;
+    }
+
+    .ind-acc-closed-heading {
+        font-size: 44px;
+        line-height: 44px;
+    }
+
+    .ind-acc-open {
+        bottom: 48px;
+        left: 40px;
+        right: 40px;
+        gap: 28px;
+    }
+
+    .ind-acc-open-heading {
+        font-size: 44px;
+        line-height: 44px;
+        margin-bottom: 20px;
+    }
+
+    .ind-acc-open-body {
+        font-size: 19px;
+        line-height: 22px;
+    }
+
+    .ind-acc-arrow {
+        width: 68px;
+        height: 68px;
+    }
+
+    .ind-acc-arrow svg {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — phone  ≤ 640 px
+   ============================================================ */
+@media (max-width: 640px) {
+
+    /* ── Hero ── */
+    .ind-hero-section {
+        padding-top: 140px;
+        padding-bottom: 48px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .ind-hero-heading {
+        font-size: 29px;
+        line-height: 32px;
+    }
+
+    /* ── Banner ── */
+    .ind-banner-section {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+
+    .ind-banner-heading {
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    .ind-banner-body {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    /* ── Accordion ── */
+    .ind-acc-item {
+        height: 180px;
+    }
+
+    .ind-acc-item.ind-acc-active {
+        height: 88vh;
+    }
+
+    .ind-acc-closed {
+        bottom: 24px;
+        left: 20px;
+    }
+
+    .ind-acc-closed-heading {
+        font-size: 27px;
+        line-height: 29px;
+    }
+
+    /* On mobile the open content stacks vertically */
+    .ind-acc-open {
+        bottom: 28px;
+        left: 20px;
+        right: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .ind-acc-open-heading {
+        font-size: 27px;
+        line-height: 29px;
+        margin-bottom: 12px;
+    }
+
+    .ind-acc-open-body {
+        font-size: 16px;
+        line-height: 19px;
+        max-width: 100%;
+    }
+
+    .ind-acc-arrow {
+        width: 56px;
+        height: 56px;
+        /* on mobile, put the arrow at the bottom-right of the stacked layout */
+        align-self: flex-end;
+        margin-bottom: 0;
+    }
+
+    .ind-acc-arrow svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* ============================================================
+   CTA — LET THERE BE CHANGE
+   ============================================================ */
+
+.ind-cta-section {
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-left: 140px;
+    padding-right: 140px;
+    text-align: center;
+}
+
+/* Heading — 1280 × 83 px, font-size 90px, line-height 83px */
+.ind-cta-heading {
+    max-width: 1280px;
+    font-size: 63px;
+    line-height: 58px;
+    font-weight: 400;
+    color: #242424;
+    letter-spacing: 0;
+    margin: 0 0 48px 0;
+}
+
+/* Body — 1080 × 70 px, font-size 22px, line-height 160% */
+.ind-cta-body {
+    max-width: 1080px;
+    font-size: 19px;
+    line-height: 160%;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 0;
+    margin: 0 0 56px 0;
+}
+
+/* Button — 306 × 61 px, border-radius 20px */
+.ind-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 306px;
+    height: 61px;
+    background-color: #4026B8;
+    border-radius: 20px;
+    font-size: 19px;
+    line-height: 100%;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.ind-cta-btn:hover {
+    background-color: #3320a2;
+}
+
+/* ── Tablet ≤ 1024px ── */
+@media (max-width: 1024px) {
+
+    .ind-cta-section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .ind-cta-heading {
+        font-size: 45px;
+        line-height: 45px;
+        margin-bottom: 36px;
+    }
+
+    .ind-cta-body {
+        font-size: 18px;
+        margin-bottom: 44px;
+    }
+
+    .ind-cta-btn {
+        font-size: 18px;
+        width: 260px;
+        height: 54px;
+    }
+}
+
+/* ── Phone ≤ 640px ── */
+@media (max-width: 640px) {
+
+    .ind-cta-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .ind-cta-heading {
+        font-size: 29px;
+        line-height: 32px;
+        margin-bottom: 24px;
+    }
+
+    .ind-cta-body {
+        font-size: 16px;
+        margin-bottom: 36px;
+    }
+
+    .ind-cta-btn {
+        font-size: 16px;
+        width: 100%;
+        max-width: 306px;
+        height: 52px;
+        border-radius: 16px;
+    }
+}
+
+/* ============================================================
+   FLUID DESKTOP SCALE  — 1025px … 1919px
+   Same fixed-1920px-frame issue as the other page stylesheets:
+   nothing here scales between the ≤1024px breakpoint and the
+   1920px spec width, so on any laptop viewport narrower than
+   1920px (e.g. 1536px) everything renders ~1.25x too large
+   versus Figma. Placed at the end of the file, after every
+   base/unconditional rule, so it wins on source order at equal
+   specificity.
+   ============================================================ */
+@media (min-width: 1025px) and (max-width: 1919px) {
+    .ind-hero-section {
+        padding-top: clamp(160px, 14.5833vw, 280px);
+        padding-bottom: clamp(80px, 14.5833vw, 280px);
+        padding-left: clamp(40px, 7.2917vw, 140px);
+        padding-right: clamp(40px, 7.2917vw, 140px);
+    }
+    .ind-hero-bg {
+        width: clamp(700px, 67.9688vw, 1305px);
+        height: clamp(394px, 38.2813vw, 735px);
+    }
+    .ind-hero-max-w {
+        max-width: clamp(613px, 59.8958vw, 1150px);
+        min-height: clamp(98px, 9.5313vw, 183px);
+    }
+    .ind-hero-heading {
+        font-size: clamp(45px, 3.28125vw, 63px);
+        line-height: clamp(45px, 3.02083vw, 58px);
+    }
+
+    .ind-banner-section {
+        padding-left: clamp(40px, 7.2917vw, 140px);
+        padding-right: clamp(40px, 7.2917vw, 140px);
+    }
+    .ind-banner-heading-w {
+        max-width: clamp(160px, 15.625vw, 300px);
+        min-width: 0;
+    }
+    .ind-banner-body-w { max-width: clamp(433px, 42.2917vw, 812px); }
+    .ind-banner-heading {
+        font-size: clamp(30px, 2.0833vw, 40px);
+        line-height: clamp(32px, 2.0833vw, 40px);
+    }
+    .ind-banner-body {
+        font-size: clamp(17px, 1.25vw, 24px);
+        line-height: clamp(22px, 1.25vw, 24px);
+    }
+
+    .ind-acc-item { height: clamp(260px, 20.1042vw, 386px); }
+    .ind-acc-closed {
+        bottom: clamp(36px, 2.7083vw, 52px);
+        left: clamp(40px, 7.2917vw, 140px);
+    }
+    .ind-acc-closed-heading {
+        font-size: clamp(44px, 3.28125vw, 63px);
+        line-height: clamp(44px, 3.28125vw, 63px);
+    }
+    .ind-acc-open {
+        bottom: clamp(48px, 4.1667vw, 80px);
+        left: clamp(40px, 7.2917vw, 140px);
+        right: clamp(40px, 7.2917vw, 140px);
+        gap: clamp(28px, 2.5vw, 48px);
+    }
+    .ind-acc-open-text { max-width: clamp(565px, 55.15625vw, 1059px); }
+    .ind-acc-open-heading {
+        font-size: clamp(44px, 3.28125vw, 63px);
+        line-height: clamp(44px, 3.28125vw, 63px);
+        margin-bottom: clamp(20px, 1.4583vw, 28px);
+    }
+    .ind-acc-open-body {
+        font-size: clamp(19px, 1.25vw, 24px);
+        line-height: clamp(22px, 1.354167vw, 26px);
+        max-width: clamp(565px, 55.15625vw, 1059px);
+    }
+    .ind-acc-arrow {
+        width: clamp(68px, 4.375vw, 84px);
+        height: clamp(68px, 4.375vw, 84px);
+    }
+
+    .ind-cta-section {
+        padding-top: clamp(120px, 10.4167vw, 200px);
+        padding-bottom: clamp(120px, 10.4167vw, 200px);
+        padding-left: clamp(40px, 7.2917vw, 140px);
+        padding-right: clamp(40px, 7.2917vw, 140px);
+    }
+    .ind-cta-heading {
+        max-width: clamp(683px, 66.6667vw, 1280px);
+        font-size: clamp(45px, 3.28125vw, 63px);
+        line-height: clamp(45px, 3.02083vw, 58px);
+        margin-bottom: clamp(36px, 2.5vw, 48px);
+    }
+    .ind-cta-body {
+        max-width: clamp(576px, 56.25vw, 1080px);
+        font-size: clamp(18px, 0.98958vw, 19px);
+        margin-bottom: clamp(44px, 2.9167vw, 56px);
+    }
+    .ind-cta-btn {
+        width: clamp(260px, 15.9375vw, 306px);
+        height: clamp(54px, 3.17708vw, 61px);
+        font-size: clamp(18px, 0.98958vw, 19px);
+    }
+}

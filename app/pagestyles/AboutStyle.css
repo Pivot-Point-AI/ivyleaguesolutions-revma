@@ -1,0 +1,118 @@
+html, body {
+    overflow-x: hidden;
+}
+
+/* Stats section blobs */
+.about-blob {
+    position: absolute;
+    width: 174px;
+    height: 87px;
+    border-radius: 9999px;
+    background-color: #911FCD;
+    opacity: 0.6;
+    pointer-events: none;
+    filter: blur(40px);
+}
+
+.about-blob--top-left {
+    top: 70px;
+    left: 0;
+}
+
+.about-blob--bottom-right {
+    top: 346px;
+    left: 74%;
+}
+
+.about-blob--top-right {
+    top: 0;
+    left: 96%;
+}
+
+/* Award word-pop animation */
+.award-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.award-word.popped {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================================
+   World Map (About page) — pins for USA / UAE / Pakistan offices
+   ============================================================ */
+.about-world-map {
+    position: relative;
+    width: 100%;
+}
+
+.about-pin {
+    position: absolute;
+    transform: translate(-50%, -100%);
+    z-index: 2;
+}
+.about-pin .bubble {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 9px 16px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.16);
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+    position: relative;
+}
+.about-pin .bubble img {
+    width: 40px;
+    height: 40px;
+    border-radius: 1px;
+    display: block;
+}
+.about-pin .bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #ffffff;
+}
+.about-dot {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background: #4026B8;
+    border-radius: 50%;
+    transform: translate(-50%, 8px);
+    z-index: 1;
+}
+
+.about-pin--pk,  .about-dot--pk  { top: 33.63%; left: 50.82%; }
+.about-pin--uae, .about-dot--uae { top: 30%; left: 39%; }
+.about-pin--usa, .about-dot--usa { top: 22%; left: 12%; }
+
+@media (max-width: 640px) {
+    .about-pin .bubble {
+        padding: 5px 8px;
+        gap: 5px;
+        font-size: 11px;
+    }
+    .about-pin .bubble img {
+        width: 22px;
+        height: 22px;
+    }
+    .about-dot {
+        width: 7px;
+        height: 7px;
+    }
+}

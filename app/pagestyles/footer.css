@@ -1,0 +1,61 @@
+/* ============================================================
+   FOOTER — custom CSS (only what Tailwind can't express)
+   ============================================================ */
+
+/* Background gradient */
+.footer-bg {
+    background: linear-gradient(180deg, #06060f 0%, #08081a 40%, #060610 100%);
+}
+
+/* Horizon video */
+.footer-video {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+    opacity: 0.5;
+    filter: brightness(0.55) saturate(0.75);
+    mix-blend-mode: screen;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%);
+    mask-image:         linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%);
+}
+
+/* Get Started heading — clamp keeps it fluid */
+.footer-heading {
+    font-size: clamp(42px, 7vw, 84px);
+    line-height: clamp(48px, 8vw, 90px);
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+/* Subtitle */
+.footer-subtitle {
+    font-size: clamp(15px, 1.6vw, 22px);
+    line-height: 1.45;
+    letter-spacing: 0;
+    font-weight: 300;
+}
+
+/* CTA button — border-radius 15px not in default Tailwind scale */
+.footer-cta {
+    border-radius: 15px;
+    font-family: Inter, sans-serif;
+}
+
+/* Policy links — clamp font-size */
+.footer-policy-link {
+    font-size: clamp(13px, 2vw, 24px);
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+/* ============================================================
+   FLUID DESKTOP SCALE  — 1025px … 1919px
+   Same fixed-1920px-frame issue as the other page stylesheets.
+   Everything else in this file already uses clamp()/vw; only
+   .footer-video had a hardcoded 1920-spec px height with no
+   scaling and no existing breakpoint override.
+   ============================================================ */
+@media (min-width: 1025px) and (max-width: 1919px) {
+    .footer-video { height: clamp(64px, 6.25vw, 120px); }
+}

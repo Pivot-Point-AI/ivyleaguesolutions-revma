@@ -1,0 +1,24 @@
+<svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<clipPath id="usaClip"><circle cx="31" cy="31" r="30"/></clipPath>
+</defs>
+<g clip-path="url(#usaClip)">
+<rect x="0" y="0" width="62" height="62" fill="#B22234"/>
+<rect x="0" y="4.77" width="62" height="4.77" fill="#FFFFFF"/>
+<rect x="0" y="14.31" width="62" height="4.77" fill="#FFFFFF"/>
+<rect x="0" y="23.85" width="62" height="4.77" fill="#FFFFFF"/>
+<rect x="0" y="33.38" width="62" height="4.77" fill="#FFFFFF"/>
+<rect x="0" y="42.92" width="62" height="4.77" fill="#FFFFFF"/>
+<rect x="0" y="52.46" width="62" height="4.77" fill="#FFFFFF"/>
+<rect x="0" y="0" width="28" height="33.38" fill="#3C3B6E"/>
+<g fill="#FFFFFF">
+<circle cx="5" cy="5" r="1.2"/><circle cx="11" cy="5" r="1.2"/><circle cx="17" cy="5" r="1.2"/><circle cx="23" cy="5" r="1.2"/>
+<circle cx="8" cy="9.5" r="1.2"/><circle cx="14" cy="9.5" r="1.2"/><circle cx="20" cy="9.5" r="1.2"/>
+<circle cx="5" cy="14" r="1.2"/><circle cx="11" cy="14" r="1.2"/><circle cx="17" cy="14" r="1.2"/><circle cx="23" cy="14" r="1.2"/>
+<circle cx="8" cy="18.5" r="1.2"/><circle cx="14" cy="18.5" r="1.2"/><circle cx="20" cy="18.5" r="1.2"/>
+<circle cx="5" cy="23" r="1.2"/><circle cx="11" cy="23" r="1.2"/><circle cx="17" cy="23" r="1.2"/><circle cx="23" cy="23" r="1.2"/>
+<circle cx="8" cy="27.5" r="1.2"/><circle cx="14" cy="27.5" r="1.2"/><circle cx="20" cy="27.5" r="1.2"/>
+</g>
+</g>
+<circle cx="31" cy="31" r="30" stroke="#FAFAFA"/>
+</svg>

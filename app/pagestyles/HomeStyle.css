@@ -1,0 +1,285 @@
+/* ── Hero slide 1 overlays ── */
+.hero-radial-gradient {
+    background: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 40%, rgba(3,0,12,0.35) 100%);
+}
+.slider-line-pos {
+    left: 22%;
+    width: 800px;
+    top: 56%;
+    height: auto;
+    max-width: none;
+}
+.noro-mobile-img {
+    height: 88%;
+    max-height: 88%;
+    object-position: bottom right;
+}
+
+/* ── Section 3 fintech overlays ── */
+.fintech-overlay-dark {
+    background: linear-gradient(160deg, rgba(4,4,12,.78) 0%, rgba(6,6,18,.68) 100%);
+}
+.fintech-overlay-scan {
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,1) 2px, rgba(255,255,255,1) 3px);
+}
+
+/* ── Section 4: process track ── */
+#showcase-section > div { will-change: transform; }
+
+/* ── Section 4: process card active — OVERLAY approach (text stays bright) ── */
+.process-card {
+    position: relative;
+    transition: box-shadow 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Dark overlay pseudo-element sits between image and text */
+.process-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 1;
+    transition: background 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow  0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* When active: darken via the overlay, NOT a filter */
+.process-card-active {
+    box-shadow:
+        inset 0 0 0 2px rgba(0, 0, 0, 0.45),
+        inset 0 0 60px rgba(0, 0, 0, 0.35),
+        inset 0 0 120px rgba(0, 0, 0, 0.20);
+}
+.process-card-active::after {
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* Text block: sits ABOVE the overlay */
+.process-card > div:first-child {
+    position: relative;
+    z-index: 2;
+}
+
+/* Image/illustration block: sits BELOW the overlay */
+.process-card > div:last-child {
+    position: relative;
+    z-index: 0;
+}
+
+/* ── Section 4: process card fixed dimensions (was inline style) ── */
+.process-card-dims {
+    width: 520px;
+    height: 742px;
+}
+
+/* ── Section 4: process card background colors (was inline style) ── */
+.process-card-bg-development { background-color: #1B44C2; }
+.process-card-bg-strategy     { background-color: #8A6FF4; }
+.process-card-bg-discovery    { background-color: #7876A2; }
+.process-card-bg-strategy-alt { background-color: #508CFA; }
+
+/* ── Section 5: showcase dimensions ── */
+.showcase-box { height: 685px; }
+@media (max-width: 1700px) {
+    .showcase-box { height: clamp(200px, 38vw, 685px); }
+}
+@media (max-width: 640px) {
+    #showcase-section > div { flex-direction: column; }
+    .showcase-box { height: clamp(200px, 56vw, 340px); }
+}
+
+/* ── Section 5: top-to-bottom clip reveal ── */
+.showcase-reveal {
+    clip-path: inset(0 0 100% 0 round 1rem);
+    transition: clip-path 1.1s cubic-bezier(0.4, 0, 0.2, 1) var(--reveal-delay, 0ms);
+    will-change: clip-path;
+}
+.showcase-reveal.is-revealed {
+    clip-path: inset(0 0 0% 0 round 1rem);
+}
+
+/* ── Section 4: process track wrapper ── */
+.process-track-wrap { height: 742px; }
+@media (max-width: 639px) {
+    .process-track-wrap { height: 420px; }
+}
+
+/* ── Process cards mobile ── */
+@media (max-width: 639px) {
+    .process-card { width: calc(100vw - 2rem) !important; min-width: calc(100vw - 2rem) !important; height: 420px !important; }
+    .process-card .flex-1.relative.overflow-hidden { min-height: 140px; }
+    .process-card h3 { line-height: 1.2 !important; margin-bottom: 0.5rem !important; }
+    .process-card > div:first-child { padding-top: 1.75rem !important; padding-bottom: 0.5rem !important; }
+}
+
+/* ── Process card diagrams: base (desktop) background image/size/position (was inline style) ──
+   background-image uses a CSS custom property (--card-bg-img) set inline in Blade because the
+   actual URL still needs Laravel's asset() helper to resolve correctly across environments. */
+.process-img-development {
+    background-image: var(--card-bg-img);
+    background-size: 120% auto;
+    background-position: bottom left;
+}
+.process-img-strategy {
+    background-image: var(--card-bg-img);
+    background-size: 455px 257px;
+    background-position: center calc(100% - 99px);
+}
+.process-img-discovery {
+    background-image: var(--card-bg-img);
+    background-size: 110% auto;
+    background-position: bottom left;
+}
+
+/* ── Process card diagrams on mobile (independent control per card) ── */
+@media (max-width: 639px) {
+    .process-img-strategy {
+        background-size: 82% auto !important;
+        background-position: center calc(100% - 50px) !important;
+    }
+    .process-img-development {
+        background-size: 120% auto !important;
+        background-position: bottom left !important;
+    }
+    .process-img-discovery {
+        background-size: 110% auto !important;
+        background-position: bottom left !important;
+    }
+}
+/* ── Section 9: Team card transitions & hover ── */
+.team-card-transition {
+    transition: flex-basis 2.6s cubic-bezier(0.16,1,0.3,1),
+                flex-grow  2.6s cubic-bezier(0.16,1,0.3,1);
+}
+
+/* Portrait image: minimal zoom on hover */
+.team-card-img {
+    transform: scale(1);
+    transition: transform 2.8s cubic-bezier(0.16,1,0.3,1);
+    will-change: transform;
+}
+.team-card:hover .team-card-img {
+    transform: scale(1.04);
+}
+
+/* Bottom gradient overlay */
+.team-card-gradient {
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,.88) 0%,
+        rgba(0,0,0,.40) 40%,
+        rgba(0,0,0,.10) 70%,
+        transparent 100%
+    );
+}
+
+/* Dark overlay fade transition */
+.team-card-overlay-transition {
+    transition: opacity 2.2s cubic-bezier(0.16,1,0.3,1);
+}
+
+/* ── Team accordion mobile ── */
+@media (max-width: 1023px) {
+    .team-accordion { flex-direction: column !important; height: auto !important; }
+    .team-card {
+        flex-basis: 260px !important; flex-grow: 0 !important;
+        flex-shrink: 0 !important; min-width: 100% !important;
+        min-height: 260px !important; height: 260px !important;
+    }
+}
+
+/* ── Navbar white on slide 1 ── */
+body[data-hero-slide="0"] header *:not(button):not(.btn):not([class*="bg-brand"]):not([class*="bg-purple"]),
+body[data-hero-slide="0"] #navbar *:not(button):not(.btn):not([class*="bg-brand"]):not([class*="bg-purple"]),
+body[data-hero-slide="0"] .navbar *:not(button):not(.btn):not([class*="bg-brand"]):not([class*="bg-purple"]) { color: #ffffff !important; transition: color 0.4s ease; }
+body[data-hero-slide="0"] header svg *, body[data-hero-slide="0"] #navbar svg *, body[data-hero-slide="0"] .navbar svg * { stroke: #ffffff !important; fill: #ffffff !important; }
+body[data-hero-slide="0"] [class*="nav"] *:not([class*="bg-brand"]):not([class*="bg-purple"]):not(button[class*="bg"]),
+body[data-hero-slide="0"] [id*="nav"] *:not([class*="bg-brand"]):not([class*="bg-purple"]):not(button[class*="bg"]) { color: #ffffff !important; }
+body[data-hero-slide="0"] [class*="nav"] svg *, body[data-hero-slide="0"] [id*="nav"] svg * { stroke: #ffffff !important; fill: #ffffff !important; }
+
+/* ── Client accordions ── */
+.client-accordion, .client-accordion * { border: none !important; outline: none !important; }
+.accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.65s cubic-bezier(0.4,0,0.2,1); }
+.client-accordion:hover .accordion-body,
+.client-accordion.is-active .accordion-body { max-height: 200px; }
+.client-accordion { transition: box-shadow 0.45s ease; }
+.client-accordion:hover,
+.client-accordion.is-active { box-shadow: 0 12px 40px rgba(0,0,0,0.08) !important; }
+
+/* ── Client logo dimensions (was inline style; width/height still come from Blade data via CSS vars) ── */
+.client-logo-img {
+    max-width: 100%;
+    width: var(--logo-w);
+    height: var(--logo-h);
+}
+
+/* ── Showcase zoom-out ── */
+#showcase-container { transform-origin: center center; will-change: transform, opacity; }
+
+/* ── Partner logo marquee ── */
+.partner-marquee-wrap {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+}
+.partner-marquee-track { display: flex; width: max-content; animation: marquee-scroll 22s linear infinite; }
+.partner-marquee-track:hover { animation-play-state: paused; }
+.partner-marquee-set { display: flex; align-items: center; gap: 0 24px; padding-right: 24px; }
+@media (min-width: 640px) { .partner-marquee-set { gap: 0 40px; padding-right: 40px; } }
+@keyframes marquee-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .partner-marquee-track { animation: none; } .partner-marquee-set { flex-wrap: wrap; justify-content: center; } }
+
+/* ── Typography helper (was repeated inline style="font-family:'Inter',sans-serif;") ── */
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+.tracking-0 {
+    letter-spacing: 0%;
+}
+
+/* ── fade-up stagger delays (were inline style="transition-delay:...") ── */
+.delay-100 { transition-delay: .1s; }
+.delay-150 { transition-delay: .15s; }
+.delay-200 { transition-delay: .2s; }
+
+/* ── Section 4: process track left inset (was inline style) ── */
+.process-track-inset {
+    left: clamp(1.25rem, 5.56vw, 140px);
+}
+
+/* ============================================================
+   FLUID DESKTOP SCALE  — 1025px … 1919px
+   Same fixed-1920px-frame issue as the other page stylesheets:
+   nothing here scales between 1025px and the 1920px spec width,
+   so on any laptop viewport narrower than 1920px (e.g. 1536px)
+   these elements render too large versus Figma. Most of this
+   file already uses vw-based clamp() or percentage/CSS-variable
+   sizing and needs no change — only the few remaining
+   unconditional fixed-px layout rules below are covered. None
+   of these selectors have an existing max-width: 1024px
+   override, so floors are computed as ceiling * 1024/1920.
+   Placed at the end of the file, after every base/unconditional
+   rule, so it wins on source order at equal specificity.
+   ============================================================ */
+@media (min-width: 1025px) and (max-width: 1919px) {
+    .slider-line-pos {
+        width: clamp(427px, 41.66667vw, 800px);
+    }
+    .process-card-dims {
+        width: clamp(277px, 27.08333vw, 520px);
+        height: clamp(396px, 38.64583vw, 742px);
+    }
+    .process-track-wrap {
+        height: clamp(396px, 38.64583vw, 742px);
+    }
+    /* .process-img-strategy is the only diagram sized with fixed px
+       instead of a percentage — it doesn't shrink along with
+       .process-card-dims above, so it renders oversized/misaligned
+       relative to the now-smaller card. */
+    .process-img-strategy {
+        background-size: clamp(243px, 23.69792vw, 455px) clamp(137px, 13.38542vw, 257px);
+        background-position: center calc(100% - clamp(53px, 5.15625vw, 99px));
+    }
+}

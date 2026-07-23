@@ -1,0 +1,694 @@
+/* ============================================================
+   industriesStyle.css
+   ============================================================ */
+
+/* ── Page wrapper ── */
+.ind-page {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+
+.ind-hero-section {
+    position: relative;   /* add this */
+    overflow: hidden;     /* add this */
+    background-color: #f8f8f8;
+    padding-top: 280px;
+    padding-bottom: 280px;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+/* Decorative dotted background artwork — 1305 × 735 px, pinned to the top-right */
+.ind-hero-bg {
+    position: absolute;
+    top: 100px;
+    right: -15px;
+    width: 1305px;
+    height: 735px;
+    max-width: none;
+    opacity: 1;
+    transform: rotate(0deg);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+}
+
+@media (max-width: 1024px) {
+    .ind-hero-bg { width: 700px; height: 394px; opacity: .5; }
+}
+@media (max-width: 640px) {
+    .ind-hero-bg { display: none; }
+}
+
+.ind-hero-max-w {
+    position: relative;   /* add this */
+    z-index: 1;           /* add this */
+    max-width: 1150px;
+    min-height: 183px;
+    display: flex;
+    align-items: center;
+}
+
+.ind-hero-heading {
+    font-size: 63px;
+    line-height: 58px;
+    letter-spacing: 0;
+    font-weight: 400;
+    color: #242424;
+    margin: 0;
+}
+
+/* ============================================================
+   PURPLE BANNER SECTION
+   ============================================================ */
+
+.ind-banner-section {
+    width: 100%;
+    background-color: #4026B8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    padding: 35px 140px;
+    box-sizing: border-box;
+}
+
+/* Left column — 300 × 161 px */
+.ind-banner-heading-w {
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 161px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.ind-banner-heading {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Right column — 812 × 90 px */
+.ind-banner-body-w {
+    max-width: 812px;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    flex: 1 1 300px;
+}
+
+.ind-banner-body {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* ============================================================
+   WHAT WE BUILD SECTION
+   ============================================================ */
+
+.ind-build-section {
+    background-color: #ffffff;
+    padding: 120px 140px;
+    box-sizing: border-box;
+}
+
+/* Heading wrapper — 640 × 60 px */
+.ind-build-heading-w {
+    width: 640px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.ind-build-heading {
+    font-size: 45px;
+    line-height: 100%;
+    font-weight: 400;
+    font-style: normal;
+    color: #242424;
+    letter-spacing: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Subtext wrapper — 1485 × 70 px */
+.ind-build-sub-w {
+    width: 100%;
+    max-width: 1485px;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.ind-build-sub {
+    font-size: 26px;
+    line-height: 110%;
+    font-weight: 300;
+    font-style: normal;
+    color: #979797;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+/* Cards row */
+.ind-build-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+/* Individual card — 800 × 434 px */
+.ind-build-card {
+    width: 100%;
+    max-width: 800px;
+    flex: 1 1 400px;
+    min-height: 472px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding: 48px 42px;
+    /* Figma shadow: X -50, Y 0, Blur 100, Spread 0, #000000 5% */
+    box-shadow: -50px 0px 100px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* Card heading wrapper — 423 × 100 px */
+.ind-build-card-heading-w {
+    width: 423px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.ind-build-card-heading {
+    font-size: 27px;
+    line-height: 65px;
+    font-weight: 400;
+    font-style: normal;
+    color: #242424;
+    letter-spacing: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Bullets wrapper — card 1: 716 × 276 px, card 2: 716 × 230 px */
+.ind-build-bullets-w {
+    width: 716px;
+    padding-left: 25px;
+    box-sizing: border-box;
+}
+
+.ind-build-bullets-w--1 {
+    min-height: 276px;
+}
+
+.ind-build-bullets-w--2 {
+    min-height: 230px;
+}
+
+.ind-build-bullets {
+    list-style: disc;
+    padding-left: 22px;
+    margin: 0;
+}
+
+.ind-build-bullets li {
+    font-size: 23px;
+    line-height: 160%;
+    font-weight: 300;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0;
+}
+
+/* ============================================================
+   CTA SECTION — "Innovate Your Financial Ecosystem"
+   ============================================================ */
+
+.ind-cta-section {
+    background-color: #f4f4f6;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 40px;
+    box-sizing: border-box;
+}
+
+/* Heading wrapper — 1280 × 166 px */
+.ind-cta-heading-w {
+    width: 100%;
+    max-width: 1280px;
+    min-height: 166px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.ind-cta-heading {
+    font-size: 63px;
+    line-height: 58px;
+    font-weight: 400;
+    font-style: normal;
+    color: #242424;
+    letter-spacing: 0;
+    text-align: center;
+    margin: 0;
+}
+
+/* Body wrapper — 1082 × 70 px */
+.ind-cta-body-w {
+    width: 100%;
+    max-width: 1082px;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 48px;
+}
+
+.ind-cta-body {
+    font-size: 19px;
+    line-height: 160%;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    letter-spacing: 0;
+    text-align: center;
+    margin: 0;
+}
+
+/* Button — 378 × 61 px */
+.ind-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 378px;
+    height: 61px;
+    background-color: #4026B8;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.ind-cta-btn:hover {
+    background-color: #3320a0;
+}
+
+.ind-cta-btn-text {
+    width: 301px;
+    height: 33px;
+    font-family: Inter, sans-serif;
+    font-size: 19px;
+    line-height: 100%;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+    letter-spacing: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ============================================================
+   RESPONSIVE — tablet ≤ 1024px
+   ============================================================ */
+@media (max-width: 1024px) {
+
+    .ind-hero-section {
+        padding-top: 160px;
+        padding-bottom: 80px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .ind-hero-max-w {
+        max-width: 100%;
+        min-height: auto;
+    }
+
+    .ind-hero-heading {
+        font-size: 45px;
+        line-height: 45px;
+    }
+
+    .ind-banner-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .ind-banner-heading-w,
+    .ind-banner-body-w {
+        max-width: 100%;
+        min-width: unset;
+        min-height: auto;
+    }
+
+    .ind-banner-heading {
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    .ind-banner-body {
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    /* Build section */
+    .ind-build-section {
+        padding: 80px 40px;
+    }
+
+    .ind-build-heading-w {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .ind-build-heading {
+        font-size: 32px;
+        white-space: normal;
+    }
+
+    .ind-build-sub-w {
+        width: 100%;
+        min-height: auto;
+        margin-bottom: 48px;
+    }
+
+    .ind-build-sub {
+        font-size: 19px;
+    }
+
+    .ind-build-cards {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .ind-build-card {
+        width: 100%;
+        min-height: auto;
+        padding: 36px 28px;
+    }
+
+    .ind-build-card-heading-w {
+        width: 100%;
+        height: auto;
+    }
+
+    .ind-build-card-heading {
+        font-size: 22px;
+        line-height: 1.3;
+        white-space: normal;
+    }
+
+    .ind-build-bullets-w,
+    .ind-build-bullets-w--1,
+    .ind-build-bullets-w--2 {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .ind-build-bullets li {
+        font-size: 17px;
+    }
+
+    /* CTA section */
+    .ind-cta-section {
+        padding: 80px 40px;
+    }
+
+    .ind-cta-heading-w {
+        width: 100%;
+        min-height: auto;
+        margin-bottom: 24px;
+    }
+
+    .ind-cta-heading {
+        font-size: 45px;
+        line-height: 45px;
+    }
+
+    .ind-cta-body-w {
+        width: 100%;
+        min-height: auto;
+        margin-bottom: 36px;
+    }
+
+    .ind-cta-body {
+        font-size: 18px;
+    }
+
+    .ind-cta-btn {
+        width: 320px;
+        height: 56px;
+    }
+
+    .ind-cta-btn-text {
+        font-size: 16px;
+        width: auto;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — phone ≤ 640px
+   ============================================================ */
+@media (max-width: 640px) {
+
+    .ind-hero-section {
+        padding-top: 140px;
+        padding-bottom: 48px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .ind-hero-heading {
+        font-size: 29px;
+        line-height: 32px;
+    }
+
+    .ind-banner-section {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+
+    .ind-banner-heading {
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    .ind-banner-body {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    /* Build section */
+    .ind-build-section {
+        padding: 60px 20px;
+    }
+
+    .ind-build-heading {
+        font-size: 26px;
+    }
+
+    .ind-build-sub {
+        font-size: 17px;
+    }
+
+    .ind-build-card {
+        padding: 28px 20px;
+    }
+
+    .ind-build-card-heading {
+        font-size: 19px;
+    }
+
+    .ind-build-bullets li {
+        font-size: 16px;
+    }
+
+    /* CTA section */
+    .ind-cta-section {
+        padding: 60px 20px;
+    }
+
+    .ind-cta-heading {
+        font-size: 29px;
+        line-height: 32px;
+    }
+
+    .ind-cta-body {
+        font-size: 15px;
+    }
+
+    .ind-cta-btn {
+        width: 100%;
+        max-width: 320px;
+        height: 52px;
+    }
+
+    .ind-cta-btn-text {
+        font-size: 17px;
+        width: auto;
+    }
+}
+
+/* ============================================================
+   FLUID DESKTOP SCALE  — 1025px … 1919px
+   Same fixed-1920px-frame issue as the other page stylesheets:
+   nothing here scales between the 1024px breakpoint and the
+   1920px spec width, so on any laptop viewport narrower than
+   1920px (e.g. 1536px) everything renders about 1.25x too large
+   versus Figma. Placed at the end of the file, after every
+   base/unconditional rule, so it wins on source order at equal
+   specificity.
+   ============================================================ */
+@media (min-width: 1025px) and (max-width: 1919px) {
+    .ind-hero-section {
+        padding-top: clamp(160px, 14.5833vw, 280px);
+        padding-bottom: clamp(80px, 14.5833vw, 280px);
+        padding-left: clamp(40px, 7.2917vw, 140px);
+        padding-right: clamp(40px, 7.2917vw, 140px);
+    }
+    .ind-hero-bg {
+        width: clamp(700px, 67.9688vw, 1305px);
+        height: clamp(394px, 38.2813vw, 735px);
+    }
+    .ind-hero-max-w {
+        max-width: clamp(613px, 59.8958vw, 1150px);
+        min-height: auto;
+    }
+    .ind-hero-heading {
+        font-size: clamp(45px, 3.28125vw, 63px);
+        line-height: clamp(45px, 3.020833vw, 58px);
+    }
+
+    .ind-banner-section {
+        padding-top: clamp(19px, 1.82292vw, 35px);
+        padding-bottom: clamp(19px, 1.82292vw, 35px);
+        padding-left: clamp(40px, 7.2917vw, 140px);
+        padding-right: clamp(40px, 7.2917vw, 140px);
+    }
+    .ind-banner-heading-w {
+        max-width: clamp(160px, 15.625vw, 300px);
+        min-width: 0;
+        min-height: auto;
+    }
+    .ind-banner-body-w {
+        max-width: clamp(433px, 42.2917vw, 812px);
+        min-height: auto;
+    }
+    .ind-banner-heading {
+        font-size: clamp(30px, 2.0833vw, 40px);
+        line-height: clamp(32px, 2.0833vw, 40px);
+    }
+    .ind-banner-body {
+        font-size: clamp(17px, 1.25vw, 24px);
+        line-height: clamp(22px, 1.25vw, 24px);
+    }
+
+    .ind-build-section {
+        padding-top: clamp(80px, 6.25vw, 120px);
+        padding-bottom: clamp(80px, 6.25vw, 120px);
+        padding-left: clamp(40px, 7.2917vw, 140px);
+        padding-right: clamp(40px, 7.2917vw, 140px);
+    }
+    .ind-build-heading-w {
+        width: clamp(341px, 33.3333vw, 640px);
+        height: auto;
+        margin-bottom: clamp(20px, 1.45833vw, 28px);
+    }
+    .ind-build-heading {
+        font-size: clamp(32px, 2.34375vw, 45px);
+    }
+    .ind-build-sub-w {
+        max-width: clamp(792px, 77.34375vw, 1485px);
+        min-height: auto;
+        margin-bottom: clamp(48px, 4.16667vw, 80px);
+    }
+    .ind-build-sub {
+        font-size: clamp(19px, 1.354167vw, 26px);
+    }
+    .ind-build-cards {
+        gap: clamp(24px, 1.666667vw, 32px);
+    }
+    .ind-build-card {
+        max-width: clamp(427px, calc(41.6667vw - 12px), 800px);
+        min-height: auto;
+        padding-top: clamp(36px, 2.5vw, 48px);
+        padding-bottom: clamp(36px, 2.5vw, 48px);
+        padding-left: clamp(28px, 2.1875vw, 42px);
+        padding-right: clamp(28px, 2.1875vw, 42px);
+    }
+    .ind-build-card-heading-w {
+        width: clamp(226px, 22.03125vw, 423px);
+        height: auto;
+    }
+    .ind-build-card-heading {
+        font-size: clamp(22px, 1.40625vw, 27px);
+        line-height: 1.3;
+    }
+    .ind-build-bullets-w {
+        width: clamp(382px, 37.29167vw, 716px);
+    }
+    .ind-build-bullets-w--1 {
+        min-height: auto;
+    }
+    .ind-build-bullets-w--2 {
+        min-height: auto;
+    }
+    .ind-build-bullets li {
+        font-size: clamp(17px, 1.197917vw, 23px);
+    }
+
+    .ind-cta-section {
+        padding-top: clamp(80px, 10.41667vw, 200px);
+        padding-bottom: clamp(80px, 10.41667vw, 200px);
+    }
+    .ind-cta-heading-w {
+        max-width: clamp(683px, 66.6667vw, 1280px);
+        min-height: auto;
+        margin-bottom: clamp(24px, 1.66667vw, 32px);
+    }
+    .ind-cta-body-w {
+        max-width: clamp(577px, 56.35417vw, 1082px);
+        min-height: auto;
+        margin-bottom: clamp(36px, 2.5vw, 48px);
+    }
+    .ind-cta-heading {
+        font-size: clamp(45px, 3.28125vw, 63px);
+        line-height: clamp(45px, 3.020833vw, 58px);
+    }
+    .ind-cta-body {
+        font-size: clamp(18px, 0.989583vw, 19px);
+    }
+    .ind-cta-btn {
+        width: clamp(320px, 19.6875vw, 378px);
+        height: clamp(56px, 3.177083vw, 61px);
+    }
+    .ind-cta-btn-text {
+        height: clamp(18px, 1.71875vw, 33px);
+        font-size: clamp(16px, 0.989583vw, 19px);
+    }
+}

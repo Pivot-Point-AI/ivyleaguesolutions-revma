@@ -1,0 +1,1002 @@
+/* ============================================================
+   digitalInfrastructure.css
+   Shares all fintech.css tokens; only hero-max-w and banner
+   column widths differ to match the design spec.
+   ============================================================ */
+
+/* ── prevent any child from blowing out the viewport ── */
+.di-page {
+    overflow-x: hidden;
+    width: 100%;
+}
+/* Decorative dotted background artwork — 1305 × 735 px, pinned to the top-right */
+.ind-hero-bg {
+    position: absolute;
+    top: 100px;
+    right: -15px;
+    width: 1305px;
+    height: 735px;
+    max-width: none;
+    opacity: 1;
+    transform: rotate(0deg);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+}
+
+@media (max-width: 1024px) {
+    .ind-hero-bg { width: 700px; height: 394px; opacity: .5; }
+}
+@media (max-width: 640px) {
+    .ind-hero-bg { display: none; }
+}
+
+/* ============================================================
+   TYPOGRAPHY TOKENS  (identical to fintech.css)
+   ============================================================ */
+.text-display {
+    font-size: 63px;
+    line-height: 58px;
+    letter-spacing: 0;
+}
+
+.banner-heading { font-size: 40px; line-height: 40px; font-weight: 300; }
+.banner-body    { font-size: 24px; line-height: 24px; font-weight: 300; }
+
+.body-25 { font-size: 21px; line-height: 110%; letter-spacing: 0; }
+.body-22 { font-size: 19px; line-height: 160%; letter-spacing: 0; }
+
+.btn-label { font-size: 19px; line-height: 100%; }
+
+/* ============================================================
+   LAYOUT HELPERS
+   ============================================================ */
+
+/* Hero: 1340 × 295 px as per spec (vs 992px in fintech) */
+.di-hero-max-w {
+    position: relative;
+    z-index: 1;
+    max-width: 1346px;
+    height: 295px;
+    display: flex;
+    align-items: center;
+}
+.di-page .hero-section {
+    position: relative;
+    overflow: hidden;
+}
+/* Banner columns: 256 px heading  |  880 px body */
+.di-banner-heading-w { max-width: 256px; min-width: 256px; }
+.di-banner-body-w    { max-width: 884px; }
+
+/* ---- CTA button (shared) ---- */
+.cta-btn {
+    width: 326px;
+    height: 61px;
+    background-color: #4026B8;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* ============================================================
+   CLOUD SERVICE MODELS SECTION
+   ============================================================ */
+
+/* ── Heading block: 1356 × 74 px ── */
+.cm-heading-w {
+    max-width: 1400px;
+    min-height: 74px;
+    display: flex;
+    align-items: center;
+}
+
+.cm-heading {
+    font-size: 63px;
+    line-height: 58px;
+    letter-spacing: 0;
+    color: #242424;
+    font-weight: 400;
+}
+
+/* ── Body paragraph: 1642 × 100 px ── */
+.cm-body-w {
+    max-width: 1642px;
+    min-height: 100px;
+}
+
+.cm-body {
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: #6A6A6A;
+    font-weight: 300;
+}
+
+/* ── Bottom layout wrapper ── */
+.cm-bottom {
+    align-items: flex-end;
+}
+
+/* ── LEFT COLUMN ──
+   Height locked to the tall laptop image (720px) so justify-between
+   places "Customized Solutions" at the very top and "Tailored For
+   Every Business" at the very bottom — matching the original design. */
+.cm-left {
+    height: 720px;
+}
+
+/* "Customized Solutions" label: 341 × 32 px */
+.cm-customized-label {
+    font-size: 29px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #6A6A6A;
+    font-weight: 400;
+    max-width: 350px;
+}
+
+/* "Tailored For Every Business": 666 × 156 px */
+.cm-tailored-heading {
+    font-size: 63px;
+    line-height: 58px;
+    letter-spacing: 0;
+    color: #242424;
+    font-weight: 400;
+    text-transform: capitalize;
+    max-width: 666px;
+}
+
+/* ── RIGHT COLUMN ── */
+
+/* Laptop image: 428 × 720 px */
+.cm-img-laptop {
+    width: 428px;
+    height: 720px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+/* SaaS diagram image: 428 × 347 px */
+.cm-img-saas {
+    width: 428px;
+    height: 347px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+/* Purple SaaS info box */
+.cm-saas-box {
+    width: 428px;
+    min-height: 347px;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* SaaS box heading: 300 × 80 px */
+.cm-saas-box-heading {
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #ffffff;
+    font-weight: 500;
+    max-width: 300px;
+}
+
+/* SaaS box body: 354 × 28 px */
+.cm-saas-box-body {
+    font-size: 22px;
+    line-height: 90%;
+    letter-spacing: 0;
+    color: #ffffff;
+    font-weight: 300;
+    max-width: 354px;
+}
+
+/* ============================================================
+   RESPONSIVE — tablet ≤ 1024 px
+   ============================================================ */
+@media (max-width: 1024px) {
+
+    .text-display    { font-size: 45px; line-height: 45px; }
+    .banner-heading  { font-size: 30px; line-height: 32px; }
+    .banner-body     { font-size: 17px; line-height: 22px; }
+    .body-22         { font-size: 18px; }
+
+    .di-page .hero-section {
+        padding-top: 160px;
+        padding-bottom: 80px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .di-hero-max-w {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Banner — stack vertically */
+    .banner-section {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 24px !important;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+
+    .di-banner-heading-w,
+    .di-banner-body-w { max-width: 100%; min-width: unset; }
+
+    /* Cloud models — scale type */
+    .cm-heading    { font-size: 42px; line-height: 45px; }
+    .cm-body       { font-size: 17px; line-height: 22px; }
+    .cm-customized-label { font-size: 22px; line-height: 29px; }
+    .cm-tailored-heading { font-size: 42px; line-height: 45px; max-width: 100%; }
+
+    /* Stack bottom section vertically */
+    .cm-bottom {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 48px;
+    }
+
+    /* Reset the desktop fixed height so the column doesn't over-stretch */
+    .cm-left  { width: 100%; height: auto; }
+    .cm-right { width: 100%; }
+
+    /* Scale images */
+    .cm-img-laptop {
+        width: 100%;
+        max-width: 428px;
+        height: auto;
+        min-height: 400px;
+    }
+
+    .cm-img-saas {
+        width: 100%;
+        max-width: 428px;
+        height: auto;
+    }
+
+    .cm-saas-box {
+        width: 100%;
+        max-width: 428px;
+    }
+
+    /* Stack the two right columns side-by-side on tablet */
+    .cm-right {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .cm-saas-col { flex: 1; min-width: 0; }
+    .cm-laptop-w { flex: 1; min-width: 0; }
+
+    .cloud-models-section {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — phone ≤ 640 px
+   ============================================================ */
+@media (max-width: 640px) {
+
+    .text-display    { font-size: 29px; line-height: 32px; }
+    .banner-heading  { font-size: 22px; line-height: 27px; }
+    .banner-body     { font-size: 16px; line-height: 19px; }
+
+    .di-page .hero-section {
+        padding-top: 140px;
+        padding-bottom: 48px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .banner-section {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        padding-top: 28px !important;
+        padding-bottom: 28px !important;
+    }
+
+    .cta-btn { width: 100%; max-width: 326px; }
+
+    /* Cloud models — mobile */
+    .cm-heading    { font-size: 26px; line-height: 30px; }
+    .cm-body       { font-size: 16px; line-height: 20px; }
+    .cm-customized-label { font-size: 17px; line-height: 22px; }
+    .cm-tailored-heading { font-size: 29px; line-height: 32px; }
+
+    .cloud-models-section {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        padding-top: 60px !important;
+    }
+
+    /* Stack the two right sub-columns on mobile */
+    .cm-right {
+        flex-direction: column !important;
+        width: 100%;
+    }
+
+    .cm-laptop-w,
+    .cm-saas-col { width: 100%; }
+
+    .cm-img-laptop,
+    .cm-img-saas,
+    .cm-saas-box { width: 100%; max-width: 100%; }
+
+    .cm-img-laptop  { height: 340px; }
+    .cm-img-saas    { height: auto; }
+
+    .cm-saas-box-heading { font-size: 22px; }
+    .cm-saas-box-body    { font-size: 18px; max-width: 100%; }
+}
+
+
+/* ============================================================
+   MOST USED CLOUD SERVICES / INDUSTRY CAPABILITIES SECTION
+   ============================================================ */
+
+.cc-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Full-cover background image */
+.cc-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    display: block;
+}
+
+/* Inner content stacks on top of bg */
+.cc-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 110px 140px 130px;
+}
+
+/* ── "Most Used Cloud Services" label ── */
+.cc-label {
+    width: 439px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+    line-height: 58px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: 0;
+    white-space: nowrap;
+    padding-bottom: 60px;
+
+}
+
+/* ── "Industry-Leading Cloud Capabilities" heading ── */
+.cc-main-heading {
+    max-width: 1425px;
+    font-size: 63px;
+    line-height: 58px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    margin: 50px 0 0 0;  /* gap between label and heading */
+}
+
+/* ── Cards row ── */
+.cc-cards-row {
+    display: flex;
+    gap: 16px;
+    margin-top: 155px;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: center;
+}
+
+/* ── Individual card ──
+   Only `width` is transitioned here, exactly as in the original
+   spec — the box's own size/padding/height never changes. */
+.cc-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 52px 48px;
+    width: 426px;
+    height: 426px;
+    flex-shrink: 0;
+    overflow: hidden;
+    transition: width 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+/* Expanded state — JS toggles this class */
+.cc-card.cc-active {
+    width: 650px;
+}
+
+
+.cc-card-content {
+    position: absolute;
+    left: 48px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity;
+}
+
+.cc-content-collapsed {
+    top: 52px;
+    width: 330px;
+    opacity: 1;
+}
+
+.cc-content-expanded {
+    bottom: 52px;
+    width: 554px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.cc-card.cc-active .cc-content-collapsed {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.cc-card.cc-active .cc-content-expanded {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ── Card icon ── */
+.cc-card-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* ── Card heading ── */
+.cc-card-heading {
+    font-size: 32px;
+    line-height: 100%;
+    font-weight: 500;
+    color: #242424;
+    letter-spacing: 0;
+    margin: 28px 0 0 0;
+    /* Prevent long headings from wrapping awkwardly on unexpanded cards */
+    white-space: normal;
+}
+
+/* ── Card body text ── */
+.cc-card-body {
+    font-size: 22px;
+    line-height: 90%;
+    font-weight: 300;
+    color: #979797;
+    letter-spacing: 0;
+    margin: 20px 0 0 0;
+}
+
+/* ============================================================
+   CC SECTION — RESPONSIVE tablet ≤ 1024 px
+   ============================================================ */
+@media (max-width: 1024px) {
+
+    .cc-inner {
+        padding: 80px 40px 80px;
+    }
+
+    .cc-label {
+        width: auto;
+        font-size: 22px;
+        height: auto;
+    }
+
+    .cc-main-heading {
+        font-size: 42px;
+        line-height: 43px;
+    }
+
+    .cc-cards-row {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+        gap: 20px;
+    }
+
+    /* On tablet cards expand vertically rather than horizontally,
+       and there's no hover distinction — every card just shows its
+       full content, stacked and static. */
+    .cc-card,
+    .cc-card.cc-active {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        min-height: 260px;
+    }
+
+    /* Drop the desktop two-copy crossfade trick: show only the
+       expanded (full-text) copy, in normal document flow, always
+       visible. Hide the collapsed duplicate entirely so its text
+       isn't rendered twice. */
+    .cc-content-collapsed {
+        display: none;
+    }
+
+    .cc-card-content.cc-content-expanded {
+        position: static;
+        width: 100%;
+        opacity: 1;
+        pointer-events: auto;
+        transition: none;
+    }
+
+    .cc-card-heading { font-size: 24px; margin-top: 20px; }
+    .cc-card-body    { font-size: 18px; }
+}
+
+/* ============================================================
+   CC SECTION — RESPONSIVE phone ≤ 640 px
+   ============================================================ */
+@media (max-width: 640px) {
+
+    .cc-inner {
+        padding: 60px 20px 60px;
+    }
+
+    .cc-label {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .cc-main-heading {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .cc-cards-row {
+        margin-top: 40px;
+        gap: 16px;
+    }
+
+    .cc-card,
+    .cc-card.cc-active {
+        max-width: 100%;
+        padding: 32px 28px;
+    }
+
+    .cc-card-heading { font-size: 20px; }
+    .cc-card-body    { font-size: 16px; line-height: 140%; }
+}
+
+
+/* ============================================================
+   WHY CHOOSE US SECTION
+   ============================================================ */
+
+.wc-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* ── LEFT COLUMN: label, heading, copy + feature list ── */
+.wc-left {
+    max-width: 821px;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+/* "Why Choose Us" label: 439 × 32 px */
+.wc-label {
+    width: 439px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    font-size: 29px;
+    line-height: 58px;
+    font-weight: 400;
+    color: #6A6A6A;
+    letter-spacing: 0;
+}
+
+/* "Why Ivy League Solutions For Cloud Services?": 821 × 134 px */
+.wc-heading {
+    max-width: 821px;
+    min-height: 134px;
+    font-size: 63px;
+    line-height: 58px;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    margin-top: 32px !important;
+}
+
+/* Paragraph: 742 × 90 px */
+.wc-body {
+    max-width: 742px;
+    min-height: 90px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #6A6A6A;
+    letter-spacing: 0;
+    margin-top: 15px !important;
+}
+
+/* ── Feature list ── */
+.wc-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 80px;
+}
+
+.wc-feature-heading {
+    min-height: 36px;
+    font-size: 24px;
+    line-height: 100%;
+    font-weight: 500;
+    color: #242424;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+.wc-feature-body {
+    font-size: 19px;
+    line-height: 90%;
+    font-weight: 300;
+    color: #979797;
+    letter-spacing: 0;
+    margin: 14px 0 0 0 !important;
+}
+
+/* Per-feature widths / heights as per spec */
+.wc-feature:nth-child(1) .wc-feature-heading { max-width: 474px; }
+.wc-feature:nth-child(1) .wc-feature-body    { max-width: 512px; min-height: 86px; }
+
+.wc-feature:nth-child(2) .wc-feature-heading { max-width: 549px; }
+.wc-feature:nth-child(2) .wc-feature-body    { max-width: 512px; min-height: 66px; }
+
+.wc-feature:nth-child(3) .wc-feature-heading { max-width: 474px; }
+.wc-feature:nth-child(3) .wc-feature-body    { max-width: 474px; min-height: 86px; }
+
+/* ── RIGHT COLUMN — staggered image composition ── */
+.wc-right {
+    position: relative;
+    width: 610px;
+    min-height: 816px;
+    flex-shrink: 0;
+}
+
+/* manThinking.svg: 610 × 462 px, top-right */
+.wc-img-man {
+    width: 610px;
+    height: 462px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+/* ipadWomen.svg: 446 × 338 px, staggered bottom-left of the above */
+.wc-img-woman {
+    position: absolute;
+    right: 615px;
+    top: 478px;
+    width: 446px;
+    height: 338px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+/* ============================================================
+   WHY CHOOSE US — RESPONSIVE tablet ≤ 1024 px
+   ============================================================ */
+@media (max-width: 1024px) {
+
+    .wc-section {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 60px;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+    }
+
+    .wc-left { max-width: 100%; }
+
+    .wc-label {
+        width: auto;
+        height: auto;
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
+    .wc-heading {
+        max-width: 100%;
+        min-height: auto;
+        font-size: 42px;
+        line-height: 43px;
+        margin-top: 20px !important;
+    }
+
+    .wc-body {
+        max-width: 100%;
+        min-height: auto;
+        font-size: 17px;
+        line-height: 22px;
+        margin-top: 28px !important;
+    }
+
+    .wc-features {
+        margin-top: 48px;
+        gap: 28px;
+    }
+
+    .wc-feature-heading { font-size: 20px; }
+
+    .wc-feature-heading,
+    .wc-feature-body { max-width: 100% !important; }
+
+    .wc-feature-body {
+        font-size: 17px;
+        line-height: 140%;
+        min-height: auto !important;
+    }
+
+    /* Image composition — stack and de-stagger */
+    .wc-right {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .wc-img-man {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    .wc-img-woman {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-top: 24px;
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+    }
+}
+
+/* ============================================================
+   WHY CHOOSE US — RESPONSIVE phone ≤ 640 px
+   ============================================================ */
+@media (max-width: 640px) {
+
+    .wc-section {
+        gap: 40px;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .wc-label   { font-size: 17px; }
+    .wc-heading { font-size: 26px; line-height: 30px; margin-top: 14px !important; }
+    .wc-body    { font-size: 16px; line-height: 19px; margin-top: 20px !important; }
+
+    .wc-features { margin-top: 32px; gap: 20px; }
+
+    .wc-feature-heading { font-size: 17px; }
+    .wc-feature-body    { font-size: 15px; }
+
+    .wc-img-man,
+    .wc-img-woman { max-width: 100%; }
+}
+
+/* ============================================================
+   FLUID DESKTOP SCALE  — 1025px … 1919px
+   Same fixed-1920px-frame issue as fintech.css: nothing here
+   scales between the ≤1024px breakpoint and the 1920px spec
+   width, so on any laptop viewport narrower than 1920px (e.g.
+   1536px) everything renders ~1.25x too large versus Figma.
+   These clamp() rules scale every fixed value proportionally,
+   floored either at the existing ≤1024px override or, where
+   none exists, at the value the 1920-spec ratio hits at 1024px.
+   Placed at the END of the file (after every base/unconditional
+   rule) on purpose: a media-query rule has the same specificity
+   as a plain rule, so with equal specificity source order wins —
+   if this block sat above the base cc- and wc- rules (as it did
+   before), those later plain rules would silently override it at
+   every width, which is exactly what was happening.
+   ============================================================ */
+@media (min-width: 1025px) and (max-width: 1919px) {
+    .text-display {
+        font-size: clamp(45px, 3.2813vw, 63px);
+        line-height: clamp(45px, 3.0208vw, 58px);
+    }
+    .banner-heading {
+        font-size: clamp(30px, 2.0833vw, 40px);
+        line-height: clamp(32px, 2.0833vw, 40px);
+    }
+    .banner-body {
+        font-size: clamp(17px, 1.25vw, 24px);
+        line-height: clamp(22px, 1.25vw, 24px);
+    }
+    .body-22 { font-size: clamp(18px, 0.98958vw, 19px); }
+    .cm-heading {
+        font-size: clamp(42px, 3.2813vw, 63px);
+        line-height: clamp(45px, 3.0208vw, 58px);
+    }
+    .cm-body {
+        font-size: clamp(17px, 1.25vw, 24px);
+        line-height: clamp(22px, 1.25vw, 24px);
+    }
+    .cm-customized-label { font-size: clamp(22px, 1.5104vw, 29px); }
+    .cm-tailored-heading {
+        font-size: clamp(42px, 3.2813vw, 63px);
+        line-height: clamp(45px, 3.0208vw, 58px);
+    }
+    .cc-label { font-size: clamp(22px, 1.5104vw, 29px); }
+    .cc-main-heading {
+        font-size: clamp(42px, 3.2813vw, 63px);
+        line-height: clamp(43px, 3.0208vw, 58px);
+    }
+    .wc-label { font-size: clamp(22px, 1.5104vw, 29px); }
+    .wc-heading {
+        font-size: clamp(42px, 3.2813vw, 63px);
+        line-height: clamp(43px, 3.0208vw, 58px);
+    }
+    .wc-body {
+        font-size: clamp(17px, 1.25vw, 24px);
+        line-height: clamp(22px, 1.25vw, 24px);
+    }
+
+    .di-page .hero-section {
+        padding-top: clamp(160px, 14.5833vw, 280px);
+        padding-bottom: clamp(80px, 9.375vw, 180px);
+        padding-left: clamp(40px, 7.2917vw, 140px);
+        padding-right: clamp(40px, 7.2917vw, 140px);
+    }
+    .di-hero-max-w {
+        max-width: clamp(718px, 70.1042vw, 1346px);
+        height: auto;
+    }
+
+    .banner-section {
+        padding-left: clamp(40px, 7.2917vw, 140px);
+        padding-right: clamp(40px, 7.2917vw, 140px);
+        padding-top: clamp(19px, 1.8229vw, 35px);
+        padding-bottom: clamp(19px, 1.8229vw, 35px);
+    }
+    .di-banner-heading-w { max-width: clamp(137px, 13.3333vw, 256px); min-width: 0; }
+    .di-banner-body-w    { max-width: clamp(472px, 46.0417vw, 884px); }
+
+    .cloud-models-section {
+        padding-left: clamp(40px, 7.2917vw, 140px);
+        padding-right: clamp(40px, 7.2917vw, 140px);
+        padding-top: clamp(91px, 8.8542vw, 170px);
+        padding-bottom: clamp(64px, 6.25vw, 120px);
+    }
+    .cm-heading-w { max-width: clamp(747px, 72.9167vw, 1400px); }
+    .cm-body-w {
+        max-width: clamp(876px, 85.5208vw, 1642px);
+        margin-top: clamp(21px, 2.0833vw, 40px) !important;
+    }
+    .cm-bottom { margin-top: clamp(85px, 8.3333vw, 160px) !important; }
+    .cm-customized-label { max-width: clamp(187px, 18.2292vw, 350px); }
+    .cm-tailored-heading { max-width: clamp(355px, 34.6875vw, 666px); }
+    .cm-right,
+    .cm-saas-col { gap: clamp(9px, 0.8333vw, 16px) !important; }
+
+    .cm-img-laptop {
+        width: clamp(228px, 22.2917vw, 428px);
+        height: clamp(384px, 37.5vw, 720px);
+    }
+    .cm-img-saas {
+        width: clamp(228px, 22.2917vw, 428px);
+        height: clamp(185px, 18.0729vw, 347px);
+    }
+    .cm-saas-box {
+        width: clamp(228px, 22.2917vw, 428px);
+        min-height: auto;
+        padding: clamp(21px, 2.0833vw, 40px);
+    }
+    .cm-saas-box-heading { max-width: clamp(160px, 15.625vw, 300px); }
+    .cm-saas-box-body {
+        max-width: clamp(189px, 18.4375vw, 354px);
+        margin-top: clamp(11px, 1.0417vw, 20px) !important;
+    }
+
+    .cc-inner {
+        padding: clamp(80px, 5.7292vw, 110px) clamp(40px, 7.2917vw, 140px) clamp(80px, 6.7708vw, 130px);
+    }
+    .cc-label { width: clamp(234px, 22.8646vw, 439px); }
+    .cc-main-heading { max-width: clamp(760px, 74.2188vw, 1425px); }
+    .cc-cards-row { margin-top: clamp(60px, 8.0729vw, 155px); }
+    .cc-card {
+        width: clamp(227px, 23.4375vw, 426px);
+        height: clamp(227px, 23.4375vw, 426px);
+        padding: clamp(28px, 2.7083vw, 52px) clamp(26px, 2.5vw, 48px);
+    }
+    .cc-card.cc-active { width: clamp(347px, 33.8542vw, 650px); }
+    .cc-card-content { left: clamp(26px, 2.5vw, 48px); }
+    .cc-content-collapsed {
+        top: clamp(28px, 2.7083vw, 52px);
+        width: clamp(176px, 17.1875vw, 330px);
+    }
+    .cc-content-expanded {
+        bottom: clamp(28px, 2.7083vw, 52px);
+        width: clamp(295px, 28.8542vw, 554px);
+    }
+    .cc-card-icon { width: clamp(32px, 3.125vw, 60px); height: clamp(32px, 3.125vw, 60px); }
+    .cc-card-heading { margin-top: clamp(15px, 1.4583vw, 28px); }
+    .cc-card-body { margin-top: clamp(11px, 1.0417vw, 20px); }
+
+    .wc-section {
+        padding-left: clamp(40px, 7.2917vw, 140px);
+        padding-right: clamp(40px, 7.2917vw, 140px);
+        padding-top: clamp(80px, 8.8542vw, 170px);
+        padding-bottom: clamp(80px, 8.8542vw, 170px);
+    }
+    .wc-left { max-width: clamp(438px, 42.7604vw, 821px); }
+    .wc-label { width: clamp(234px, 22.8646vw, 439px); }
+    .wc-heading {
+        max-width: clamp(438px, 42.7604vw, 821px);
+        min-height: auto;
+        margin-top: clamp(20px, 1.6667vw, 32px) !important;
+    }
+    .wc-body {
+        max-width: clamp(396px, 38.6458vw, 742px);
+        min-height: auto;
+    }
+    .wc-features { margin-top: clamp(48px, 4.1667vw, 80px); }
+    .wc-feature:nth-child(1) .wc-feature-heading { max-width: clamp(253px, 24.6875vw, 474px); }
+    .wc-feature:nth-child(1) .wc-feature-body    { max-width: clamp(273px, 26.6667vw, 512px); min-height: auto; }
+    .wc-feature:nth-child(2) .wc-feature-heading { max-width: clamp(293px, 28.5938vw, 549px); }
+    .wc-feature:nth-child(2) .wc-feature-body    { max-width: clamp(273px, 26.6667vw, 512px); min-height: auto; }
+    .wc-feature:nth-child(3) .wc-feature-heading { max-width: clamp(253px, 24.6875vw, 474px); }
+    .wc-feature:nth-child(3) .wc-feature-body    { max-width: clamp(253px, 24.6875vw, 474px); min-height: auto; }
+
+    .wc-right { width: clamp(325px, 31.7708vw, 610px); min-height: clamp(435px, 42.5vw, 816px); }
+    .wc-img-man {
+        width: clamp(325px, 31.7708vw, 610px);
+        height: clamp(246px, 24.0625vw, 462px);
+    }
+    .wc-img-woman {
+        right: clamp(328px, 32.03125vw, 615px);
+        top: clamp(255px, 24.8958vw, 478px);
+        width: clamp(238px, 23.2292vw, 446px);
+        height: clamp(180px, 17.6042vw, 338px);
+    }
+}

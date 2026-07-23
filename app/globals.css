@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #ece9ff;
+  --color-brand-100: #d5cfff;
+  --color-brand-200: #b0a5ff;
+  --color-brand-300: #8a78ff;
+  --color-brand-400: #6550e0;
+  --color-brand-500: #4f34cc;
+  --color-brand-600: #4026B8;
+  --color-brand-700: #341da0;
+  --color-brand-800: #271680;
+  --color-brand-900: #180e55;
+  --color-dark: #09090f;
+  --font-sans: 'Stage Grotesk', ui-sans-serif, system-ui;
+}
+
+@font-face {
+  font-family: 'Stage Grotesk';
+  src: url('/font/StageGrotesk-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes site-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.site-logo-spin {
+  animation: site-logo-spin 3s linear infinite;
+}
+
+@font-face {
+  font-family: 'Stage Grotesk';
+  src: url('/font/StageGrotesk-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Stage Grotesk';
+  src: url('/font/StageGrotesk-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Stage Grotesk';
+  src: url('/font/StageGrotesk-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+.fontregular { font-family: 'Stage Grotesk', Arial, ui-sans-serif, system-ui, sans-serif; font-weight: 400; }
+.fontmedium { font-family: 'Stage Grotesk', Arial, ui-sans-serif, system-ui, sans-serif; font-weight: 500; }
+.fontbold { font-family: 'Stage Grotesk', Arial, ui-sans-serif, system-ui, sans-serif; font-weight: 700; }
+
+footer {
+  overflow-x: hidden;
+}
+
+@keyframes glowSweep {
+  0%   { background-position: -50% 0; }
+  50%  { background-position: 100% 0; }
+  100% { background-position: -50% 0; }
+}
+
+body {
+  font-family: 'Stage Grotesk', Arial, ui-sans-serif, system-ui, sans-serif;
+}
+
+.hero-bg {
+  background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 30%, #fefefe 60%, #edf3ff 100%);
+}
+
+.blob-1 {
+  background: radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%);
+}
+.blob-2 {
+  background: radial-gradient(circle, rgba(99,102,241,0.06) 0%, transparent 70%);
+}
+
+.card-development {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
+}
+.card-strategy {
+  background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 100%);
+}
+.card-discovery {
+  background: linear-gradient(135deg, #4338ca 0%, #818cf8 100%);
+}
+
+.fintech-bg {
+  background: linear-gradient(180deg, #0a0a18 0%, #0d0d1f 100%);
+}
+
+.cta-purple {
+  background: linear-gradient(135deg, #5b21b6 0%, #4c1d95 100%);
+}
+
+.dark-section {
+  background: linear-gradient(180deg, #09090f 0%, #0f0f1e 100%);
+}
+
+html { scroll-behavior: smooth; }
+
+[x-cloak], [data-cloak] { display: none !important; }
+
+@keyframes shimmer {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+.shimmer { animation: shimmer 3s ease-in-out infinite; }
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#site-loader {
+  transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#site-loader.loader-fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#site-loader-black {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#site-loader-black.black-in {
+  opacity: 1;
+  visibility: visible;
+}
+#site-loader-black.black-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.loading {
+  overflow: hidden;
+}
+
+/* ============================================================
+   GLOBAL RESPONSIVE SAFETY LAYER
+   Guards against horizontal overflow site-wide and tames the
+   desktop-first hardcoded paddings on tablet / phone widths.
+   These are unlayered rules so they beat Tailwind utilities,
+   but only apply below the desktop breakpoint.
+   ============================================================ */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 1024px) {
+  /* Media / images never force horizontal scroll */
+  img, video, svg {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  img:not(.site-logo), video {
+    height: auto;
+  }
+}
+
+/* ============================================================
+   NAVBAR FLUID DESKTOP SCALE — 1025px … 1919px
+   The header's desktop layout (Tailwind lg: classes, active from
+   1024px up with no further breakpoint) is fixed-px, tuned for a
+   1920px-wide Figma frame, same as every page stylesheet. Below
+   1920px it rendered ~1.25x too large versus Figma. Floors below
+   are the ratio the 1920-spec value hits at 1024px (spec * 1024
+   / 1920), except where that ratio would make text illegibly
+   small, in which case a readable minimum is used instead.
+   ============================================================ */
+@media (min-width: 1025px) and (max-width: 1919px) {
+  .site-header-inner { height: clamp(59px, 5.7292vw, 110px); }
+  .site-logo { height: clamp(50px, 4.8646vw, 93px); width: auto; }
+  .site-nav { gap: clamp(30px, 2.9167vw, 56px); }
+  .site-nav-link { font-size: clamp(16px, 1.0417vw, 20px); }
+  .site-book-btn,
+  .site-menu-btn {
+    height: clamp(34px, 3.29844vw, 63.33px);
+    padding-left: clamp(16px, 1.5625vw, 30px);
+    padding-right: clamp(16px, 1.5625vw, 30px);
+    font-size: clamp(16px, 1.11094vw, 21.33px);
+  }
+}

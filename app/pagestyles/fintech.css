@@ -1,0 +1,574 @@
+/* ============================================================
+   fintech.css  –  custom values outside Tailwind's default
+   scale + ALL responsive overrides (no max-* Tailwind needed)
+   ============================================================ */
+
+/* ── prevent any child from blowing out the viewport ── */
+.fintech-page {
+    overflow-x: hidden;
+    width: 100%;
+}
+/* Decorative dotted background artwork — 1305 × 735 px, pinned to the top-right */
+.ind-hero-bg {
+    position: absolute;
+    top: 100px;
+    right: -15px;
+    width: 1305px;
+    height: 735px;
+    max-width: none;
+    opacity: 1;
+    transform: rotate(0deg);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+}
+
+@media (max-width: 1024px) {
+    .ind-hero-bg { width: 700px; height: 394px; opacity: .5; }
+}
+@media (max-width: 640px) {
+    .ind-hero-bg { display: none; }
+}
+.fintech-page .hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-max-w {
+    position: relative;
+    z-index: 1;
+    max-width: 992px;
+}
+/* ============================================================
+   TYPOGRAPHY TOKENS
+   ============================================================ */
+.text-display {
+    font-size: 63px;
+    line-height: 58px;
+    letter-spacing: 0;
+}
+
+.banner-heading { font-size: 40px; line-height: 40px; }
+.banner-body    { font-size: 24px; line-height: 24px; }
+
+.convenience-body { font-size: 24px; line-height: 24px; }
+
+.body-25 { font-size: 21px; line-height: 110%; letter-spacing: 0; }
+.body-22 { font-size: 19px; line-height: 160%; letter-spacing: 0; }
+
+.btn-label { font-size: 19px; line-height: 100%; }
+
+/* ============================================================
+   LAYOUT HELPERS
+   ============================================================ */
+.hero-max-w      { max-width: 992px; }
+.banner-heading-w{ max-width: 247px; }
+.banner-body-w   { max-width: 845px; }
+
+/* Two-column rows (heading/paragraph + image group) use fixed pixel
+   widths on shrink-0 children with no wrap, so they only fit viewports
+   wide enough to hold both columns at full size — the 1024px media
+   query forces a full stack below that, but there's a gap in between
+   (roughly 1025-1750px, i.e. most real laptop windows) where the pair
+   is too wide for the available content area yet wide enough that the
+   1024px override never kicks in. Wrapping lets a column drop to its
+   own line instead of overflowing/getting clipped in that range. */
+.two-col-layout {
+    flex-wrap: wrap;
+}
+
+/* ---- Micro Bank image strip ---- */
+.micro-images-wrap {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 60px;
+    margin-top: 80px;
+    margin-bottom: 140px;
+    overflow: visible;
+}
+.micro-img-top  { position: relative; flex-shrink: 0; z-index: 1; }
+.micro-img-mid  { position: relative; flex-shrink: 0; z-index: 2; }
+.micro-img-raised {
+    position: relative;
+    bottom: 290px;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+/* ---- Wallet purple card ---- */
+.wallet-card {
+    position: relative;
+    width: 820px;
+    height: 836px;
+    background-color: #4026B8;
+    border-radius: 24px;
+    flex-shrink: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wallet-glow-tl {
+    position: absolute;
+    right: 600px; bottom: 600px;
+    width: 280px; height: 280px;
+    background: rgba(145,31,205,.53);
+    border-radius: 50%;
+    filter: blur(75.85px);
+    z-index: 0;
+    pointer-events: none;
+}
+.wallet-glow-br {
+    position: absolute;
+    top: 600px; right: 0;
+    width: 280px; height: 280px;
+    background: rgba(145,31,205,.53);
+    border-radius: 50%;
+    filter: blur(75.85px);
+    z-index: 0;
+    pointer-events: none;
+}
+.wallet-img {
+    position: relative;
+    z-index: 1;
+    width: 782px;
+    height: 667px;
+    object-fit: contain;
+    display: block;
+}
+
+/* ---- Core Banking 2×2 grid ---- */
+.grid-row   { display: flex; gap: 20px; flex-wrap: wrap; }
+.grid-row-1 { align-items: flex-end;   margin-bottom: 20px; }
+.grid-row-2 { align-items: flex-start; }
+
+/* ---- Digital Transformation image cluster ---- */
+.transform-images-wrap {
+    flex-wrap: wrap;
+}
+
+/* ---- Service card grid (attractive numbered-card variant of content sections) ---- */
+.svc-cards-section {
+    padding-bottom: 20px;
+}
+.svc-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    align-items: start;
+}
+.svc-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 44px 40px;
+    box-shadow: 0px 4.2px 15.7px rgba(0, 0, 0, 0.03);
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    transition: border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+.svc-card:hover {
+    border-color: #4026B8;
+    transform: translateY(-4px);
+    box-shadow: 0px 12px 28px rgba(64, 38, 184, 0.12);
+}
+.svc-card-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #EFEAFB;
+    color: #4026B8;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    transition: background .3s ease, color .3s ease;
+}
+.svc-card:hover .svc-card-badge {
+    background: #4026B8;
+    color: #ffffff;
+}
+.svc-card-heading {
+    font-size: 24px;
+    line-height: 1.25;
+    margin-bottom: 14px !important;
+}
+.svc-card-body {
+    font-size: 17px;
+    line-height: 160%;
+}
+
+@media (max-width: 1024px) {
+    .svc-cards-grid { grid-template-columns: 1fr; gap: 20px; }
+    .svc-card { padding: 32px 28px; }
+}
+@media (max-width: 640px) {
+    .svc-card { padding: 24px 20px; border-radius: 16px; }
+    .svc-card-heading { font-size: 20px; }
+    .svc-card-body { font-size: 15px; }
+}
+
+/* ---- CTA button ---- */
+.cta-btn {
+    width: auto;
+    min-width: 326px;
+    height: 61px;
+    padding: 0 32px;
+    background-color: #4026B8;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    white-space: nowrap;
+}
+
+/* ============================================================
+   FLUID DESKTOP SCALE  — 1025px … 1919px
+   The page is built with fixed px values matching a 1920px-wide
+   Figma frame. Below 1920px (e.g. a 1536px laptop viewport) those
+   values don't shrink, so the layout renders ~1.25x too large
+   compared to Figma until the window actually hits 1920px wide —
+   that's why it only looked pixel-perfect at 80% browser zoom
+   (1536 / 1920 = 0.8). These clamp() rules scale every fixed value
+   proportionally with viewport width in that gap, floored at the
+   same numbers the ≤1024px breakpoint already uses (or, where no
+   tablet override exists, at the value the ratio hits at 1024px)
+   so it's continuous with the breakpoints below.
+   ============================================================ */
+@media (min-width: 1025px) and (max-width: 1919px) {
+    .fintech-page .hero-section {
+        padding-top: clamp(160px, 15.625vw, 300px);
+        padding-bottom: clamp(80px, 10.9375vw, 210px);
+        padding-left: clamp(40px, 7.2917vw, 140px);
+        padding-right: clamp(40px, 7.2917vw, 140px);
+    }
+    .ind-hero-bg {
+        width: clamp(700px, 67.9688vw, 1305px);
+        height: clamp(394px, 38.2813vw, 735px);
+    }
+
+    .text-display {
+        font-size: clamp(45px, 3.2813vw, 63px);
+        line-height: clamp(45px, 3.0208vw, 58px);
+    }
+    .banner-heading {
+        font-size: clamp(30px, 2.0833vw, 40px);
+        line-height: clamp(32px, 2.0833vw, 40px);
+    }
+    .banner-body {
+        font-size: clamp(17px, 1.25vw, 24px);
+        line-height: clamp(22px, 1.25vw, 24px);
+    }
+    .convenience-body {
+        font-size: clamp(17px, 1.25vw, 24px);
+        line-height: clamp(22px, 1.25vw, 24px);
+    }
+    .body-25 { font-size: clamp(18px, 1.09375vw, 21px); }
+    .body-22 { font-size: clamp(18px, 0.98958vw, 19px); }
+
+    .banner-section {
+        padding-left: clamp(40px, 7.2917vw, 140px);
+        padding-right: clamp(40px, 7.2917vw, 140px);
+        padding-top: clamp(19px, 1.8229vw, 35px);
+        padding-bottom: clamp(19px, 1.8229vw, 35px);
+    }
+
+    .content-section {
+        padding-left: clamp(40px, 7.2917vw, 140px);
+        padding-right: clamp(40px, 7.2917vw, 140px);
+        padding-top: clamp(80px, 11.1979vw, 215px);
+    }
+    .content-section-with-bottom {
+        padding-left: clamp(40px, 7.2917vw, 140px);
+        padding-right: clamp(40px, 7.2917vw, 140px);
+        padding-top: clamp(80px, 11.1979vw, 215px);
+        padding-bottom: clamp(80px, 11.1979vw, 215px);
+    }
+    .why-section {
+        padding-left: clamp(40px, 7.2917vw, 140px);
+        padding-right: clamp(40px, 7.2917vw, 140px);
+        padding-top: clamp(80px, 11.1979vw, 215px);
+        padding-bottom: clamp(80px, 11.1979vw, 215px);
+    }
+
+    .micro-images-wrap {
+        gap: clamp(32px, 3.125vw, 60px);
+        margin-bottom: clamp(80px, 7.2917vw, 140px);
+    }
+    .micro-img-raised { bottom: clamp(0px, 15.1042vw, 290px); }
+    .micro-img-top img,
+    .micro-img-raised img {
+        width: clamp(252px, 24.5833vw, 472px);
+        height: clamp(203px, 19.8438vw, 381px);
+    }
+    .micro-img-mid img {
+        width: clamp(292px, 28.4896vw, 547px);
+        height: clamp(361px, 35.2604vw, 677px);
+    }
+
+    .wallet-two-col { gap: clamp(24px, 3.125vw, 60px) !important; }
+    .wallet-text-col {
+        max-width: clamp(420px, 33.8542vw, 650px) !important;
+    }
+    .wallet-card {
+        width: clamp(437px, 42.7083vw, 820px);
+        height: clamp(446px, 43.5417vw, 836px);
+    }
+    .wallet-img {
+        width: clamp(417px, 40.7292vw, 782px);
+        height: clamp(356px, 34.7396vw, 667px);
+    }
+    .wallet-glow-tl,
+    .wallet-glow-br {
+        width: clamp(149px, 14.5833vw, 280px);
+        height: clamp(149px, 14.5833vw, 280px);
+    }
+
+    .core-two-col { gap: clamp(32px, 4.1667vw, 80px) !important; }
+    .core-text-col { max-width: clamp(420px, 31.8229vw, 611px) !important; }
+
+    .svc-two-col { gap: clamp(24px, 3.125vw, 60px) !important; }
+    .svc-col-heading { max-width: clamp(340px, 29.4271vw, 565px) !important; }
+    .svc-col-body { max-width: clamp(420px, 46.875vw, 900px) !important; }
+
+    .transform-two-col { gap: clamp(32px, 4.1667vw, 80px) !important; }
+    .transform-text-col { max-width: clamp(420px, 32.7083vw, 628px) !important; }
+    .transform-images-wrap { gap: clamp(10px, 1.0417vw, 20px) !important; }
+    .transform-right-col { gap: clamp(10px, 1.0417vw, 20px) !important; }
+
+    .grid-row { gap: clamp(11px, 1.0417vw, 20px); }
+    .grid-row-1 { margin-bottom: clamp(11px, 1.0417vw, 20px); }
+    .grid-row-1 img:first-child {
+        width: clamp(279px, 27.2396vw, 523px);
+        height: clamp(266px, 25.9896vw, 499px);
+    }
+    .grid-row-1 img:last-child {
+        width: clamp(146px, 14.2188vw, 273px);
+        height: clamp(266px, 25.9896vw, 499px);
+    }
+    .grid-row-2 img:first-child {
+        width: clamp(189px, 18.4375vw, 354px);
+        height: clamp(186px, 18.125vw, 348px);
+    }
+    .grid-row-2 img:last-child {
+        width: clamp(236px, 23.0208vw, 442px);
+        height: clamp(186px, 18.125vw, 348px);
+    }
+
+    .transform-images-wrap > div:first-child img {
+        width: clamp(181px, 17.6563vw, 339px);
+        height: clamp(194px, 18.9063vw, 363px);
+    }
+    .transform-right-col img:first-child {
+        width: clamp(181px, 17.6563vw, 339px);
+        height: clamp(194px, 18.9063vw, 363px);
+    }
+    .transform-right-col img:last-child {
+        width: clamp(200px, 19.5313vw, 375px);
+        height: clamp(219px, 21.4063vw, 411px);
+    }
+
+    .cta-btn {
+        width: auto;
+        min-width: clamp(174px, 16.9792vw, 326px);
+        height: clamp(33px, 3.1771vw, 61px);
+    }
+}
+
+/* ============================================================
+   RESPONSIVE  — tablet  ≤ 1024 px
+   ============================================================ */
+@media (max-width: 1024px) {
+
+    /* Typography scale down */
+    .text-display    { font-size: 45px; line-height: 45px; }
+    .banner-heading  { font-size: 30px; line-height: 32px; }
+    .banner-body     { font-size: 17px; line-height: 22px; }
+    .convenience-body{ font-size: 17px; line-height: 22px; }
+    .body-25         { font-size: 18px; }
+    .body-22         { font-size: 18px; }
+
+    /*
+     * Hero padding fix — TWO-class selector (.fintech-page .hero-section)
+     * gives specificity (0,2,0) which beats Tailwind's single arbitrary
+     * class (0,1,0) regardless of stylesheet load order. No !important needed.
+     */
+    /* navbar is 110px tall + 50px breathing room = 160px */
+    .fintech-page .hero-section {
+        padding-top: 160px;
+        padding-bottom: 80px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .hero-max-w { max-width: 100%; }
+
+    /* Banner – stack vertically */
+    .banner-section {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 24px !important;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+    .banner-heading-w,
+    .banner-body-w   { max-width: 100%; }
+
+    /* Generic content sections */
+    .content-section {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+        padding-top: 80px !important;
+    }
+    .content-section-with-bottom {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+    }
+
+    /* Two-col layouts → stack */
+    .two-col-layout {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+    .two-col-layout > * { max-width: 100% !important; width: 100% !important; }
+
+    /* Micro Bank images – disable stagger, wrap */
+    .micro-images-wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: hidden;
+        margin-bottom: 80px;
+    }
+    .micro-img-raised { bottom: 0; }
+    .micro-img-top img,
+    .micro-img-mid img,
+    .micro-img-raised img {
+        width: 100% !important;
+        max-width: 480px !important;
+        height: auto !important;
+    }
+
+    /* Wallet card */
+    .wallet-card {
+        width: 100% !important;
+        height: auto !important;
+        padding: 48px 24px !important;
+    }
+    .wallet-img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Core Banking image grid */
+    .grid-row { flex-wrap: wrap; }
+    .grid-row img { flex: 1 1 calc(50% - 10px); width: 0 !important; height: auto !important; }
+
+    /* Digital Transformation images */
+    .transform-images-wrap {
+        width: 100% !important;
+        flex-wrap: wrap !important;
+    }
+    .transform-images-wrap img {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .transform-right-col {
+        width: 100% !important;
+    }
+    .transform-right-col img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Why Choose */
+    .why-section {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE  — phone  ≤ 640 px
+   ============================================================ */
+@media (max-width: 640px) {
+
+    /* Typography scale down further */
+    .text-display    { font-size: 29px; line-height: 32px; }
+    .banner-heading  { font-size: 22px; line-height: 27px; }
+    .banner-body     { font-size: 16px; line-height: 19px; }
+    .convenience-body{ font-size: 16px; line-height: 19px; }
+    .body-25         { font-size: 15px; }
+    .body-22         { font-size: 15px; }
+
+    /* navbar is 110px tall + 30px breathing room = 140px */
+    .fintech-page .hero-section {
+        padding-top: 140px;
+        padding-bottom: 48px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Banner */
+    .banner-section {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        padding-top: 28px !important;
+        padding-bottom: 28px !important;
+    }
+
+    /* Content sections */
+    .content-section,
+    .content-section-with-bottom {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        padding-top: 48px !important;
+    }
+    .content-section-with-bottom { padding-bottom: 48px !important; }
+
+    /* Micro Bank – vertical stack */
+    .micro-images-wrap {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        margin-top: 32px;
+        margin-bottom: 48px;
+    }
+    .micro-img-raised { bottom: 0; }
+    .micro-img-top img,
+    .micro-img-mid img,
+    .micro-img-raised img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Core Banking – single column */
+    .grid-row          { flex-direction: column; }
+    .grid-row img      { width: 100% !important; height: auto !important; flex: none; }
+    .grid-row-1        { margin-bottom: 12px; }
+
+    /* Transformation images – single column */
+    .transform-images-wrap { flex-direction: column !important; }
+
+    /* CTA button */
+    .cta-btn { width: 100%; max-width: 326px; }
+
+    /* Why section */
+    .why-section {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        padding-top: 48px !important;
+        padding-bottom: 48px !important;
+    }
+}

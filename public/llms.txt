@@ -1,0 +1,37 @@
+# Ivy League Solutions
+
+> Ivy League Solutions is a global software development company delivering custom software, fintech platforms, enterprise systems (ERP/CRM), and digital infrastructure for mid-to-large businesses. Headquartered in Perth Amboy, New Jersey, USA, with additional offices in Dubai, UAE, and Islamabad, Pakistan.
+
+Ivy League Solutions builds industry-specific software for fintech, healthcare, e-commerce, logistics, and academia (EdTech), and delivers enterprise-wide digital transformation, cloud infrastructure, and API integration projects across industries. Engagements are scoped around measurable business outcomes rather than delivered code alone.
+
+## Company
+
+- [Homepage](https://ivyleaguesolutions.com/): Overview of services, industries served, and client outcomes.
+- [About](https://ivyleaguesolutions.com/about): Company mission, team, and track record.
+- [Contact](https://ivyleaguesolutions.com/contact): Phone +1 845 300 2429, email contact@ivyleaguesolutions.com, and office addresses in the USA, UAE, and Pakistan.
+- [Case Studies](https://ivyleaguesolutions.com/case-study): Real client projects in mobile banking, ERP, multi-currency payments, and healthcare, with measurable results.
+- [Blog](https://ivyleaguesolutions.com/blog): Insights on software development, fintech, and digital transformation.
+
+## Services
+
+- [Services overview](https://ivyleaguesolutions.com/services)
+- [Custom Software Development](https://ivyleaguesolutions.com/services/custom-software-development): Bespoke software, web & mobile apps, product modernization.
+- [Enterprise Solutions & ERP](https://ivyleaguesolutions.com/services/enterprise-solutions): Enterprise application integration, ERP/CRM (SAP, Oracle, Microsoft Dynamics), BI & analytics.
+- [Fintech & Digital Platforms](https://ivyleaguesolutions.com/services/fintech-digital-platforms): Digital banking, micro-bank platforms, wallet applications, digital lending, core banking systems.
+- [Digital Infrastructure & Cloud](https://ivyleaguesolutions.com/services/digital-infrastructure): Cloud migration and managed infrastructure on AWS, Azure, and Google Cloud.
+- [API & Integration Services](https://ivyleaguesolutions.com/services/api-integration): REST/GraphQL API development, third-party integration, system orchestration, data synchronization.
+- [Digital Transformation](https://ivyleaguesolutions.com/services/digital-transformation): Digital strategy, process automation, cloud adoption, data & insights.
+
+## Industries
+
+- [Industries overview](https://ivyleaguesolutions.com/industries)
+- [Fintech](https://ivyleaguesolutions.com/industries/fintech): Payment platforms, mobile banking, lending systems, compliance engines.
+- [Healthcare](https://ivyleaguesolutions.com/industries/healthcare): HIPAA-compliant patient management, telemedicine, health records.
+- [E-Commerce](https://ivyleaguesolutions.com/industries/ecommerce): Multi-vendor marketplaces, inventory management, order processing.
+- [Logistics](https://ivyleaguesolutions.com/industries/logistics): Fleet tracking, warehouse management, supply chain optimization.
+- [Academia (EdTech)](https://ivyleaguesolutions.com/industries/academia): Learning management systems, student portals, virtual classrooms.
+
+## Policies
+
+- [Privacy Policy](https://ivyleaguesolutions.com/privacy-policy)
+- [Terms & Conditions](https://ivyleaguesolutions.com/terms)

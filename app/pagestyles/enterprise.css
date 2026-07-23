@@ -1,0 +1,927 @@
+/* ================================================================
+   enterprise.css — Enterprise Solutions & ERP page styles
+   ================================================================ */
+
+
+/* ----------------------------------------------------------------
+   Design card crosshatch background (Custom App Dev)
+   ---------------------------------------------------------------- */
+.ent-design-card-bg {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background-image: url('/assets/enterprisePage/designBg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: padding-box;   /* keeps bg from painting under a border edge */
+    box-shadow: none !important;
+
+}
+
+.ent-design-card-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    /* no need for border-radius here anymore — overflow:hidden on the parent handles clipping */
+}
+
+.ent-design-card-bg > * {
+    position: relative;
+    z-index: 1;
+}
+.ind-hero-bg {
+    position: absolute;
+    top: 100px;
+    right: -15px;
+    width: 1305px;
+    height: 735px;
+    max-width: none;
+    opacity: 1;
+    transform: rotate(0deg);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+}
+/* ----------------------------------------------------------------
+   Checkbox icon circle
+   ---------------------------------------------------------------- */
+.ent-check-circle {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ent-check-circle::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: #9D9D9D;
+    opacity: 0.15;
+}
+
+
+/* ----------------------------------------------------------------
+   Security Cards Carousel
+   ---------------------------------------------------------------- */
+.sec-card {
+    width: 528px;
+    min-width: 528px;
+    height: 344px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(25.82px);
+    -webkit-backdrop-filter: blur(25.82px);
+    padding: 32px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+    position: relative;
+    box-sizing: border-box;
+    cursor: default;
+}
+.sec-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1.2px;
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.099)  0%,
+        rgba(255,255,255,0.044) 25%,
+        rgba(255,255,255,0.000) 50%,
+        rgba(255,255,255,0.039) 75%,
+        rgba(255,255,255,0.088) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+.sec-num-circle {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: rgba(8,8,8,0.55);
+    border: 1px solid rgba(255,255,255,0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.sec-num-circle span {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 120%;
+    text-align: center;
+    display: block;
+}
+.sec-card-title {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 120%;
+    margin: 0 0 12px;
+}
+.sec-card-desc {
+    color: rgba(255,255,255,0.78);
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 110%;
+    margin: 0;
+    max-width: 420px;
+}
+
+
+/* ----------------------------------------------------------------
+   UX / UI Design Carousel
+   ---------------------------------------------------------------- */
+.ux-card {
+    width: 501px;
+    min-width: 501px;
+    height: 601px;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: box-shadow 0.5s ease;
+}
+.ux-card .ux-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.5s ease;
+}
+.ux-card.ux-inactive .ux-bg-img { opacity: 0; }
+.ux-card.ux-active   .ux-bg-img { opacity: 1; }
+.ux-card .ux-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.58);
+    transition: opacity 0.5s ease;
+}
+.ux-card.ux-inactive .ux-overlay { opacity: 0; }
+.ux-card.ux-active   .ux-overlay { opacity: 1; }
+.ux-card.ux-inactive { background: #FFFFFF; }
+.ux-card.ux-active   { background: #111111; }
+.ux-card .ux-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 36px 32px;
+    box-sizing: border-box;
+}
+.ux-title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 125%;
+    text-transform: uppercase;
+    margin: 0 0 14px 0;
+    max-width: 376px;
+    transition: color 0.5s ease;
+}
+.ux-card.ux-active   .ux-title { color: #FFFFFF; }
+.ux-card.ux-inactive .ux-title { color: #242424; }
+.ux-desc {
+    font-weight: 300;
+    font-size: 20.17px;
+    line-height: 20px;
+    margin: 0;
+    max-width: 430px;
+    transition: color 0.5s ease;
+}
+.ux-card.ux-active   .ux-desc { color: #FFFFFF; }
+.ux-card.ux-inactive .ux-desc { color: #7B7B7B; }
+.ux-num {
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 110%;
+    margin: 0 0 10px 0;
+    width: 94px;
+    height: 77px;
+    display: flex;
+    align-items: center;
+    transition: color 0.5s ease;
+}
+.ux-card.ux-active   .ux-num { color: #FFFFFF; }
+.ux-card.ux-inactive .ux-num { color: #0C1931; }
+.ux-underline {
+    width: 67px;
+    height: 3px;
+    border-radius: 2px;
+    transition: background 0.5s ease, opacity 0.5s ease;
+}
+.ux-card.ux-active   .ux-underline { background: #FFFFFF; opacity: 1; }
+.ux-card.ux-inactive .ux-underline { background: #0C1931; opacity: 1; }
+
+
+/* ================================================================
+   DESKTOP LAYOUT DEFINITIONS
+   ================================================================ */
+
+/* Collaboration & Productivity Tools */
+.ent-collab-section {
+    position: relative;
+    height: clamp(340px, 31.3vw, 620px);
+    margin-top: clamp(60px, 10.42vw, 200px);
+    padding-top: 0;
+}
+.ent-collab-text {
+    position: absolute;
+    top: 0;
+    left: clamp(20px, 7.29vw, 140px);
+    width: 722px;
+}
+.ent-collab-cards {
+    position: absolute;
+    top: clamp(120px, 15.625vw, 300px);
+    right: 0px;
+}
+
+/* Business Intelligence & Analytics
+   These sections span the full viewport width (no outer max-width
+   container), so we scale a fixed 1920px-wide design canvas down using
+   plain vw math — avoids any container-query browser-support risk. */
+.ent-bi-section {
+    position: relative;
+    height: calc(980 / 1920 * 100vw);
+    max-height: 980px;
+    padding: 0;
+    overflow: hidden;
+}
+.ent-bi-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    /* Canvas must be tall enough for the lowest content: the Reporting
+       card's description bottoms out at top 875 + 36 + 14 + 38 = 963px,
+       and the Data Collection image at top 640 + 300 = 940px — both
+       past the previous 900px canvas height, so they were clipped by
+       overflow:hidden regardless of scaling. */
+    height: 980px;
+    transform: scale(min(1, calc(100vw / 1920px)));
+    transform-origin: top left;
+}
+
+/* Key Benefits canvases sit one level inside the section's own 140px side
+   padding, so their design-canvas reference width is ~1641px (viewport
+   minus 280px), not the full 1920px page width. */
+/* .ent-cq-section (on the ancestor <section>) is the size-query container.
+   cqw units below measure ITS content box (padding auto-excluded). Querying
+   cqw on the canvas itself (rather than an ancestor) doesn't work — an
+   element can't be a size container for its own properties, so it falls
+   back to querying further up (the viewport), which reintroduces the
+   scrollbar-width mismatch this is meant to avoid. */
+.ent-cq-section { container-type: inline-size; }
+
+.ent-arrow-canvas, .ent-biglines-canvas, .ent-linepoints-canvas, .ent-crossline-canvas, .ent-dotedline-canvas {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+/* Scaled via container query units (cqw), not 100vw: vw includes the
+   scrollbar width while the container's actual content box doesn't, so at
+   some widths the vw-scaled content was a few px wider than its own
+   container and got clipped by overflow:hidden (e.g. "Reduce Costs" label
+   in the dotted-line canvas). cqw measures the real container box. */
+.ent-arrow-canvas      { height: calc(520 / 1641 * 100cqw); max-height: 520px; }
+.ent-biglines-canvas   { height: calc(560 / 1641 * 100cqw); max-height: 560px; }
+.ent-linepoints-canvas { height: calc(480 / 1641 * 100cqw); max-height: 480px; }
+.ent-crossline-canvas  { height: calc(580 / 1641 * 100cqw); max-height: 580px; }
+.ent-dotedline-canvas  { height: calc(161 / 1641 * 100cqw); max-height: 161px; }
+
+.ent-arrow-inner, .ent-biglines-inner, .ent-linepoints-inner, .ent-crossline-inner, .ent-dotedline-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1641px;
+    transform-origin: top left;
+    transform: scale(min(1, calc(100cqw / 1641px)));
+}
+.ent-arrow-inner      { height: 520px; }
+.ent-biglines-inner   { height: 560px; }
+.ent-linepoints-inner { height: 480px; }
+.ent-crossline-inner  { height: 580px; }
+.ent-dotedline-inner  { height: 161px; }
+
+/* Custom Application Development cards (1641x932 design canvas). Only
+   scaled at desktop widths — below 1025px the section's own flex-col
+   mobile layout (native document flow, no absolute/transform) already
+   handles responsiveness, so the canvas/inner rules are gated out there
+   to avoid fighting that layout. */
+@media (min-width: 1025px) {
+    .ent-customdev-canvas {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: calc(932 / 1641 * 100cqw);
+        max-height: 932px;
+    }
+    .ent-customdev-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1641px;
+        height: 932px;
+        transform-origin: top left;
+        transform: scale(min(1, calc(100cqw / 1641px)));
+    }
+}
+
+/* Legacy Application Modernization content row (1642x670 design canvas),
+   same technique. */
+@media (min-width: 1025px) {
+    .ent-legacy-canvas {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: calc(670 / 1642 * 100cqw);
+        max-height: 670px;
+    }
+    .ent-legacy-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1642px;
+        height: 670px;
+        transform-origin: top left;
+        transform: scale(min(1, calc(100cqw / 1642px)));
+    }
+}
+
+.ent-curve-canvas      { position: relative; width: 92.16%; margin-left: 6.905%; overflow: visible; aspect-ratio: 1415 / 627; height: auto; }
+
+
+/* ================================================================
+   BREAKPOINT ≤ 1280px
+   ================================================================ */
+@media (max-width: 1280px) {
+    .ent-collab-section { height: auto; min-height: 700px; }
+    .sec-card { width: 420px; min-width: 420px; }
+    .ux-card  { width: 420px; min-width: 420px; }
+}
+
+
+/* ================================================================
+   BREAKPOINT ≤ 1024px  (Tablet — main responsive reset)
+   ================================================================ */
+@media (max-width: 1024px) {
+
+    /* ══════════════════════════════════════════════════════════
+       KEY BENEFITS CANVASES
+       HOW: benefit blocks use class="absolute" (Tailwind) +
+            style="top:Npx; left:Npx;" (inline coords).
+            > [style] selects any direct child with a style attr.
+            :not(.ent-benefits-line) excludes the SVG line wrappers.
+       ══════════════════════════════════════════════════════════ */
+.ind-hero-bg {
+    display: none;
+}
+    /* Remove fixed canvas height so content flows naturally */
+    .ent-arrow-canvas,
+    .ent-biglines-canvas,
+    .ent-linepoints-canvas,
+    .ent-crossline-canvas,
+    .ent-curve-canvas,
+    .ent-dotedline-canvas {
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+
+    /* Undo the desktop scale-canvas transform so children can reflow */
+    .ent-arrow-inner, .ent-biglines-inner, .ent-linepoints-inner,
+    .ent-crossline-inner, .ent-dotedline-inner {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        transform: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Hide decorative SVG connector lines */
+    .ent-benefits-line { display: none !important; }
+
+    /* Convert absolutely-positioned benefit blocks to normal flow.
+       These elements have style="top:...;left:...;" as inline attr. */
+    .ent-curve-canvas      > [style]:not(.ent-benefits-line),
+    .ent-dotedline-inner   > [style]:not(.ent-benefits-line),
+    .ent-arrow-inner       > [style]:not(.ent-benefits-line),
+    .ent-biglines-inner    > [style]:not(.ent-benefits-line),
+    .ent-linepoints-inner  > [style]:not(.ent-benefits-line),
+    .ent-crossline-inner   > [style]:not(.ent-benefits-line) {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        text-align: left !important;
+        padding-bottom: 24px !important;
+        margin-bottom: 0 !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+    /* Last block — no bottom border */
+    .ent-curve-canvas      > [style]:not(.ent-benefits-line):last-child,
+    .ent-dotedline-inner   > [style]:not(.ent-benefits-line):last-child,
+    .ent-arrow-inner       > [style]:not(.ent-benefits-line):last-child,
+    .ent-biglines-inner    > [style]:not(.ent-benefits-line):last-child,
+    .ent-linepoints-inner  > [style]:not(.ent-benefits-line):last-child,
+    .ent-crossline-inner   > [style]:not(.ent-benefits-line):last-child {
+        border-bottom: none !important;
+        padding-bottom: 0 !important;
+    }
+    /* Fix fixed-width inner containers inside each benefit block */
+    .ent-curve-canvas      > [style]:not(.ent-benefits-line) > *,
+    .ent-dotedline-inner   > [style]:not(.ent-benefits-line) > *,
+    .ent-arrow-inner       > [style]:not(.ent-benefits-line) > *,
+    .ent-biglines-inner    > [style]:not(.ent-benefits-line) > *,
+    .ent-linepoints-inner  > [style]:not(.ent-benefits-line) > *,
+    .ent-crossline-inner   > [style]:not(.ent-benefits-line) > * {
+        width: auto !important;
+        max-width: 100% !important;
+        height: auto !important;
+        white-space: normal !important;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       BUSINESS INTELLIGENCE & ANALYTICS
+       HOW: children use pure Tailwind classes (absolute top-[N]
+            left-[N]) with NO inline style attr, so we use > *.
+       ══════════════════════════════════════════════════════════ */
+    .ent-bi-section {
+        position: static !important;
+        height: auto !important;
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+        overflow: visible !important;
+    }
+    /* Undo the desktop scale-canvas transform so children can reflow */
+    .ent-bi-inner {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        transform: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 28px !important;
+    }
+    /* Every absolutely positioned child → document flow */
+    .ent-bi-inner > * {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+    /* Inner fixed-width wrappers */
+    .ent-bi-inner > * > div {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+    }
+    /* Images fill width, capped height */
+    .ent-bi-section img {
+        width: 100% !important;
+        height: 220px !important;
+        max-height: 220px !important;
+        object-fit: cover !important;
+        border-radius: 14px !important;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       COLLABORATION & PRODUCTIVITY
+       ══════════════════════════════════════════════════════════ */
+    .ent-collab-section {
+        position: static !important;
+        height: auto !important;
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+    .ent-collab-text {
+        position: static !important;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    .ent-collab-text > div {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .ent-collab-cards {
+        position: static !important;
+        width: 100% !important;
+        margin-top: 48px !important;
+        padding: 0 !important;
+    }
+    .ent-collab-cards > div {
+        flex-direction: column !important;
+        gap: 32px !important;
+    }
+    .ent-collab-cards > div > div {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       ERP / CRM CARDS
+       ══════════════════════════════════════════════════════════ */
+    .ent-crm-cards {
+        flex-direction: column !important;
+    }
+    .ent-crm-cards > div {
+        width: 100% !important;
+        min-width: 0 !important;
+        flex-shrink: 1 !important;
+        height: 420px !important;
+        max-height: 420px !important;
+    }
+
+    /* ERP/CRM header row */
+    .ent-erp-header {
+        flex-direction: column !important;
+        gap: 20px !important;
+        margin-bottom: 40px !important;
+    }
+    .ent-erp-header > div {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       CUSTOM APP DEVELOPMENT
+       ══════════════════════════════════════════════════════════ */
+
+    /* Outer grid → single column */
+    .ent-custom-grid {
+        flex-direction: column !important;
+    }
+
+    /* Left column outer wrapper */
+    .ent-custom-grid > div:first-child {
+        width: 100% !important;
+        min-width: 0 !important;
+        flex-shrink: 1 !important;
+    }
+    /* Left column: top photo card */
+    .ent-custom-grid > div:first-child > div:first-child {
+        width: 100% !important;
+        min-width: 0 !important;
+        flex-shrink: 1 !important;
+        height: 300px !important;
+    }
+    /* Left column: sub-row (Deployment + Support) → stack */
+    .ent-custom-subrow {
+        flex-direction: column !important;
+    }
+    .ent-custom-subrow > div {
+        width: 100% !important;
+        min-width: 0 !important;
+        flex-shrink: 1 !important;
+        height: auto !important;
+        min-height: 260px !important;
+    }
+
+    /* Right section outer */
+    .ent-custom-subgrid {
+        width: 100% !important;
+        min-width: 0 !important;
+        flex-shrink: 1 !important;
+    }
+    /* Inner first flex row (Design card + Dev/Test cards) → stack */
+    .ent-custom-subgrid > div:first-child {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    /* Design card and white-cards wrapper */
+    .ent-custom-subgrid > div:first-child > div {
+        width: 100% !important;
+        min-width: 0 !important;
+        flex-shrink: 1 !important;
+        height: auto !important;
+    }
+    /* Design card min-height */
+    .ent-design-card-bg {
+        min-height: 280px !important;
+    }
+    /* Dev + Testing cards container: side-by-side on tablet */
+    .ent-custom-subgrid > div:first-child > div:last-child {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        min-height: unset !important;
+    }
+    /* Individual Dev / Testing cards */
+    .ent-custom-subgrid > div:first-child > div:last-child > div {
+        flex: 1 1 240px !important;
+        width: auto !important;
+        min-width: 0 !important;
+        height: auto !important;
+        min-height: 200px !important;
+    }
+    /* Key Benefits whitebox */
+    .ent-custom-whitebox {
+        width: 100% !important;
+        min-width: 0 !important;
+        flex-shrink: 1 !important;
+        height: auto !important;
+    }
+    .ent-custom-whitebox > div {
+        width: 100% !important;
+        height: auto !important;
+    }
+    /* Checklist rows */
+    .ent-custom-whitebox .flex.items-start > div:last-child {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       LEGACY MODERNIZATION IMAGES
+       ══════════════════════════════════════════════════════════ */
+    .ent-legacy-imgs {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        margin-top: 40px !important;
+    }
+    .ent-legacy-imgs > div {
+        margin-bottom: 0 !important;
+        width: 200px !important;
+        height: 300px !important;
+    }
+    .ent-legacy-imgs > div img {
+        width: 200px !important;
+        height: 300px !important;
+    }
+
+    /* ══════════════════════════════════════════════════════════
+       CAROUSELS
+       ══════════════════════════════════════════════════════════ */
+    .sec-card {
+        width: 360px;
+        min-width: 360px;
+        height: auto;
+        min-height: 280px;
+    }
+    .ux-card {
+        width: 360px;
+        min-width: 360px;
+        height: 480px;
+    }
+}
+
+
+/* ================================================================
+   BREAKPOINT ≤ 768px  (Large phone)
+   ================================================================ */
+@media (max-width: 768px) {
+
+    /* Purple banner */
+    .ent-purple-banner {
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 40px 24px !important;
+    }
+    .ent-purple-banner > div {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* BI section padding */
+    .ent-bi-section {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+    /* Collab section padding */
+    .ent-collab-section {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+    /* Security section */
+    .ent-security-text {
+        left: 24px !important;
+        top: 60px !important;
+        width: calc(100% - 48px) !important;
+    }
+    .ent-security-text > div {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* ERP/CRM cards */
+    .ent-crm-cards > div {
+        height: 340px !important;
+        max-height: 340px !important;
+    }
+
+    /* Legacy images */
+    .ent-legacy-imgs > div     { width: 170px !important; height: 260px !important; }
+    .ent-legacy-imgs > div img { width: 170px !important; height: 260px !important; }
+
+    /* Carousels */
+    .sec-card { width: 300px; min-width: 300px; }
+    .ux-card  { width: 300px; min-width: 300px; height: 420px; }
+}
+
+
+/* ================================================================
+   BREAKPOINT ≤ 640px  (Mobile)
+   ================================================================ */
+@media (max-width: 640px) {
+
+    /* Collab padding */
+    .ent-collab-section {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .ent-collab-text  { padding: 0 !important; }
+    .ent-collab-cards { padding: 0 !important; }
+
+    /* Purple banner */
+    .ent-purple-banner {
+        flex-direction: column !important;
+        gap: 24px !important;
+        padding: 40px 20px !important;
+    }
+    .ent-purple-banner > div {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* ERP header */
+    .ent-erp-header {
+        flex-direction: column !important;
+        gap: 24px !important;
+    }
+    .ent-erp-header > div { width: 100% !important; height: auto !important; }
+
+    /* ERP/CRM cards */
+    .ent-crm-cards > div {
+        height: 280px !important;
+        max-height: 280px !important;
+    }
+
+    /* Custom App sub-row: also stack */
+    .ent-custom-subrow { flex-direction: column !important; }
+    .ent-custom-subrow > div {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 240px !important;
+    }
+
+    /* Dev + Testing cards: also stack on mobile */
+    .ent-custom-subgrid > div:first-child > div:last-child {
+        flex-direction: column !important;
+    }
+    .ent-custom-subgrid > div:first-child > div:last-child > div {
+        flex: none !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 180px !important;
+    }
+
+    /* Design card height */
+    .ent-design-card-bg { min-height: 260px !important; }
+
+    /* Legacy images */
+    .ent-legacy-imgs > div     { width: 130px !important; height: 200px !important; }
+    .ent-legacy-imgs > div img { width: 130px !important; height: 200px !important; }
+
+    /* Security section */
+    .ent-security-text {
+        left: 20px !important;
+        top: 40px !important;
+        width: calc(100% - 40px) !important;
+    }
+    .ent-security-text > div { width: 100% !important; height: auto !important; margin-bottom: 16px !important; }
+    .ent-security-text h2 { font-size: 29px !important; line-height: 32px !important; }
+    .ent-security-text p  { font-size: 18px !important; line-height: 20px !important; }
+
+    /* BI section */
+    .ent-bi-section {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        gap: 20px !important;
+    }
+    .ent-bi-section img {
+        height: 180px !important;
+        max-height: 180px !important;
+    }
+
+    /* Carousels */
+    .sec-card {
+        width: 270px;
+        min-width: 270px;
+        padding: 24px 20px;
+        min-height: 260px;
+    }
+    .sec-card-title  { font-size: 20px !important; }
+    .sec-card-desc   { font-size: 17px !important; line-height: 20px !important; max-width: 100%; }
+    .sec-num-circle  { width: 42px !important; height: 42px !important; }
+    .sec-num-circle span { font-size: 17px !important; }
+
+    .ux-card  { width: 270px; min-width: 270px; height: 380px; }
+    .ux-title { font-size: 22px !important; line-height: 27px !important; }
+    .ux-desc  { font-size: 16px !important; }
+    .ux-num   { font-size: 38px !important; height: auto !important; }
+
+    /* Whitebox checklist */
+    .ent-custom-whitebox { padding: 28px 20px !important; }
+    .ent-custom-whitebox > div:first-child { width: 100% !important; height: auto !important; }
+    .ent-custom-whitebox .flex.items-start > div:last-child { width: 100% !important; height: auto !important; }
+}
+
+/* ============================================================
+   FLUID DESKTOP SCALE  — 1025px … 1919px
+   Same fixed-1920px-frame issue as the other page stylesheets:
+   nothing here scales between the 1024px breakpoint and the
+   1920px spec width, so on any laptop viewport narrower than
+   1920px (e.g. 1536px) everything renders too large versus
+   Figma. Note: several sections in this file (collab, business
+   intelligence, key-benefit canvases, curve canvas) already use
+   vw/cqw-based clamp() or scale() math further up the file and
+   are left untouched here. This block only covers the remaining
+   fixed-px rules (security cards carousel, UX/UI design carousel)
+   that had no existing fluid handling. Placed at the end of the
+   file, after every base/unconditional rule, so it wins on
+   source order at equal specificity.
+   ============================================================ */
+@media (min-width: 1025px) and (max-width: 1919px) {
+    .ent-check-circle {
+        width: clamp(19px, 1.82292vw, 35px);
+        height: clamp(19px, 1.82292vw, 35px);
+        margin-top: clamp(1px, 0.10417vw, 2px);
+    }
+
+    .sec-card {
+        /* trimmed ~20px off the fluid width vs the raw 1920-spec ratio so
+           3 full cards + a visible peek of a 4th reliably fit on common
+           laptop viewports (~1440-1536px) instead of exactly filling the
+           row with no peek */
+        width: clamp(282px, calc(27.5vw - 40px), 528px);
+        min-width: clamp(282px, calc(27.5vw - 40px), 528px);
+        height: auto;
+        padding: clamp(17px, 1.66667vw, 32px) clamp(19px, 1.875vw, 36px);
+    }
+    .sec-num-circle {
+        width: clamp(36px, 3.54167vw, 68px);
+        height: clamp(36px, 3.54167vw, 68px);
+    }
+    .sec-num-circle span {
+        font-size: clamp(18px, 1.77083vw, 34px);
+    }
+    .sec-card-title {
+        font-size: clamp(18px, 1.77083vw, 34px);
+        margin: 0 0 clamp(6px, 0.625vw, 12px);
+    }
+    .sec-card-desc {
+        font-size: clamp(12px, 1.14583vw, 22px);
+        max-width: clamp(224px, 21.875vw, 420px);
+    }
+
+    .ux-card {
+        width: clamp(360px, 26.09375vw, 501px);
+        min-width: clamp(360px, 26.09375vw, 501px);
+        height: clamp(480px, 31.30208vw, 601px);
+    }
+    .ux-card .ux-content {
+        padding: clamp(19px, 1.875vw, 36px) clamp(17px, 1.66667vw, 32px);
+    }
+    .ux-title {
+        font-size: clamp(21px, 2.08333vw, 40px);
+        margin: 0 0 clamp(7px, 0.72917vw, 14px) 0;
+        max-width: clamp(201px, 19.5833vw, 376px);
+    }
+    .ux-desc {
+        font-size: clamp(11px, 1.05052vw, 20.17px);
+        max-width: clamp(229px, 22.39583vw, 430px);
+    }
+    .ux-num {
+        font-size: clamp(37px, 3.64583vw, 70px);
+        margin: 0 0 clamp(5px, 0.52083vw, 10px) 0;
+        width: clamp(50px, 4.89583vw, 94px);
+        height: auto;
+    }
+    .ux-underline {
+        width: clamp(36px, 3.48958vw, 67px);
+    }
+}

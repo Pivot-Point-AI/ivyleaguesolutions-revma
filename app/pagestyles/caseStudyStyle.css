@@ -1,0 +1,1076 @@
+/* ============================================================
+   HERO + PURPLE BANNER
+   ============================================================ */
+.cs-hero-section {
+    position: relative;   /* add this */
+    overflow: hidden;     /* add this */
+    padding: 280px 140px 180px;
+}
+.ind-hero-bg {
+    position: absolute;
+    top: 100px;
+    right: -15px;
+    width: 1305px;
+    height: 735px;
+    max-width: none;
+    opacity: 1;
+    transform: rotate(0deg);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+}
+.cs-hero-max-w {
+    position: relative;   /* add this */
+    z-index: 1;           /* add this */
+    max-width: 1346px;
+    display: flex;
+    align-items: center;
+}
+.cs-text-display {
+    max-width: 1145px;
+    font-size: 63px;
+    line-height: 58px;
+    letter-spacing: 0;
+}
+.cs-banner-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 140px;
+}
+.cs-banner-heading-w {
+    max-width: 256px;
+    min-width: 256px;
+}
+.cs-banner-heading {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 400;
+}
+.cs-banner-body-w {
+    max-width: 884px;
+}
+.cs-banner-body {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+    .cs-hero-section { padding: 160px 40px 80px; }
+    .cs-hero-max-w { max-width: 100%; height: auto; }
+    .cs-text-display { max-width: 100%; font-size: 45px; line-height: 45px; }
+    .ind-hero-bg { width: 700px; height: 394px; opacity: .5; }
+    .cs-banner-section { flex-direction: column; align-items: flex-start; gap: 24px; padding: 35px 40px; }
+    .cs-banner-heading-w, .cs-banner-body-w { max-width: 100%; min-width: unset; }
+    .cs-banner-heading { font-size: 30px; line-height: 32px; }
+    .cs-banner-body    { font-size: 17px; line-height: 22px; }
+}
+@media (max-width: 640px) {
+    .cs-hero-section { padding: 140px 20px 48px; }
+    .cs-text-display { font-size: 29px; line-height: 32px; }
+    .ind-hero-bg { display: none; }
+    .cs-banner-section { padding: 28px 20px; }
+    .cs-banner-heading { font-size: 22px; line-height: 27px; }
+    .cs-banner-body    { font-size: 16px; line-height: 19px; }
+}
+
+/* ============================================================
+   SHARED STAT STYLES
+   ============================================================ */
+.stat-item { display: flex; align-items: flex-start; gap: 16px; }
+.stat-check {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: #ede9fe; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 3px;
+}
+.stat-check svg { width: 18px; height: 18px; color: #4026B8; }
+.stat-num  { font-size: 27px; font-weight: 500; color: #1a1a2e; line-height: 1.2; }
+.stat-lbl  { font-size: 21px; font-weight: 300; color: #9ca3af; line-height: 1; margin-top: 4px; }
+
+@media (max-width: 1024px) {
+    .stat-check { width: 32px; height: 32px; }
+    .stat-check svg { width: 15px; height: 15px; }
+    .stat-num  { font-size: 20px; }
+    .stat-lbl  { font-size: 18px; }
+}
+@media (max-width: 640px) {
+    .stat-item { gap: 10px; }
+    .stat-check { width: 26px; height: 26px; margin-top: 2px; }
+    .stat-check svg { width: 12px; height: 12px; }
+    .stat-num  { font-size: 18px; }
+    .stat-lbl  { font-size: 14px; margin-top: 2px; }
+}
+
+.cs-card { background: white; border-radius: 14px; padding: 20px 22px; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+.cs-card h4 { font-size: .95rem; font-weight: 600; color: #111; margin-bottom: 8px; }
+.cs-card p  { font-size: clamp(.9rem,1.5vw,1.1rem); color: #6b7280; line-height: 1.65; font-weight: 300; }
+
+/* ============================================================
+   ERP CHALLENGE/SOLUTION BANNER
+   ============================================================ */
+.erp-cs-banner {
+    position: relative;
+    width: 100%;
+    min-height: 257px;
+    background-color: #4026B8;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.erp-cs-banner-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    pointer-events: none;
+}
+.erp-cs-banner-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1921px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 52px 120px;
+}
+.erp-cs-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.erp-cs-col-left  { max-width: 683px; }
+.erp-cs-col-right { max-width: 661px; }
+.erp-cs-heading {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    margin: 0;
+}
+.erp-cs-body {
+    color: #FFFFFF;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 110%;
+    letter-spacing: 0%;
+    margin: 0;
+}
+
+@media (max-width: 1280px) {
+    .erp-cs-banner-inner { padding: 48px 60px; gap: 40px; }
+}
+@media (max-width: 1024px) {
+    .erp-cs-banner-inner { flex-direction: column; padding: 48px 40px; gap: 36px; }
+    .erp-cs-col-left, .erp-cs-col-right { max-width: 100%; }
+    .erp-cs-heading { font-size: 26px; }
+    .erp-cs-body { font-size: 18px; }
+}
+@media (max-width: 640px) {
+    .erp-cs-banner-inner { padding: 36px 20px; gap: 28px; }
+    .erp-cs-heading { font-size: 22px; }
+    .erp-cs-body { font-size: 16px; }
+}
+/* Gap fill: bespoke rule above only covers up to 1280px; scale
+   proportionally for 1281-1919px (e.g. 1366/1536px laptops) so it
+   doesn't fall back to the raw 1920-spec values. */
+@media (min-width: 1281px) and (max-width: 1919px) {
+    .erp-cs-banner-inner {
+        padding: clamp(48px, 2.70833vw, 52px) clamp(60px, 6.25vw, 120px);
+        gap: clamp(40px, 3.125vw, 60px);
+    }
+}
+
+/* ============================================================
+   MOBILE BANKING — Hover Image Cards
+   ============================================================ */
+.mb-img-wrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    flex-shrink: 0;
+}
+.mb-img-wrap > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.35s ease;
+    position: relative;
+    z-index: 1;
+}
+.mb-hover-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 36px 32px;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+.mb-hover-overlay h3 {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 14px 0;
+}
+.mb-hover-overlay p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.65;
+    margin: 0;
+}
+.mb-img-wrap:hover > img { opacity: 0; }
+.mb-img-wrap:hover .mb-hover-overlay { opacity: 1; }
+
+.mb-desktop-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 66px;
+    padding: 90px 140px;
+}
+.mb-fintech-badge {
+    display: inline-block;
+    color: #4026B8;
+    background: #ede9fe;
+    border-radius: 9999px;
+    padding: 10px 24px;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+.mb-heading {
+    max-width: 792px;
+    color: #242424;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    margin: 0 0 52px 0;
+}
+.mb-images-wrap {
+    display: flex;
+    gap: 24px;
+    align-items: flex-end;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1280px) {
+    .mb-desktop-wrap { gap: 40px; padding: 70px 60px; }
+    .mb-heading { font-size: 43px; line-height: 48px; }
+}
+@media (max-width: 1024px) {
+    .mb-desktop-wrap { flex-direction: column; padding: 60px 40px; }
+    .mb-heading { font-size: 36px; line-height: 40px; }
+    .mb-images-wrap { width: 100%; justify-content: center; }
+}
+@media (max-width: 640px) {
+    .mb-desktop-wrap { padding: 48px 20px; }
+    .mb-heading { font-size: 27px; line-height: 32px; }
+    .mb-images-wrap { flex-direction: column; align-items: center; }
+}
+/* Gap fill: bespoke rule above only covers up to 1280px; scale
+   proportionally for 1281-1919px. */
+@media (min-width: 1281px) and (max-width: 1919px) {
+    .mb-desktop-wrap {
+        gap: clamp(40px, 3.4375vw, 66px);
+        padding: clamp(70px, 4.6875vw, 90px) clamp(60px, 7.29167vw, 140px);
+    }
+    .mb-heading {
+        font-size: clamp(43px, 2.91667vw, 56px);
+        line-height: clamp(48px, 3.02083vw, 58px);
+    }
+}
+
+/* ============================================================
+   ERP SECTION
+   ============================================================ */
+.erp-desktop-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 90px 140px;
+}
+.erp-left {
+    position: relative;
+    flex-shrink: 0;
+    width: 679px;
+    height: 679px;
+    overflow: visible;
+}
+.erp-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 679px;
+    height: 679px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #4026B8 0%, rgba(64,38,184,0) 100%);
+    opacity: 0.20;
+    z-index: 0;
+    pointer-events: none;
+}
+.erp-machine-img-wrap {
+    position: absolute;
+    z-index: 1;
+    width: 608px;
+    height: 546px;
+    top: 67px;
+    left: 217px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.erp-machine-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.4s ease;
+    display: block;
+}
+.erp-machine-img-wrap:hover img { transform: scale(1.04); }
+.erp-right { max-width: 687px; min-width: 0; }
+.erp-enterprise-badge {
+    display: inline-block;
+    color: #4026B8;
+    background: #ede9fe;
+    border-radius: 9999px;
+    padding: 10px 24px;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.erp-heading {
+    width: 687px;
+    max-width: 100%;
+    color: #242424;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 0;
+    margin: 0 0 52px 0;
+}
+
+/* erp-left (679px) + gap (60px) + erp-right (687px) + section padding
+   (280px) = 1706px needed at full size — this must shrink before the
+   viewport drops below that, or erp-right gets squeezed/clipped by the
+   section's overflow:hidden (visible on common ~1440-1600px laptop
+   screens at 100% zoom). */
+@media (max-width: 1720px) {
+    .erp-left { width: 520px; height: 520px; }
+    .erp-circle { width: 520px; height: 520px; }
+    /* left was 166px (tuned for the 679px container), which put the image's
+       right edge at 166+465=631px — 111px past this 520px container, deep
+       enough into .erp-right to cover the heading text since the image is
+       position:absolute with z-index:1 and paints above the static heading.
+       Pulled left in so the image stays within the container + gap only. */
+    .erp-machine-img-wrap { width: 465px; height: 418px; top: 51px; left: 90px; }
+}
+@media (max-width: 1280px) {
+    .erp-desktop-wrap { gap: 40px; padding: 70px 60px; }
+    .erp-heading { font-size: 43px; line-height: 48px; width: auto; }
+}
+@media (max-width: 1024px) {
+    .erp-desktop-wrap { flex-direction: column; padding: 60px 40px; }
+    .erp-left { width: 100%; height: 420px; }
+    .erp-circle { width: 300px; height: 300px; left: 30px; }
+    .erp-machine-img-wrap { width: 380px; height: 340px; top: 0; right: 50%; transform: translateX(50%); }
+    .erp-heading { font-size: 36px; line-height: 40px; }
+}
+@media (max-width: 640px) {
+    .erp-desktop-wrap { padding: 48px 20px; }
+    .erp-heading { font-size: 27px; line-height: 32px; }
+    .erp-left { height: 340px; }
+    .erp-circle { width: 220px; height: 220px; }
+    .erp-machine-img-wrap { width: 280px; height: 260px; }
+}
+/* Gap fill: .erp-desktop-wrap/.erp-heading bespoke rule only covers up
+   to 1280px; scale proportionally for 1281-1919px. */
+@media (min-width: 1281px) and (max-width: 1919px) {
+    .erp-desktop-wrap {
+        gap: clamp(40px, 3.125vw, 60px);
+        padding: clamp(70px, 4.6875vw, 90px) clamp(60px, 7.29167vw, 140px);
+    }
+    .erp-heading {
+        font-size: clamp(43px, 2.91667vw, 56px);
+        line-height: clamp(48px, 3.02083vw, 58px);
+    }
+}
+/* Gap fill: the .erp-left/.erp-circle/.erp-machine-img-wrap bespoke
+   rule only covers up to 1720px; scale proportionally for
+   1721-1919px so the composited photo doesn't jump to full 1920-spec
+   size right before the top of the fluid range. */
+@media (min-width: 1721px) and (max-width: 1919px) {
+    .erp-left { width: clamp(520px, 35.36458vw, 679px); height: clamp(520px, 35.36458vw, 679px); }
+    .erp-circle { width: clamp(520px, 35.36458vw, 679px); height: clamp(520px, 35.36458vw, 679px); }
+    .erp-machine-img-wrap {
+        width: clamp(465px, 31.66667vw, 608px);
+        height: clamp(418px, 28.4375vw, 546px);
+        top: clamp(51px, 3.48958vw, 67px);
+        left: clamp(90px, 11.30208vw, 217px);
+    }
+}
+
+/* ============================================================
+   MULTI-CURRENCY PAYMENT SECTION
+   ============================================================ */
+.mc-desktop-wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 90px 140px;
+}
+.mc-left-col {
+    flex: 1;
+    min-width: 0;
+}
+.mc-heading {
+    max-width: 820px;
+    color: #242424;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    margin: 0 0 52px 0;
+}
+
+/* Large group image with challenge/solution hover */
+.mc-group-wrap {
+    position: relative;
+    width: 832px;
+    max-width: 100%;
+    height: 461px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.mc-group-wrap > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.35s ease;
+}
+.mc-group-wrap:hover > img {
+    filter: brightness(0.28);
+}
+.mc-group-cs-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 32px 36px;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+.mc-group-wrap:hover .mc-group-cs-overlay {
+    opacity: 1;
+}
+.mc-group-cs-overlay h3 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+    line-height: 1.2;
+}
+.mc-group-cs-overlay p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.65;
+    margin: 0 0 18px 0;
+}
+.mc-group-cs-overlay p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================================
+   RIGHT FREE-POSITION CONTAINER
+   ============================================================ */
+.mc-right-free {
+    position: relative;
+    flex-shrink: 0;
+    width: 775px;
+    height: 860px;
+}
+
+/* Photo hover cards */
+.mc-photo-card {
+    position: absolute;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.mc-photo-card > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.35s ease;
+}
+.mc-photo-card:hover > img {
+    filter: brightness(0.38);
+}
+.mc-photo-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px 24px;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+.mc-photo-card:hover .mc-photo-overlay {
+    opacity: 1;
+}
+.mc-photo-overlay .ov-num {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 4px 0;
+}
+.mc-photo-overlay .ov-lbl {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Stat boxes */
+.mc-stat-box {
+    position: absolute;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+.mc-stat-box:hover {
+    transform: scale(1.04);
+}
+.mc-snum {
+    color: #ffffff;
+    font-family: 'Manrope', 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    letter-spacing: -4px;
+    text-align: center;
+    line-height: 65px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mc-slbl {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.5;
+    text-align: center;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mc-purple-box { background: #4026B8; }
+.mc-black-box  { background: #000000; }
+
+/* ── POSITIONS ── */
+
+/* manSitting photo — top-left */
+.mc-photo-card.mc-mansitting {
+    left:   0px;
+    top:    75px;
+    width:  370px;
+    height: 419px;
+}
+
+/* Purple stat box — top-right */
+.mc-stat-box.mc-purple-box {
+    left:   405px;
+    top:    75px;
+    width:  370px;
+    height: 302px;
+}
+
+/* Black stat box — bottom-left */
+.mc-stat-box.mc-black-box {
+    left:   0px;
+    top:    535px;
+    width:  370px;
+    height: 302px;
+}
+
+/* manTyping photo — bottom-right */
+.mc-photo-card.mc-mantyping {
+    left:   405px;
+    top:    420px;
+    width:  370px;
+    height: 419px;
+}
+
+@media (max-width: 1440px) {
+    .mc-desktop-wrap { padding: 70px 80px; gap: 20px; }
+    .mc-heading { font-size: 45px; line-height: 49px; }
+    .mc-group-wrap { height: 400px; }
+}
+@media (max-width: 1280px) {
+    .mc-desktop-wrap { padding: 70px 60px; gap: 16px; }
+    .mc-heading { font-size: 40px; line-height: 45px; }
+    .mc-group-wrap { height: 360px; }
+    .mc-right-free { width: 620px; height: 760px; }
+    .mc-photo-card.mc-mansitting  { width: 300px; height: 340px; }
+    .mc-stat-box.mc-purple-box    { left: 316px; width: 300px; height: 250px; }
+    .mc-stat-box.mc-black-box     { top: 360px; width: 300px; height: 250px; }
+    .mc-photo-card.mc-mantyping   { left: 316px; top: 264px; width: 300px; height: 340px; }
+}
+@media (max-width: 1024px) {
+    .mc-desktop-wrap { flex-direction: column; padding: 60px 40px; }
+    .mc-heading { font-size: 36px; line-height: 40px; }
+    .mc-group-wrap { height: 320px; }
+    .mc-right-free {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        width: 100%;
+        height: auto;
+    }
+    .mc-photo-card,
+    .mc-stat-box {
+        position: relative !important;
+        left: auto !important; top: auto !important;
+        width: 100% !important; height: 280px !important;
+    }
+    .mc-stat-box { height: 180px !important; }
+}
+@media (max-width: 640px) {
+    .mc-desktop-wrap { padding: 48px 20px; }
+    .mc-heading { font-size: 27px; line-height: 32px; }
+    .mc-right-free { gap: 10px; }
+    .mc-photo-card { height: 220px !important; }
+    .mc-stat-box   { height: 150px !important; }
+    .mc-group-wrap { height: 240px; }
+    .mc-snum { font-size: 32px; height: auto; line-height: 1.2; letter-spacing: -2px; }
+    .mc-slbl { height: auto; }
+}
+/* Gap fill: bespoke rule above only covers up to 1440px; scale
+   proportionally for 1441-1919px (e.g. the common 1536px laptop). */
+@media (min-width: 1441px) and (max-width: 1919px) {
+    .mc-desktop-wrap {
+        padding: clamp(70px, 4.6875vw, 90px) clamp(80px, 7.29167vw, 140px);
+        gap: clamp(20px, 1.82292vw, 35px);
+    }
+    .mc-heading {
+        font-size: clamp(45px, 2.91667vw, 56px);
+        line-height: clamp(49px, 3.02083vw, 58px);
+    }
+    .mc-group-wrap { height: clamp(400px, 24.01042vw, 461px); }
+}
+
+/* ============================================================
+   HEALTHCARE SECTION
+   ============================================================ */
+.hc-desktop-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 90px 140px;
+}
+.hc-healthcare-badge {
+    display: inline-block;
+    color: #4026B8;
+    background: #ede9fe;
+    border-radius: 9999px;
+    padding: 10px 24px;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.hc-heading {
+    max-width: 700px;
+    color: #242424;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    margin: 0 0 52px 0;
+}
+.hc-img-wrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    flex-shrink: 0;
+    width: 605px;
+    height: 612px;
+}
+.hc-img-wrap > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.35s ease;
+}
+.hc-img-wrap:hover > img {
+    filter: brightness(0.28);
+}
+.hc-hover-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px 36px;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+.hc-img-wrap:hover .hc-hover-overlay {
+    opacity: 1;
+}
+.hc-hover-overlay h3 {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+}
+.hc-hover-overlay p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.65;
+    margin: 0 0 28px 0;
+}
+.hc-hover-overlay p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 1280px) {
+    .hc-desktop-wrap { gap: 40px; padding: 70px 60px; }
+    .hc-heading { font-size: 43px; line-height: 48px; }
+    .hc-img-wrap { width: 520px; height: 620px; }
+}
+@media (max-width: 1024px) {
+    .hc-desktop-wrap { flex-direction: column; padding: 60px 40px; }
+    .hc-heading { font-size: 36px; line-height: 40px; }
+    .hc-img-wrap { width: 100%; height: 420px; }
+}
+@media (max-width: 640px) {
+    .hc-desktop-wrap { padding: 48px 20px; }
+    .hc-heading { font-size: 27px; line-height: 32px; }
+    .hc-img-wrap { height: 320px; }
+    .hc-hover-overlay h3 { font-size: 20px; }
+    .hc-hover-overlay p  { font-size: 14px; }
+}
+/* Gap fill: bespoke rule above only covers up to 1280px; scale
+   proportionally for 1281-1919px. */
+@media (min-width: 1281px) and (max-width: 1919px) {
+    .hc-desktop-wrap {
+        gap: clamp(40px, 3.125vw, 60px);
+        padding: clamp(70px, 4.6875vw, 90px) clamp(60px, 7.29167vw, 140px);
+    }
+    .hc-heading {
+        font-size: clamp(43px, 2.91667vw, 56px);
+        line-height: clamp(48px, 3.02083vw, 58px);
+    }
+    .hc-img-wrap {
+        width: clamp(520px, 31.51042vw, 605px);
+        height: clamp(526px, 31.875vw, 612px);
+    }
+}
+
+/* ============================================================
+   INLINE-STYLE REPLACEMENTS
+   ============================================================ */
+
+/* Mobile section headings (shared across all case sections) */
+.cs-mobile-section-h2 {
+    color: #242424;
+    font-weight: 400;
+    font-size: clamp(1.9rem, 6vw, 48px);
+    line-height: 1.1;
+    text-transform: capitalize;
+    margin: 0 0 32px 0;
+}
+
+/* Same but without text-transform (ERP heading) */
+.cs-mobile-section-h2-nc {
+    color: #242424;
+    font-weight: 400;
+    font-size: clamp(1.9rem, 6vw, 48px);
+    line-height: 1.1;
+    margin: 0 0 32px 0;
+}
+
+/* Small badge variant used inside mobile/tablet sections */
+.cs-badge-sm {
+    font-size: 14px !important;
+    padding: 7px 18px !important;
+    margin-bottom: 20px !important;
+}
+
+/* mb-img-wrap fixed sizes (desktop Mobile Banking cards) */
+.cs-mb-img-short {
+    width: 380px;
+    height: 425px;
+}
+.cs-mb-img-tall {
+    width: 380px;
+    height: 613px;
+}
+
+/* Hover overlay background colours */
+.cs-overlay-purple { background: #4026B8; }
+.cs-overlay-dark   { background: #111111; }
+
+/* mc-stat-box override for the mobile markup (inside lg:hidden block) */
+.cs-mc-stat-mobile {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    height: 150px !important;
+}
+
+/* ============================================================
+   MOBILE SCROLL-REVEAL IMAGE OVERLAYS
+   Scoped to < 1024px only — desktop uses CSS hover exclusively.
+   JS (caseStudy.js) adds .cs-tapped when card enters viewport.
+   ============================================================ */
+@media (max-width: 1023px) {
+
+    .cs-mobile-img-card {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        background: #000;
+    }
+    .cs-mobile-img-card > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: filter 0.55s ease;
+    }
+
+    /* Overlays hidden by default */
+    .cs-mobile-img-overlay,
+    .cs-mobile-stat-overlay {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transform: translateY(12px);
+        transition: opacity 0.55s ease, transform 0.55s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .cs-mobile-img-overlay {
+        padding: 22px 18px;
+    }
+    .cs-mobile-img-overlay h3 {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.2;
+        margin: 0 0 5px 0;
+    }
+    .cs-mobile-img-overlay h3 + h3 {
+        margin-top: 10px;
+    }
+    .cs-mobile-img-overlay p {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.55;
+        margin: 0;
+    }
+    .cs-mobile-img-overlay-purple { background: rgba(64, 38, 184, 0.92); }
+    .cs-mobile-img-overlay-dark   { background: rgba(0, 0, 0, 0.80); }
+
+    /* Stat number overlays (12 / Countries supported, 3x / Volume growth) */
+    .cs-mobile-stat-overlay {
+        padding: 14px;
+        background: rgba(0, 0, 0, 0.72);
+    }
+    .cs-mobile-stat-overlay .ov-num {
+        color: #ffffff;
+        font-size: 33px;
+        font-weight: 700;
+        line-height: 1;
+        margin: 0 0 3px 0;
+    }
+    .cs-mobile-stat-overlay .ov-lbl {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 13px;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    /* Scroll-revealed state — JS adds .cs-tapped when card enters viewport */
+    .cs-mobile-img-card.cs-tapped > img {
+        filter: brightness(0.28);
+    }
+    .cs-mobile-img-card.cs-tapped .cs-mobile-img-overlay,
+    .cs-mobile-img-card.cs-tapped .cs-mobile-stat-overlay {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* ============================================================
+   CTA BUTTON
+   ============================================================ */
+.cs-cta-btn {
+    width: 306px;
+    height: 61px;
+    border-radius: 20px;
+}
+.cs-cta-btn-label {
+    width: 256px;
+    height: 33px;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 19px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5.56px;
+    padding-bottom: 5.56px;
+}
+
+@media (max-width: 1024px) {
+    .cs-cta-btn { width: 260px; height: 52px; border-radius: 16px; }
+    .cs-cta-btn-label { width: auto; height: auto; font-size: 18px; padding: 4px 12px; }
+}
+@media (max-width: 640px) {
+    .cs-cta-btn { width: 100%; max-width: 280px; height: 46px; border-radius: 14px; }
+    .cs-cta-btn-label { width: auto; height: auto; font-size: 15px; padding: 3px 10px; }
+}
+
+/* ============================================================
+   FLUID DESKTOP SCALE  — 1025px … 1919px
+   Same fixed-1920px-frame issue as the other page stylesheets:
+   nothing scales between the tablet breakpoint and the 1920px
+   spec width, so on any laptop viewport narrower than 1920px
+   (e.g. 1536px) affected sections render too large versus Figma.
+   Placed at the end of the file, after every base rule, so it
+   wins on source order at equal specificity.
+   NOTE: many sections in this file (mobile banking, ERP, multi
+   currency, healthcare card layouts) already have their own
+   intermediate breakpoints at 1280px, 1440px or 1720px, which
+   sit inside the 1025-1919 range. Adding clamp overrides for
+   those selectors here would win at the end of the file and
+   silently undo that existing tuning, so those sections are
+   intentionally left untouched. Only sections whose sole
+   responsive coverage is the 1024px/640px breakpoints are
+   scaled below.
+   ============================================================ */
+@media (min-width: 1025px) and (max-width: 1919px) {
+    .cs-hero-section {
+        padding-top: clamp(160px, 14.5833vw, 280px);
+        padding-right: clamp(40px, 7.2917vw, 140px);
+        padding-bottom: clamp(80px, 9.375vw, 180px);
+        padding-left: clamp(40px, 7.2917vw, 140px);
+    }
+    .ind-hero-bg {
+        width: clamp(700px, 67.9688vw, 1305px);
+        height: clamp(394px, 38.2813vw, 735px);
+    }
+    .cs-hero-max-w { max-width: clamp(718px, 70.1042vw, 1346px); }
+    .cs-text-display {
+        max-width: clamp(611px, 59.6354vw, 1145px);
+        font-size: clamp(45px, 3.28125vw, 63px);
+        line-height: clamp(45px, 3.02083vw, 58px);
+    }
+    .cs-banner-section {
+        padding-left: clamp(40px, 7.2917vw, 140px);
+        padding-right: clamp(40px, 7.2917vw, 140px);
+    }
+    .cs-banner-heading-w {
+        max-width: clamp(137px, 13.3333vw, 256px);
+        min-width: clamp(137px, 13.3333vw, 256px);
+    }
+    .cs-banner-body-w { max-width: clamp(471px, 46.0417vw, 884px); }
+    .cs-banner-heading {
+        font-size: clamp(30px, 2.0833vw, 40px);
+        line-height: clamp(32px, 2.0833vw, 40px);
+    }
+    .cs-banner-body {
+        font-size: clamp(17px, 1.25vw, 24px);
+        line-height: clamp(22px, 1.25vw, 24px);
+    }
+
+    .stat-item { gap: clamp(8px, 0.8333vw, 16px); }
+    .stat-check {
+        width: clamp(32px, 2.0833vw, 40px);
+        height: clamp(32px, 2.0833vw, 40px);
+    }
+    .stat-check svg {
+        width: clamp(15px, 0.9375vw, 18px);
+        height: clamp(15px, 0.9375vw, 18px);
+    }
+    .stat-num { font-size: clamp(20px, 1.40625vw, 27px); }
+    .stat-lbl {
+        font-size: clamp(18px, 1.09375vw, 21px);
+        margin-top: clamp(2px, 0.2083vw, 4px);
+    }
+
+    .cs-card {
+        padding-top: clamp(11px, 1.0417vw, 20px);
+        padding-bottom: clamp(11px, 1.0417vw, 20px);
+        padding-left: clamp(12px, 1.1458vw, 22px);
+        padding-right: clamp(12px, 1.1458vw, 22px);
+    }
+
+    .cs-cta-btn {
+        width: clamp(260px, 15.9375vw, 306px);
+        height: clamp(52px, 3.17708vw, 61px);
+    }
+    .cs-cta-btn-label {
+        font-size: clamp(18px, 0.98958vw, 19px);
+        padding-top: clamp(4px, 0.2896vw, 5.56px);
+        padding-bottom: clamp(4px, 0.2896vw, 5.56px);
+    }
+}

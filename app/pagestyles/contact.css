@@ -1,0 +1,463 @@
+/* ============================================================
+   CONTACT PAGE — Hero & Banner
+   ============================================================ */
+
+.contact-text-display {
+    font-size: 63px;
+    line-height: 58px;
+    letter-spacing: 0;
+}
+.ind-hero-bg {
+    position: absolute;
+    top: 100px;
+    right: -15px;
+    width: 1305px;
+    height: 735px;
+    max-width: none;
+    opacity: 1;
+    transform: rotate(0deg);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+}
+
+@media (max-width: 1024px) {
+    .ind-hero-bg { width: 700px; height: 394px; opacity: .5; }
+}
+@media (max-width: 640px) {
+    .ind-hero-bg { display: none; }
+}
+
+.contact-hero-max-w {
+    position: relative;
+    z-index: 1;
+    max-width: 930px;
+}
+.contact-banner-heading  { font-size: 40px; line-height: 40px; }
+.contact-banner-heading-w{ max-width: 247px; }
+.contact-banner-body     { font-size: 22px; line-height: 130%; }
+.contact-banner-body-w   { max-width: 690px; }
+
+@media (max-width: 1024px) {
+    .contact-text-display    { font-size: 45px; line-height: 45px; }
+    .contact-banner-heading  { font-size: 30px; line-height: 32px; }
+    .contact-banner-body     { font-size: 17px; line-height: 22px; }
+    .contact-hero-section {
+        padding-top: 160px !important;
+        padding-bottom: 80px !important;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+    .contact-hero-max-w      { max-width: 100%; }
+    .contact-banner-section  { flex-direction: column !important; align-items: flex-start !important; gap: 24px !important; padding-left: 40px !important; padding-right: 40px !important; }
+    .contact-banner-heading-w,
+    .contact-banner-body-w   { max-width: 100%; }
+}
+
+@media (max-width: 640px) {
+    .contact-text-display    { font-size: 29px; line-height: 32px; }
+    .contact-banner-heading  { font-size: 22px; line-height: 27px; }
+    .contact-banner-body     { font-size: 16px; line-height: 19px; }
+    .contact-hero-section    { padding-top: 140px !important; padding-bottom: 48px !important; padding-left: 20px !important; padding-right: 20px !important; }
+    .contact-banner-section  { padding-left: 20px !important; padding-right: 20px !important; padding-top: 28px !important; padding-bottom: 28px !important; }
+}
+
+/* ============================================================
+   World Map
+   ============================================================ */
+
+.world-map {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 818 / 467;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.world-map .map-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ============================================================
+   Pakistan Pin  — needs ::after pseudo-element
+   ============================================================ */
+
+.pk-pin {
+    position: absolute;
+    top: 56%;
+    left: 47%;
+    transform: translate(-50%, -100%);
+}
+.pk-pin .bubble {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 9px 16px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.16);
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+    position: relative;
+}
+.pk-pin .bubble img {
+    width: 53px;
+    height: 53px;
+    border-radius: 1px;
+    display: block;
+}
+.pk-pin .bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #ffffff;
+}
+.pk-dot {
+    position: absolute;
+    top: 57%;
+    left: 47%;
+    transform: translate(-50%, 8px);
+    width: 11px;
+    height: 11px;
+    background: #4026B8;
+    border-radius: 50%;
+}
+
+/* ============================================================
+   USA Pin
+   ============================================================ */
+.usa-pin {
+    position: absolute;
+    top: 38%;
+    left: 17%;
+    transform: translate(-50%, -100%);
+}
+.usa-pin .bubble,
+.uae-pin .bubble {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 9px 16px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.16);
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+    position: relative;
+}
+.usa-pin .bubble img,
+.uae-pin .bubble img {
+    width: 53px;
+    height: 53px;
+    border-radius: 1px;
+    display: block;
+}
+.usa-pin .bubble::after,
+.uae-pin .bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #ffffff;
+}
+.usa-dot {
+    position: absolute;
+    top: 39%;
+    left: 17%;
+    transform: translate(-50%, 8px);
+    width: 11px;
+    height: 11px;
+    background: #4026B8;
+    border-radius: 50%;
+}
+
+/* ============================================================
+   UAE Pin
+   ============================================================ */
+.uae-pin {
+    position: absolute;
+    top: 33%;
+    left: 34%;
+    transform: translate(-50%, -100%);
+}
+.uae-dot {
+    position: absolute;
+    top: 34%;
+    left: 34%;
+    transform: translate(-50%, 8px);
+    width: 11px;
+    height: 11px;
+    background: #4026B8;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(64, 38, 184, 0.18);
+}
+
+/* ============================================================
+   GET IN TOUCH — heading & subtitle
+   ============================================================ */
+
+.git-heading {
+    width: 366px;
+    font-size: 63px;
+    line-height: 58px;
+    letter-spacing: 0;
+    color: #242424;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+}
+.git-subtitle {
+    max-width: 527px;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: #6A6A6A;
+    font-weight: 300;
+    margin: 0 0 28px 0;
+}
+
+@media (max-width: 1280px) {
+    .git-heading  { font-size: 45px; line-height: 46px; width: auto; }
+    .git-subtitle { font-size: 19px; line-height: 22px; }
+}
+@media (max-width: 1024px) {
+    .git-heading  { font-size: 36px; line-height: 39px; }
+    .git-subtitle { font-size: 18px; line-height: 20px; }
+}
+@media (max-width: 640px) {
+    .git-heading  { font-size: 27px; line-height: 30px; }
+    .git-subtitle { font-size: 15px; line-height: 17px; }
+}
+
+/* ============================================================
+   Info Section — Contact / Email / Location text
+   ============================================================ */
+
+.info-heading {
+    color: #242424;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 120%;
+    letter-spacing: 0;
+    margin: 0 0 6px 0;
+}
+.info-value {
+    color: #6A6A6A;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 110%;
+    letter-spacing: 0;
+    margin: 0;
+    text-decoration: none;
+    display: block;
+    transition: color 0.2s;
+        overflow-wrap: break-word;
+    word-break: break-word;
+}
+a.info-value:hover { color: #4026B8; }
+
+.location-value {
+    color: #6A6A6A;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 120%;
+    letter-spacing: 0;
+    margin: 0;
+    max-width: 700px;
+}
+
+@media (max-width: 1280px) {
+    .info-heading                 { font-size: 22px; }
+    .info-value, .location-value  { font-size: 18px; }
+}
+@media (max-width: 640px) {
+    .info-heading                 { font-size: 17px; }
+    .info-value, .location-value  { font-size: 15px; }
+}
+
+/* ============================================================
+   Floating Label Fields
+   — sibling selectors (:focus ~ label, :not(:placeholder-shown) ~ label)
+     cannot be expressed in Tailwind utility classes
+   ============================================================ */
+
+.float-group,
+.float-group--textarea {
+    position: relative;
+    margin-bottom: 14px;
+    max-width: 609px;
+    width: 100%;
+}
+
+.float-input {
+    width: 100%;
+    height: 70px;
+    background: #ffffff;
+    border: 1.5px solid transparent;
+    border-radius: 10px;
+    padding: 0 16px;
+    font-size: clamp(0.88rem, 1.2vw, 1rem);
+    color: #111111;
+    outline: none;
+    font-family: 'Stage Grotesk', sans-serif;
+    font-weight: 400;
+    transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+    display: block;
+    box-sizing: border-box;
+}
+textarea.float-input {
+    height: 132px;
+    resize: none;
+    padding-top: 24px;
+    padding-bottom: 10px;
+}
+
+.float-input:focus,
+.float-input:not(:placeholder-shown) {
+    background: #ffffff;
+    border-color: #d1d5db;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.float-label {
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: clamp(0.88rem, 1.2vw, 1rem);
+    color: #9ca3af;
+    font-weight: 300;
+    pointer-events: none;
+    transition: top 0.18s ease, transform 0.18s ease, font-size 0.18s ease,
+                color 0.18s ease, background 0.18s ease;
+    padding: 0 3px;
+    line-height: 1;
+    background: transparent;
+    z-index: 1;
+}
+.float-group--textarea .float-label {
+    top: 22px;
+    transform: none;
+}
+
+/* Floated state */
+.float-input:focus ~ .float-label,
+.float-input:not(:placeholder-shown) ~ .float-label,
+.float-group--textarea .float-input:focus ~ .float-label,
+.float-group--textarea .float-input:not(:placeholder-shown) ~ .float-label {
+    top: -1px;
+    transform: translateY(-50%);
+    font-size: 0.72rem;
+    color: #6b7280;
+    background: #ffffff;
+    padding: 0 4px;
+}
+
+@media (max-width: 1024px) {
+    .float-input         { height: 56px; }
+    textarea.float-input { height: 110px; }
+}
+@media (max-width: 640px) {
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pk-pin .bubble,
+    .usa-pin .bubble,
+    .uae-pin .bubble {
+        padding: 6px 10px;
+        gap: 6px;
+        font-size: 13px;
+    }
+    .pk-pin .bubble img,
+    .usa-pin .bubble img,
+    .uae-pin .bubble img {
+        width: 32px;
+        height: 32px;
+    }
+    .pk-dot,
+    .usa-dot,
+    .uae-dot {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* ============================================================
+   FLUID DESKTOP SCALE  — 1025px … 1919px
+   Same fixed-1920px-frame issue as the other page stylesheets:
+   nothing scales between the tablet breakpoint and the 1920px
+   spec width, so on any laptop viewport narrower than 1920px
+   (e.g. 1536px) affected elements render too large versus
+   Figma. Placed at the end of the file, after every base rule,
+   so it wins on source order at equal specificity.
+   NOTE: the get-in-touch heading/subtitle and the info-heading
+   and info-value/location-value text already have their own
+   intermediate breakpoint at 1280px, which sits inside the
+   1025-1919 range. Adding clamp overrides for those selectors
+   here would win at the end of the file and silently undo that
+   existing tuning, so those selectors are intentionally left
+   untouched. Only the elements whose sole responsive coverage
+   is the 1024px/640px breakpoints are scaled below.
+   ============================================================ */
+@media (min-width: 1025px) and (max-width: 1919px) {
+    .contact-text-display {
+        font-size: clamp(45px, 3.28125vw, 63px);
+        line-height: clamp(45px, 3.02083vw, 58px);
+    }
+    .ind-hero-bg {
+        width: clamp(700px, 67.9688vw, 1305px);
+        height: clamp(394px, 38.2813vw, 735px);
+    }
+    .contact-hero-max-w { max-width: clamp(496px, 48.4375vw, 930px); }
+    .contact-banner-heading {
+        font-size: clamp(30px, 2.0833vw, 40px);
+        line-height: clamp(32px, 2.0833vw, 40px);
+    }
+    .contact-banner-heading-w { max-width: clamp(132px, 12.8646vw, 247px); }
+    .contact-banner-body { font-size: clamp(17px, 1.14583vw, 22px); }
+    .contact-banner-body-w { max-width: clamp(368px, 35.9375vw, 690px); }
+
+    .pk-pin .bubble,
+    .usa-pin .bubble,
+    .uae-pin .bubble {
+        padding-top: clamp(5px, 0.46875vw, 9px);
+        padding-bottom: clamp(5px, 0.46875vw, 9px);
+        padding-left: clamp(9px, 0.8333vw, 16px);
+        padding-right: clamp(9px, 0.8333vw, 16px);
+        gap: clamp(5px, 0.46875vw, 9px);
+        font-size: clamp(10px, 0.9375vw, 18px);
+    }
+    .pk-pin .bubble img,
+    .usa-pin .bubble img,
+    .uae-pin .bubble img {
+        width: clamp(28px, 2.7604vw, 53px);
+        height: clamp(28px, 2.7604vw, 53px);
+    }
+    .pk-dot,
+    .usa-dot,
+    .uae-dot {
+        width: clamp(6px, 0.57292vw, 11px);
+        height: clamp(6px, 0.57292vw, 11px);
+    }
+
+    .float-group,
+    .float-group--textarea { max-width: clamp(325px, 31.7188vw, 609px); }
+    .float-input { height: clamp(56px, 3.6458vw, 70px); }
+    textarea.float-input { height: clamp(110px, 6.875vw, 132px); }
+}

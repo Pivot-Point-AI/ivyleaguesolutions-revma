@@ -7,7 +7,7 @@ export default function FeaturedAndStories() {
     <section className="blg-content-section">
       <div className="blg-content-wrap">
         <div className="blg-left-col">
-          <Image src="/assets/blogPage/featuredArticle.svg" alt="Why ERP Implementations Should Put Your Needs First" width={800} height={427} className="blg-feat-img" />
+          <Image src="/assets/blogPage/featuredArticle.webp" alt="Why ERP Implementations Should Put Your Needs First" width={800} height={427} className="blg-feat-img" />
           <div className="blg-feat-meta">
             <span className="blg-feat-label">Featured Article.</span>
             <span className="blg-feat-date">Apr 7, 2026</span>
@@ -34,7 +34,7 @@ export default function FeaturedAndStories() {
               </div>
 
               {i < topStories.length - 1 && (
-                <Image src="/assets/blogPage/storiesLine.svg" alt="" aria-hidden="true" width={755} height={1} className="blg-story-divider-img" />
+                <Image src="/assets/blogPage/storiesLine.webp" alt="" aria-hidden="true" width={755} height={1} className="blg-story-divider-img" />
               )}
             </Fragment>
           ))}

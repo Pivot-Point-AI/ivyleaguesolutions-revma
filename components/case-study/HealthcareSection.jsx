@@ -14,7 +14,7 @@ export default function HealthcareSection() {
           <Stat num="Zero" label="Data breaches" />
         </div>
         <div className="cs-mobile-img-card h-[320px]">
-          <Image src="/assets/caseStudy/patientManagement.svg" alt="Healthcare telemedicine" fill sizes="100vw" />
+          <Image src="/assets/caseStudy/patientManagement.webp" alt="Healthcare telemedicine" fill sizes="100vw" />
           <div className="cs-mobile-img-overlay cs-mobile-img-overlay-dark">
             <h3>Challenge</h3>
             <p>85% of supply chain processes were manual. Data silos across 6 departments caused $4M in annual inventory errors. Reports took 3 days to compile.</p>
@@ -37,7 +37,7 @@ export default function HealthcareSection() {
         </div>
 
         <div className="hc-img-wrap">
-          <Image src="/assets/caseStudy/healthCare.svg" alt="Healthcare telemedicine platform" fill sizes="(min-width: 1024px) 605px, 100vw" />
+          <Image src="/assets/caseStudy/healthCare.webp" alt="Healthcare telemedicine platform" fill sizes="(min-width: 1024px) 605px, 100vw" />
           <div className="hc-hover-overlay">
             <h3>Challenge</h3>
             <p>85% of supply chain processes were manual. Data silos across 6 departments caused $4M in annual inventory errors. Reports took 3 days to compile.</p>

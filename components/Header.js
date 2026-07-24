@@ -13,7 +13,7 @@ export default function Header() {
       {/* Decorative top background */}
       <div
         className="absolute top-0 inset-x-0 w-full h-[204px] bg-top bg-no-repeat bg-cover pointer-events-none z-0"
-        style={{ backgroundImage: "url('/assets/aboutPage/herobgTop.svg')" }}
+        style={{ backgroundImage: "url('/assets/aboutPage/herobgTop.webp')" }}
         aria-hidden="true"
       ></div>
 

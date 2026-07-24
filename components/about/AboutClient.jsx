@@ -111,7 +111,7 @@ export default function AboutClient() {
       {/* SECTION 3 · WORLD MAP */}
       <section className="bg-white py-10 lg:py-20">
         <div className="about-world-map">
-          <img src="/assets/aboutPage/world_map.svg" alt="World map" loading="lazy" className="w-full h-auto object-cover" />
+          <img src="/assets/aboutPage/world_map.webp" alt="World map" loading="lazy" className="w-full h-auto object-cover" />
 
           <div className="about-pin about-pin--usa">
             <div className="bubble">

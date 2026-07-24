@@ -19,13 +19,13 @@ export default function MicroBankSection() {
 
       <div className="micro-images-wrap">
         <div className="micro-img-top">
-          <Image src="/assets/fintechPage/mobileScreen.svg" alt="Mobile Screen" width={472} height={381} className="w-[472px] h-[381px] object-cover block rounded-2xl" />
+          <Image src="/assets/fintechPage/mobileScreen.webp" alt="Mobile Screen" width={472} height={381} className="w-[472px] h-[381px] object-cover block rounded-2xl" />
         </div>
         <div className="micro-img-mid">
-          <Image src="/assets/fintechPage/twoMobiles.svg" alt="Two Mobiles" width={547} height={677} className="w-[547px] h-[677px] object-cover block rounded-2xl" />
+          <Image src="/assets/fintechPage/twoMobiles.webp" alt="Two Mobiles" width={547} height={677} className="w-[547px] h-[677px] object-cover block rounded-2xl" />
         </div>
         <div className="micro-img-raised">
-          <Image src="/assets/fintechPage/mobileView.svg" alt="Mobile View" width={472} height={381} className="w-[472px] h-[381px] object-cover block rounded-2xl" />
+          <Image src="/assets/fintechPage/mobileView.webp" alt="Mobile View" width={472} height={381} className="w-[472px] h-[381px] object-cover block rounded-2xl" />
         </div>
       </div>
     </section>

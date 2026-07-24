@@ -9,7 +9,7 @@ export default function CloudServicesSection() {
 
   return (
     <section className="cc-section">
-      <Image src="/assets/infrastructurePage/cloudBackground.svg" alt="" aria-hidden="true" fill sizes="100vw" className="cc-bg" />
+      <Image src="/assets/infrastructurePage/cloudBackground.webp" alt="" aria-hidden="true" fill sizes="100vw" className="cc-bg" />
 
       <div className="cc-inner">
         <p className="cc-label m-0">Most Used Cloud Services</p>

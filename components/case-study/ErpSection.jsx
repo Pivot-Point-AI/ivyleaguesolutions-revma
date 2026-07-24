@@ -14,7 +14,7 @@ export default function ErpSection() {
           <Stat num="6 month" label="Full ROI payback" />
         </div>
         <div className="relative rounded-2xl overflow-hidden h-[320px]">
-          <Image src="/assets/caseStudy/machineOperating.svg" alt="Machine operator" fill sizes="100vw" className="object-cover" />
+          <Image src="/assets/caseStudy/machineOperating.webp" alt="Machine operator" fill sizes="100vw" className="object-cover" />
         </div>
       </div>
 
@@ -22,7 +22,7 @@ export default function ErpSection() {
         <div className="erp-left">
           <div className="erp-circle"></div>
           <div className="erp-machine-img-wrap">
-            <Image src="/assets/caseStudy/machineOperating.svg" alt="Machine operator at work" fill sizes="(min-width: 1024px) 40vw, 100vw" />
+            <Image src="/assets/caseStudy/machineOperating.webp" alt="Machine operator at work" fill sizes="(min-width: 1024px) 40vw, 100vw" />
           </div>
         </div>
         <div className="erp-right">
@@ -38,7 +38,7 @@ export default function ErpSection() {
       </div>
 
       <div className="erp-cs-banner">
-        <Image src="/assets/caseStudy/bannerBackground.svg" alt="" aria-hidden="true" fill sizes="100vw" className="erp-cs-banner-bg" />
+        <Image src="/assets/caseStudy/bannerBackground.webp" alt="" aria-hidden="true" fill sizes="100vw" className="erp-cs-banner-bg" />
         <div className="erp-cs-banner-inner">
           <div className="erp-cs-col erp-cs-col-left">
             <h3 className="erp-cs-heading">Challenge</h3>

@@ -18,7 +18,7 @@ export default function WalletApplicationSection() {
         <div className="wallet-card">
           <div className="wallet-glow-tl"></div>
           <div className="wallet-glow-br"></div>
-          <Image src="/assets/fintechPage/walletMobile.svg" alt="Wallet Mobile" width={782} height={667} className="wallet-img" />
+          <Image src="/assets/fintechPage/walletMobile.webp" alt="Wallet Mobile" width={782} height={667} className="wallet-img" />
         </div>
       </div>
     </section>

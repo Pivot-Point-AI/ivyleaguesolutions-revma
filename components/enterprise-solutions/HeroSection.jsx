@@ -6,7 +6,7 @@ export default function HeroSection() {
                  sm:pt-[120px] sm:pb-[100px] sm:px-[40px]
                  lg:pt-[300px] lg:pb-[210px] lg:px-[140px]">
     <Image
-        src="/assets/industriesPage/herobgRight.svg"
+        src="/assets/industriesPage/herobgRight.webp"
         alt=""
         className="ind-hero-bg"
         aria-hidden="true"

@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden min-h-screen">
-      <Image src="/assets/aboutPage/aboutHeader.svg" alt="" aria-hidden="true" fill sizes="100vw" preload={true} className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none" />
+      <Image src="/assets/aboutPage/aboutHeader.webp" alt="" aria-hidden="true" fill sizes="100vw" preload={true} className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none" />
       <div className="relative w-full px-6 sm:px-10 lg:pl-[140px] lg:pr-12 flex items-center min-h-screen">
         <div className="pt-24 pb-16 fade-up">
           <div className="overflow-hidden mb-2">

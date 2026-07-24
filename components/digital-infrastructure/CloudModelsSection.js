@@ -25,12 +25,12 @@ export default function CloudModelsSection() {
 
         <div className="cm-right flex items-end gap-[16px] shrink-0">
           <div className="cm-laptop-w">
-            <Image src="/assets/infrastructurePage/laptopMan.svg" alt="Professional working on a laptop" width={428} height={720} className="cm-img-laptop" />
+            <Image src="/assets/infrastructurePage/laptopMan.webp" alt="Professional working on a laptop" width={428} height={720} className="cm-img-laptop" />
           </div>
 
           <div className="cm-saas-col flex flex-col gap-[16px]">
             <div className="cm-saas-img-w">
-              <Image src="/assets/infrastructurePage/saaS.svg" alt="Software as a Service architecture diagram" width={428} height={347} className="cm-img-saas" />
+              <Image src="/assets/infrastructurePage/saaS.webp" alt="Software as a Service architecture diagram" width={428} height={347} className="cm-img-saas" />
             </div>
             <div className="cm-saas-box bg-[#4026B8]">
               <h3 className="cm-saas-box-heading text-white m-0">Software as a Service</h3>

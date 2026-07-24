@@ -9,5 +9,5 @@ export const teamMembers = [
   { name: "Farat Iqbal", role: "CEO & Co Founder", img: "/assets/servicePage/ceo.webp" },
   { name: "Ijaz Aslam", role: "CEO & Co Founder", img: "/assets/servicePage/cto.webp" },
   { name: "Asim Jameel", role: "CTO", img: "/assets/servicePage/ceo.webp" },
-  { name: "Usman Liaqat", role: "Line Manager", img: "/assets/aboutPage/award_Men.svg" },
+  { name: "Usman Liaqat", role: "Line Manager", img: "/assets/aboutPage/award_Men.webp" },
 ];

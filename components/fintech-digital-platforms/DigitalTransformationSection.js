@@ -21,11 +21,11 @@ export default function DigitalTransformationSection() {
 
         <div className="transform-images-wrap flex items-center gap-5 shrink-0">
           <div className="shrink-0 self-center">
-            <Image src="/assets/fintechPage/roboticHand.svg" alt="Robotic Hand" width={339} height={363} className="w-[339px] h-[363px] object-cover block rounded-2xl" />
+            <Image src="/assets/fintechPage/roboticHand.webp" alt="Robotic Hand" width={339} height={363} className="w-[339px] h-[363px] object-cover block rounded-2xl" />
           </div>
           <div className="transform-right-col flex flex-col gap-5 shrink-0">
-            <Image src="/assets/fintechPage/robotTyping.svg" alt="Robot Typing" width={339} height={363} className="w-[339px] h-[363px] object-cover block rounded-2xl" />
-            <Image src="/assets/fintechPage/menTyping.svg" alt="Men Typing" width={375} height={411} className="w-[375px] h-[411px] object-cover block rounded-2xl" />
+            <Image src="/assets/fintechPage/robotTyping.webp" alt="Robot Typing" width={339} height={363} className="w-[339px] h-[363px] object-cover block rounded-2xl" />
+            <Image src="/assets/fintechPage/menTyping.webp" alt="Men Typing" width={375} height={411} className="w-[375px] h-[411px] object-cover block rounded-2xl" />
           </div>
         </div>
       </div>

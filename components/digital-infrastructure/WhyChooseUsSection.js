@@ -42,8 +42,8 @@ export default function WhyChooseUsSection() {
       </div>
 
       <div className="wc-right">
-        <Image src="/assets/infrastructurePage/manThinking.svg" alt="Professional reviewing infrastructure data on monitors" width={610} height={462} className="wc-img-man" />
-        <Image src="/assets/infrastructurePage/ipadWomen.svg" alt="Professional reviewing a cloud dashboard on a tablet" width={446} height={338} className="wc-img-woman" />
+        <Image src="/assets/infrastructurePage/manThinking.webp" alt="Professional reviewing infrastructure data on monitors" width={610} height={462} className="wc-img-man" />
+        <Image src="/assets/infrastructurePage/ipadWomen.webp" alt="Professional reviewing a cloud dashboard on a tablet" width={446} height={338} className="wc-img-woman" />
       </div>
     </section>
   );

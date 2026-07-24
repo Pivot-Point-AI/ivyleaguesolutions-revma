@@ -6,12 +6,12 @@ export default function CoreBankingApplicationSection() {
       <div className="two-col-layout core-two-col flex items-center justify-between gap-[80px]">
         <div className="shrink-0">
           <div className="grid-row grid-row-1">
-            <Image src="/assets/fintechPage/coreBanking.svg" alt="Core Banking" width={523} height={499} className="w-[523px] h-[499px] object-cover block rounded-2xl shrink-0" />
-            <Image src="/assets/fintechPage/girlWriting.svg" alt="Girl Writing" width={273} height={499} className="w-[273px] h-[499px] object-cover block rounded-2xl shrink-0" />
+            <Image src="/assets/fintechPage/coreBanking.webp" alt="Core Banking" width={523} height={499} className="w-[523px] h-[499px] object-cover block rounded-2xl shrink-0" />
+            <Image src="/assets/fintechPage/girlWriting.webp" alt="Girl Writing" width={273} height={499} className="w-[273px] h-[499px] object-cover block rounded-2xl shrink-0" />
           </div>
           <div className="grid-row grid-row-2">
-            <Image src="/assets/fintechPage/peopleGroup.svg" alt="People Group" width={354} height={348} className="w-[354px] h-[348px] object-cover block rounded-2xl shrink-0" />
-            <Image src="/assets/fintechPage/statisticsMan.svg" alt="Statistics Man" width={442} height={348} className="w-[442px] h-[348px] object-cover block rounded-2xl shrink-0" />
+            <Image src="/assets/fintechPage/peopleGroup.webp" alt="People Group" width={354} height={348} className="w-[354px] h-[348px] object-cover block rounded-2xl shrink-0" />
+            <Image src="/assets/fintechPage/statisticsMan.webp" alt="Statistics Man" width={442} height={348} className="w-[442px] h-[348px] object-cover block rounded-2xl shrink-0" />
           </div>
         </div>
 

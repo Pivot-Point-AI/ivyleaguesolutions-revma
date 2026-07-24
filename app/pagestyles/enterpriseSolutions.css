@@ -305,7 +305,7 @@
 /* ════════════════════════════════════════════════════════════════
    LEGACY MODERNIZATION — staggered images
    ════════════════════════════════════════════════════════════════ */
-.ent-legacy__img-wrap        { flex-shrink: 0; width: 252px; height: 387px; }
+.ent-legacy__img-wrap        { flex-shrink: 0; width: 252px; height: 387px; overflow: hidden; }
 .ent-legacy__img-wrap--raised { margin-bottom: 90px; }
 .ent-legacy__img             { width: 252px; height: 387px; object-fit: cover; border-radius: 20px; display: block; }
 
@@ -560,10 +560,10 @@
     .ent-ux-track           { padding-left: 30px; }
 
     /* Legacy images — stacked */
-    .ent-legacy__imgs { flex-direction: column; align-items: flex-start; gap: 16px; }
-    .ent-legacy__img-wrap { width: 100%; height: 200px; }
+    .ent-legacy__imgs { flex-direction: column; align-items: flex-start; gap: 16px; width: 100% !important; }
+    .ent-legacy__img-wrap { width: 100% !important; height: 200px !important; overflow: hidden !important; }
     .ent-legacy__img-wrap--raised { margin-bottom: 0; }
-    .ent-legacy__img { width: 100%; height: 200px; }
+    .ent-legacy__img { width: 100% !important; height: 200px !important; object-fit: cover !important; }
 
     /* ERP cards */
     .ent-erp__cards { gap: 16px; }

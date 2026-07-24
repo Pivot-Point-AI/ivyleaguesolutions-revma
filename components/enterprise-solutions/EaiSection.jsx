@@ -30,51 +30,51 @@ export default function EaiSection() {
                     [scrollbar-width:none] [&::-webkit-scrollbar]:hidden mt-[60px] lg:mt-0">
 
             <div className="ent-eai-card ent-eai-card-1 w-[310px] min-w-[310px] h-[291px] bg-white rounded-[20px]
-                        relative shrink-0 flex flex-col justify-between p-[28px]">
+                        relative shrink-0 flex flex-col justify-between p-[28px] overflow-hidden">
                 <h3 className="ent-eai-heading text-[#242424] font-medium text-[34px] leading-[100%] tracking-normal m-0">
                     Data Integration
                 </h3>
-                <p className="ent-eai-body text-[#979797] font-light text-[22px] leading-[90%] tracking-normal m-0 w-[264px]">
+                <p className="ent-eai-body text-[#979797] font-light text-[22px] leading-[90%] tracking-normal m-0 w-[264px] max-w-full">
                     Linking various data sources to enable seamless data sharing.
                 </p>
             </div>
 
             <div className="ent-eai-card ent-eai-card-2 w-[310px] min-w-[310px] h-[360px] bg-white rounded-[20px]
-                        relative shrink-0 flex flex-col justify-between p-[28px]">
+                        relative shrink-0 flex flex-col justify-between p-[28px] overflow-hidden">
                 <h3 className="ent-eai-heading text-[#242424] font-medium text-[34px] leading-[100%] tracking-normal m-0">
                     Process Integration
                 </h3>
-                <p className="ent-eai-body text-[#979797] font-light text-[22px] leading-[90%] tracking-normal m-0 w-[264px]">
+                <p className="ent-eai-body text-[#979797] font-light text-[22px] leading-[90%] tracking-normal m-0 w-[264px] max-w-full">
                     Ensuring that different business processes work in harmony.
                 </p>
             </div>
 
             <div className="ent-eai-card ent-eai-card-3 w-[310px] min-w-[310px] h-[490px] bg-white rounded-[20px]
-                        relative shrink-0 flex flex-col justify-between p-[28px]">
+                        relative shrink-0 flex flex-col justify-between p-[28px] overflow-hidden">
                 <h3 className="ent-eai-heading text-[#242424] font-medium text-[34px] leading-[100%] tracking-normal m-0">
                     Application Integration
                 </h3>
-                <p className="ent-eai-body text-[#979797] font-light text-[22px] leading-[90%] tracking-normal m-0 w-[264px]">
+                <p className="ent-eai-body text-[#979797] font-light text-[22px] leading-[90%] tracking-normal m-0 w-[264px] max-w-full">
                     Connecting different software applications for smoother communication.
                 </p>
             </div>
 
             <div className="ent-eai-card ent-eai-card-4 w-[310px] min-w-[310px] h-[630px] bg-white rounded-[20px]
-                        relative shrink-0 flex flex-col justify-between p-[28px]">
+                        relative shrink-0 flex flex-col justify-between p-[28px] overflow-hidden">
                 <h3 className="ent-eai-heading text-[#242424] font-medium text-[34px] leading-[100%] tracking-normal m-0">
                     Security Integration
                 </h3>
-                <p className="ent-eai-body text-[#979797] font-light text-[22px] leading-[90%] tracking-normal m-0 w-[264px]">
+                <p className="ent-eai-body text-[#979797] font-light text-[22px] leading-[90%] tracking-normal m-0 w-[264px] max-w-full">
                     Guaranteeing the security of integrated applications.
                 </p>
             </div>
 
             <div className="ent-eai-card ent-eai-card-5 w-[310px] min-w-[310px] h-[765px] bg-white rounded-[20px]
-                        relative shrink-0 flex flex-col justify-between p-[28px]">
+                        relative shrink-0 flex flex-col justify-between p-[28px] overflow-hidden">
                 <h3 className="ent-eai-heading text-[#242424] font-medium text-[34px] leading-[100%] tracking-normal m-0">
                     Performance Monitoring
                 </h3>
-                <p className="ent-eai-body text-[#979797] font-light text-[22px] leading-[90%] tracking-normal m-0 w-[264px]">
+                <p className="ent-eai-body text-[#979797] font-light text-[22px] leading-[90%] tracking-normal m-0 w-[264px] max-w-full">
                     Keeping a vigilant eye on integrated applications' performance for seamless operations.
                 </p>
             </div>

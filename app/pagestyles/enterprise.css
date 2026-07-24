@@ -402,6 +402,8 @@
     .ent-curve-canvas,
     .ent-dotedline-canvas {
         height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
         display: flex !important;
         flex-direction: column !important;
         gap: 0 !important;
@@ -468,6 +470,7 @@
     .ent-bi-section {
         position: static !important;
         height: auto !important;
+        max-height: none !important;
         padding-top: 60px !important;
         padding-bottom: 60px !important;
         padding-left: 40px !important;

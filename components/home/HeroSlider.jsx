@@ -114,7 +114,7 @@ export default function HeroSlider() {
         </div>
 
         <div className="absolute right-0 top-0 h-full w-[55%] flex items-end justify-end">
-          <img src="/assets/landingPage/noroMobile.webp" alt="noro mobile app" loading="eager" className="w-auto object-contain select-none pointer-events-none noro-mobile-img" />
+          <img src="/assets/landingPage/noroMobile.svg" alt="noro mobile app" loading="eager" className="w-auto object-contain select-none pointer-events-none noro-mobile-img" />
         </div>
       </div>
 

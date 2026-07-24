@@ -20,7 +20,7 @@ export default function KeyBenefitsArrowSection() {
         <div className="ent-arrow-canvas">
           <div className="ent-arrow-inner">
 
-            <Image src="/assets/enterprisePage/lineArrow.svg"
+            <Image src="/assets/enterprisePage/lineArrow.webp"
                  alt=""
                  aria-hidden="true"
                  width={1068} height={317}

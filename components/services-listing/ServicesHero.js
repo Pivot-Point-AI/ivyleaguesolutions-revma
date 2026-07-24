@@ -2,7 +2,7 @@ export default function ServicesHero() {
   return (
     <section className="relative bg-[#f8f8f8] overflow-x-hidden lg:overflow-visible min-h-[480px] sm:min-h-[640px] lg:min-h-0 lg:h-[clamp(420px,50.625vw,972px)]">
       <img
-        src="/assets/servicePage/servicesHeader.svg"
+        src="/assets/servicePage/servicesHeader.webp"
         alt=""
         aria-hidden="true"
         loading="eager"

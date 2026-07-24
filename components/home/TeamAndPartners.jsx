@@ -86,19 +86,19 @@ export default function TeamAndPartners() {
           {[0, 1].map((pass) => (
             <div key={pass} className="partner-marquee-set" aria-hidden={pass > 0 ? "true" : "false"}>
               <div className="flex items-center justify-center w-[90px] sm:w-[129px] h-[80px] sm:h-[110px] flex-shrink-0">
-                <img src="/assets/landingPage/awsLogo.svg" alt={pass === 0 ? "AWS" : ""} loading="lazy" className="w-[55px] sm:w-[79px] h-auto object-contain block" />
+                <img src="/assets/landingPage/awsLogo.webp" alt={pass === 0 ? "AWS" : ""} loading="lazy" className="w-[55px] sm:w-[79px] h-auto object-contain block" />
               </div>
               <div className="flex items-center justify-center w-[140px] sm:w-[221px] h-[100px] sm:h-[147px] flex-shrink-0">
-                <img src="/assets/landingPage/azureLogo.svg" alt={pass === 0 ? "Microsoft Azure" : ""} loading="lazy" className="w-[110px] sm:w-[171px] h-auto object-contain block" />
+                <img src="/assets/landingPage/azureLogo.webp" alt={pass === 0 ? "Microsoft Azure" : ""} loading="lazy" className="w-[110px] sm:w-[171px] h-auto object-contain block" />
               </div>
               <div className="flex items-center justify-center w-[180px] sm:w-[324px] h-[80px] sm:h-[105px] flex-shrink-0">
-                <img src="/assets/landingPage/googlecloudLogo.svg" alt={pass === 0 ? "Google Cloud" : ""} loading="lazy" className="w-[150px] sm:w-[273px] h-auto object-contain block" />
+                <img src="/assets/landingPage/googlecloudLogo.webp" alt={pass === 0 ? "Google Cloud" : ""} loading="lazy" className="w-[150px] sm:w-[273px] h-auto object-contain block" />
               </div>
               <div className="flex items-center justify-center w-[120px] sm:w-[194px] h-[100px] sm:h-[175px] flex-shrink-0">
-                <img src="/assets/landingPage/huaweiLogo.svg" alt={pass === 0 ? "Huawei" : ""} loading="lazy" className="w-[90px] sm:w-[144px] h-auto object-contain block" />
+                <img src="/assets/landingPage/huaweiLogo.webp" alt={pass === 0 ? "Huawei" : ""} loading="lazy" className="w-[90px] sm:w-[144px] h-auto object-contain block" />
               </div>
               <div className="flex items-center justify-center w-[120px] sm:w-[192px] h-[90px] sm:h-[142px] flex-shrink-0">
-                <img src="/assets/landingPage/reactLogo.svg" alt={pass === 0 ? "React" : ""} loading="lazy" className="w-[80px] sm:w-[141px] h-auto object-contain block" />
+                <img src="/assets/landingPage/reactLogo.webp" alt={pass === 0 ? "React" : ""} loading="lazy" className="w-[80px] sm:w-[141px] h-auto object-contain block" />
               </div>
             </div>
           ))}

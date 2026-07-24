@@ -22,7 +22,7 @@ export default function KeyBenefitsBigLinesSection() {
 
             <div className="ent-benefits-line absolute pointer-events-none"
                  style={{top: '80px', left: '30px', width: '1620px', height: '370px'}}>
-                <Image src="/assets/enterprisePage/bigLines.svg"
+                <Image src="/assets/enterprisePage/bigLines.webp"
                      alt=""
                      aria-hidden="true"
                      fill sizes="1620px"

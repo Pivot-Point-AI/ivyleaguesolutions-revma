@@ -6,7 +6,7 @@ export default function SecuritySection() {
     <section className="ent-security relative w-full overflow-hidden">
 
 
-        <Image src="/assets/enterprisePage/securityBackground.svg"
+        <Image src="/assets/enterprisePage/securityBackground.webp"
              alt=""
              aria-hidden="true"
              fill sizes="100vw"

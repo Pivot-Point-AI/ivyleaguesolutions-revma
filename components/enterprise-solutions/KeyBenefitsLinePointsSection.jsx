@@ -22,7 +22,7 @@ export default function KeyBenefitsLinePointsSection() {
 
             <div className="ent-benefits-line absolute pointer-events-none"
                  style={{top: '170px', left: '0px', width: '1620px', height: '42px'}}>
-                <Image src="/assets/enterprisePage/linePoints.svg"
+                <Image src="/assets/enterprisePage/linePoints.webp"
                      alt=""
                      aria-hidden="true"
                      fill sizes="1620px"

@@ -17,7 +17,7 @@ export default function KeyBenefitsCurveSection() {
 
         <div className="ent-curve-canvas">
 
-            <img src="/assets/enterprisePage/dotLine.svg"
+            <img src="/assets/enterprisePage/dotLine.webp"
                  alt=""
                  aria-hidden="true"
                  loading="lazy"

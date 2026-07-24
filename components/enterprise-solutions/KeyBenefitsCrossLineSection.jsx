@@ -22,7 +22,7 @@ export default function KeyBenefitsCrossLineSection() {
 
             <div className="ent-benefits-line absolute pointer-events-none"
                  style={{top: '30px', left: '680px', width: '958px', height: '452px'}}>
-                <Image src="/assets/enterprisePage/crossLine.svg"
+                <Image src="/assets/enterprisePage/crossLine.webp"
                      alt=""
                      aria-hidden="true"
                      fill sizes="958px"

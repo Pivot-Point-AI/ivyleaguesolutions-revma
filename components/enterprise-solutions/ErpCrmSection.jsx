@@ -41,7 +41,7 @@ export default function ErpCrmSection() {
         <div className="ent-crm-cards flex flex-col lg:flex-row gap-[clamp(14px,1.46vw,28px)]">
 
             <div className="w-full lg:flex-1 lg:min-w-0 lg:max-w-[clamp(280px,41.98vw,806px)] h-[300px] sm:h-[420px] lg:h-[clamp(220px,32.71vw,628px)] rounded-[clamp(12px,1.04vw,20px)] overflow-hidden relative group shrink-0 lg:shrink cursor-pointer">
-                <Image src="/assets/enterprisePage/crmOne.svg"
+                <Image src="/assets/enterprisePage/crmOne.webp"
                      alt="ERP Solutions"
                      fill sizes="(min-width: 1024px) 50vw, 100vw"
                      className="object-cover transition-transform duration-700 group-hover:scale-105"/>
@@ -61,7 +61,7 @@ export default function ErpCrmSection() {
             </div>
 
             <div className="w-full lg:flex-1 lg:min-w-0 lg:max-w-[clamp(280px,41.98vw,806px)] h-[300px] sm:h-[420px] lg:h-[clamp(220px,32.71vw,628px)] rounded-[clamp(12px,1.04vw,20px)] overflow-hidden relative group shrink-0 lg:shrink cursor-pointer">
-                <Image src="/assets/enterprisePage/crmTwo.svg"
+                <Image src="/assets/enterprisePage/crmTwo.webp"
                      alt="CRM Solutions"
                      fill sizes="(min-width: 1024px) 50vw, 100vw"
                      className="object-cover transition-transform duration-700 group-hover:scale-105"/>

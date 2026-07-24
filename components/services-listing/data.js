@@ -1,8 +1,8 @@
 export const smallBoxes = [
-  { icon: "codeCircle.svg", title: "Custom Software\nDevelopment", slug: "custom-software-development" },
-  { icon: "enterpriseIcon.svg", title: "Enterprise Solutions\n& ERP", slug: "enterprise-solutions" },
-  { icon: "fintechIcon.svg", title: "Fintech &\nDigital Platforms", slug: "fintech-digital-platforms" },
-  { icon: "aiIcon.svg", title: "AI Solutions &\nAutomation", slug: "ai-solutions" },
+  { icon: "codeCircle.webp", title: "Custom Software\nDevelopment", slug: "custom-software-development" },
+  { icon: "enterpriseIcon.webp", title: "Enterprise Solutions\n& ERP", slug: "enterprise-solutions" },
+  { icon: "fintechIcon.webp", title: "Fintech &\nDigital Platforms", slug: "fintech-digital-platforms" },
+  { icon: "aiIcon.webp", title: "AI Solutions &\nAutomation", slug: "ai-solutions" },
 ];
 
 export const bigBoxes = [

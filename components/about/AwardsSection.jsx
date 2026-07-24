@@ -11,7 +11,7 @@ export default function AwardsSection({ awardsSectionRef }) {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 fade-up items-stretch [transition-delay:100ms]">
           <div className="relative rounded-2xl overflow-hidden group h-[320px] sm:h-[420px] lg:h-[601px]">
-            <Image src="/assets/servicePage/award_Men.svg" alt="Award recipient" fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+            <Image src="/assets/servicePage/award_Men.webp" alt="Award recipient" fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent"></div>
           </div>
 
@@ -36,7 +36,7 @@ export default function AwardsSection({ awardsSectionRef }) {
           </div>
 
           <div className="relative rounded-2xl overflow-hidden group h-[320px] sm:h-[420px] lg:h-[601px]">
-            <Image src="/assets/servicePage/award_Women.svg" alt="Award recipient" fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+            <Image src="/assets/servicePage/award_Women.webp" alt="Award recipient" fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent"></div>
           </div>
         </div>

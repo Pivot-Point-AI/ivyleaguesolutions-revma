@@ -41,7 +41,7 @@ export default function CustomDevSection() {
 
             <div className="w-full lg:w-[802px] h-[220px] sm:h-[280px] lg:h-[362px]
                          rounded-[20px] overflow-hidden relative group shrink-0 cursor-pointer">
-                <Image src="/assets/enterprisePage/peopleGroup.svg"
+                <Image src="/assets/enterprisePage/peopleGroup.webp"
                      alt="People Group Meeting"
                      fill sizes="(min-width: 1024px) 802px, 100vw"
                      className="object-cover transition-transform duration-700 group-hover:scale-105"/>
@@ -89,7 +89,7 @@ export default function CustomDevSection() {
 
                 <div className="w-full sm:w-[390px] h-[300px] sm:h-[400px] lg:h-[545px]
                              rounded-[20px] overflow-hidden relative group shrink-0 cursor-pointer">
-                    <Image src="/assets/enterprisePage/personTyping.svg"
+                    <Image src="/assets/enterprisePage/personTyping.webp"
                          alt="Person Typing"
                          fill sizes="(min-width: 640px) 390px, 100vw"
                          className="object-cover transition-transform duration-700 group-hover:scale-105"/>
@@ -123,7 +123,7 @@ export default function CustomDevSection() {
                              rounded-[20px] shadow-[0px_2px_4px_0px_rgba(152,152,152,0.15)]
                              p-[20px] lg:p-[28px] flex flex-col justify-between">
                     <div>
-                        <Image src="/assets/enterprisePage/chemistryLogo.svg"
+                        <Image src="/assets/enterprisePage/chemistryLogo.webp"
                              alt="App Logo"
                              width={40} height={40}
                              className="w-[40px] h-[40px] block"/>
@@ -189,7 +189,7 @@ export default function CustomDevSection() {
 
             <div className="w-full lg:w-[810px] h-[220px] sm:h-[280px] lg:h-[362px]
                          rounded-[20px] overflow-hidden relative group shrink-0 cursor-pointer">
-                <Image src="/assets/enterprisePage/peopleDiscussion.svg"
+                <Image src="/assets/enterprisePage/peopleDiscussion.webp"
                      alt="People Discussion"
                      fill sizes="(min-width: 1024px) 810px, 100vw"
                      className="object-cover transition-transform duration-700 group-hover:scale-105"/>

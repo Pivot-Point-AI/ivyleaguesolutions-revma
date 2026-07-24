@@ -92,21 +92,21 @@ export default function LegacyModernizationSection() {
             <div className="ent-legacy__imgs shrink-0 flex flex-col items-center gap-[20px] lg:flex-row lg:items-end">
 
                 <div className="ent-legacy__img-wrap w-[160px] h-[246px] sm:w-[200px] sm:h-[307px] lg:w-[252px] lg:h-[387px] shrink-0 mb-[0px]">
-                    <Image src="/assets/enterprisePage/mobileGirl.svg"
+                    <Image src="/assets/enterprisePage/mobileGirl.webp"
                          alt="Team collaboration"
                          width={252} height={387}
                          className="ent-legacy__img w-[160px] h-[246px] sm:w-[200px] sm:h-[307px] lg:w-[252px] lg:h-[387px] object-cover rounded-[20px] block"/>
                 </div>
 
                 <div className="ent-legacy__img-wrap ent-legacy__img-wrap--raised w-[160px] h-[246px] sm:w-[200px] sm:h-[307px] lg:w-[252px] lg:h-[387px] shrink-0 mb-[0px] lg:mb-[90px]">
-                    <Image src="/assets/enterprisePage/twoMen.svg"
+                    <Image src="/assets/enterprisePage/twoMen.webp"
                          alt="Cloud computing technology"
                          width={252} height={387}
                          className="ent-legacy__img w-[160px] h-[246px] sm:w-[200px] sm:h-[307px] lg:w-[252px] lg:h-[387px] object-cover rounded-[20px] block"/>
                 </div>
 
                 <div className="ent-legacy__img-wrap w-[160px] h-[246px] sm:w-[200px] sm:h-[307px] lg:w-[252px] lg:h-[387px] shrink-0 mb-[0px]">
-                    <Image src="/assets/enterprisePage/girlGroup.svg"
+                    <Image src="/assets/enterprisePage/girlGroup.webp"
                          alt="Team meeting"
                          width={252} height={387}
                          className="ent-legacy__img w-[160px] h-[246px] sm:w-[200px] sm:h-[307px] lg:w-[252px] lg:h-[387px] object-cover rounded-[20px] block"/>

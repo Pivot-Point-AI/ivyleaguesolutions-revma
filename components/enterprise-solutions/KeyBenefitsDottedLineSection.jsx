@@ -22,7 +22,7 @@ export default function KeyBenefitsDottedLineSection() {
         <div className="ent-dotedline-canvas">
           <div className="ent-dotedline-inner">
 
-            <Image src="/assets/enterprisePage/dotedLine.svg"
+            <Image src="/assets/enterprisePage/dotedLine.webp"
                  alt=""
                  aria-hidden="true"
                  width={1641} height={18}

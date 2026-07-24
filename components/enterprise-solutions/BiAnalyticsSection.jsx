@@ -24,7 +24,7 @@ export default function BiAnalyticsSection() {
         </div>
 
         <div className="absolute top-[105px] left-[800px]">
-            <Image src="/assets/enterprisePage/dataAnalysis.svg"
+            <Image src="/assets/enterprisePage/dataAnalysis.webp"
                  alt="Data Analysis"
                  width={300} height={300}
                  className="w-[300px] h-[300px] object-cover rounded-[16px] block"/>
@@ -57,14 +57,14 @@ export default function BiAnalyticsSection() {
         </div>
 
         <div className="absolute top-[250px] left-[1490px]">
-            <Image src="/assets/enterprisePage/dashboard.svg"
+            <Image src="/assets/enterprisePage/dashboard.webp"
                  alt="Dashboards"
                  width={305} height={185}
                  className="w-[305px] h-[185px] object-cover rounded-[16px] block"/>
         </div>
 
         <div className="absolute top-[640px] left-[160px]">
-            <Image src="/assets/enterprisePage/dataCollection.svg"
+            <Image src="/assets/enterprisePage/dataCollection.webp"
                  alt="Data Collection"
                  width={219} height={300}
                  className="w-[219px] h-[300px] object-cover rounded-[12px] block"/>
@@ -85,7 +85,7 @@ export default function BiAnalyticsSection() {
         </div>
 
         <div className="absolute top-[565px] left-[878px]">
-            <Image src="/assets/enterprisePage/dataVisualization.svg"
+            <Image src="/assets/enterprisePage/dataVisualization.webp"
                  alt="Data Visualization"
                  width={421} height={250}
                  className="w-[421px] h-[250px] object-cover rounded-[16px] block"/>
@@ -105,7 +105,7 @@ export default function BiAnalyticsSection() {
         </div>
 
         <div className="absolute top-[562px] left-[1511px]">
-            <Image src="/assets/enterprisePage/reporting.svg"
+            <Image src="/assets/enterprisePage/reporting.webp"
                  alt="Reporting"
                  width={297} height={297}
                  className="w-[297px] h-[297px] object-cover rounded-[16px] block"/>

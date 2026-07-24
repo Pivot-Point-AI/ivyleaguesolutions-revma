@@ -37,7 +37,7 @@ export default function HeroSlider() {
         className="absolute inset-0 bg-[#0d0035]"
         style={{ opacity: active === 0 ? 1 : 0, transition: "opacity .9s ease", pointerEvents: active === 0 ? "auto" : "none" }}
       >
-        <Image src="/assets/landingPage/firstSlider.svg" alt="" aria-hidden="true" fill sizes="100vw" preload={true} className="absolute inset-0 w-full h-full object-cover" />
+        <Image src="/assets/landingPage/firstSlider.webp" alt="" aria-hidden="true" fill sizes="100vw" preload={true} className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 pointer-events-none hero-radial-gradient"></div>
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-6">
@@ -62,7 +62,7 @@ export default function HeroSlider() {
           </div>
         </div>
 
-        <img src="/assets/landingPage/sliderLine.svg" alt="" aria-hidden="true" loading="eager" className="absolute pointer-events-none select-none hidden sm:block slider-line-pos" />
+        <img src="/assets/landingPage/sliderLine.webp" alt="" aria-hidden="true" loading="eager" className="absolute pointer-events-none select-none hidden sm:block slider-line-pos" />
 
         <div className="absolute hidden sm:flex items-center justify-center w-[185px] h-[87px] top-[69.3%] left-[64.5%] border border-white/35 rounded-[20px] bg-white/[0.08] backdrop-blur-[6px] p-[10px] box-border">
           <p className="font-inter w-[166px] text-white font-normal text-[15px] leading-snug text-center m-0">
@@ -73,7 +73,7 @@ export default function HeroSlider() {
 
       {/* Slide 2 */}
       <div className="absolute inset-0 bg-[#0d0035]" style={{ opacity: active === 1 ? 1 : 0, transition: "opacity .9s ease", pointerEvents: active === 1 ? "auto" : "none" }}>
-        <Image src="/assets/landingPage/axonslider.svg" alt="AXON – AI Voice Banking Assistant" fill sizes="100vw" className="absolute inset-0 w-full h-full object-contain sm:object-cover" />
+        <Image src="/assets/landingPage/axonslider.webp" alt="AXON – AI Voice Banking Assistant" fill sizes="100vw" className="absolute inset-0 w-full h-full object-contain sm:object-cover" />
 
         <div className="absolute inset-x-0 bottom-0 flex flex-col items-center text-center px-5 pt-6 pb-10 sm:hidden">
           <h1 className="font-inter tracking-0 font-semibold text-white leading-tight text-[clamp(1.4rem,5.5vw,2rem)] max-w-[92%]">
@@ -95,10 +95,10 @@ export default function HeroSlider() {
 
       {/* Slide 3 */}
       <div className="absolute inset-0 bg-[#eef2ff]" style={{ opacity: active === 2 ? 1 : 0, transition: "opacity .9s ease", pointerEvents: active === 2 ? "auto" : "none" }}>
-        <Image src="/assets/landingPage/thirdSlider.svg" alt="" aria-hidden="true" fill sizes="100vw" className="absolute inset-0 w-full h-full object-cover" />
+        <Image src="/assets/landingPage/thirdSlider.webp" alt="" aria-hidden="true" fill sizes="100vw" className="absolute inset-0 w-full h-full object-cover" />
 
         <div className="absolute top-[37.6%] left-[7.24%] max-w-[90%] sm:max-w-[600px]">
-          <img src="/assets/landingPage/noroLogo.svg" alt="noro" loading="eager" className="h-10 sm:h-14 w-auto block mb-4 sm:mb-7" />
+          <img src="/assets/landingPage/noroLogo.webp" alt="noro" loading="eager" className="h-10 sm:h-14 w-auto block mb-4 sm:mb-7" />
           <div className="font-inter font-light text-[#1a1a2e] text-[clamp(1rem,1.8vw,23px)] leading-snug">
             We bring intelligence to every interaction<br />
             <span className="text-[clamp(.85rem,1.4vw,20px)] text-[#555555]">Secure &bull; Seamless &bull; Intelligent</span>
@@ -114,7 +114,7 @@ export default function HeroSlider() {
         </div>
 
         <div className="absolute right-0 top-0 h-full w-[55%] flex items-end justify-end">
-          <img src="/assets/landingPage/noroMobile.svg" alt="noro mobile app" loading="eager" className="w-auto object-contain select-none pointer-events-none noro-mobile-img" />
+          <img src="/assets/landingPage/noroMobile.webp" alt="noro mobile app" loading="eager" className="w-auto object-contain select-none pointer-events-none noro-mobile-img" />
         </div>
       </div>
 

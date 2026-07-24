@@ -8,8 +8,8 @@ export const secData = [
 ];
 
 export const baseUxData = [
-  { num: "01", title: "User Research", desc: "Rewriting code to enhance efficiency and maintainability.", img: "/assets/enterprisePage/userResearch.svg" },
-  { num: "02", title: "Wireframing", desc: "Create low-fidelity prototypes for the user interface.", img: "/assets/enterprisePage/userResearch.svg" },
-  { num: "03", title: "Prototyping", desc: "Develop high-fidelity prototypes for in-depth testing.", img: "/assets/enterprisePage/userResearch.svg" },
-  { num: "04", title: "User Testing", desc: "Gather real user feedback to refine and perfect the design.", img: "/assets/enterprisePage/userResearch.svg" },
+  { num: "01", title: "User Research", desc: "Rewriting code to enhance efficiency and maintainability.", img: "/assets/enterprisePage/userResearch.webp" },
+  { num: "02", title: "Wireframing", desc: "Create low-fidelity prototypes for the user interface.", img: "/assets/enterprisePage/userResearch.webp" },
+  { num: "03", title: "Prototyping", desc: "Develop high-fidelity prototypes for in-depth testing.", img: "/assets/enterprisePage/userResearch.webp" },
+  { num: "04", title: "User Testing", desc: "Gather real user feedback to refine and perfect the design.", img: "/assets/enterprisePage/userResearch.webp" },
 ];

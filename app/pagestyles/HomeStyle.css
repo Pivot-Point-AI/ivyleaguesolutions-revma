@@ -132,6 +132,11 @@
     background-size: 110% auto;
     background-position: bottom left;
 }
+.process-img-delivery {
+    background-image: var(--card-bg-img);
+    background-size: 100% auto;
+    background-position: center calc(100% - 30px);
+}
 
 /* ── Process card diagrams on mobile (independent control per card) ── */
 @media (max-width: 639px) {
@@ -146,6 +151,10 @@
     .process-img-discovery {
         background-size: 110% auto !important;
         background-position: bottom left !important;
+    }
+    .process-img-delivery {
+        background-size: 90% auto !important;
+        background-position: center calc(100% - 20px) !important;
     }
 }
 /* ── Section 9: Team card transitions & hover ── */

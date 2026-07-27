@@ -25,5 +25,5 @@ export const processCards = [
   { key: "development", title: "Development", desc: "We deliver innovative and scalable development solutions tailored to meet modern business needs.", bgClass: "process-card-bg-development", imgClass: "process-img-development", img: "developmentCard.webp" },
   { key: "strategy", title: "Strategy", desc: "A clear plan that defines goals, priorities, and actions to achieve long-term success efficiently.", bgClass: "process-card-bg-strategy", imgClass: "process-img-strategy", img: "strategyCard.webp" },
   { key: "discovery", title: "Discovery", desc: "Understanding customer needs and goals to uncover the best possible solutions.", bgClass: "process-card-bg-discovery", imgClass: "process-img-discovery", img: "discoveryCard.webp" },
-  { key: "delivery", title: "Delivery", desc: "Launching your solution with rigorous testing and ongoing support to ensure lasting success.", bgClass: "process-card-bg-strategy-alt", imgClass: "process-img-strategy", img: "strategyCard.webp" },
+  { key: "delivery", title: "Delivery", desc: "Launching your solution with rigorous testing and ongoing support to ensure lasting success.", bgClass: "process-card-bg-strategy-alt", imgClass: "process-img-delivery", img: "deliveryCard.svg" },
 ];

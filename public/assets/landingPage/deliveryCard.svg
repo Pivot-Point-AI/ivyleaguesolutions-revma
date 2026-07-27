@@ -1,0 +1,21 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- motion lines -->
+  <path d="M20 120H90" stroke="white" stroke-opacity="0.35" stroke-width="3" stroke-linecap="round"/>
+  <path d="M10 150H100" stroke="white" stroke-opacity="0.5" stroke-width="3" stroke-linecap="round"/>
+  <path d="M20 180H90" stroke="white" stroke-opacity="0.35" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- shipping box -->
+  <g stroke="white" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M150 118 L245 90 L340 118 L245 146 Z" fill="white" fill-opacity="0.06"/>
+    <path d="M150 118 L150 220 L245 248 L245 146 Z" fill="white" fill-opacity="0.1"/>
+    <path d="M340 118 L340 220 L245 248 L245 146 Z" fill="white" fill-opacity="0.16"/>
+    <path d="M182 108 L277 136" stroke-opacity="0.6"/>
+    <path d="M150 118 L245 146" stroke-opacity="0.6"/>
+    <path d="M340 118 L245 146" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- checkmark badge -->
+  <circle cx="245" cy="146" r="34" fill="#508CFA"/>
+  <circle cx="245" cy="146" r="34" stroke="white" stroke-width="2.5"/>
+  <path d="M230 146 L241 157 L262 134" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

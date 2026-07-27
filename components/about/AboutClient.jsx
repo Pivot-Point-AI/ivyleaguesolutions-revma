@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { teamMembers } from "./data";
+import { useEffect, useRef } from "react";
 import HeroSection from "./HeroSection";
 import StatsSection from "./StatsSection";
 import AwardsSection from "./AwardsSection";
@@ -11,7 +10,6 @@ import Link from "next/link";
 export default function AboutClient() {
   const statsRowRef = useRef(null);
   const awardsSectionRef = useRef(null);
-  const teamTrackRef = useRef(null);
 
   useEffect(() => {
     /* Stat counters */
@@ -61,26 +59,6 @@ export default function AboutClient() {
       if (awardsObserver) awardsObserver.disconnect();
     };
   }, []);
-
-  /* Team carousel — driven by React state so card content never desyncs from its DOM position */
-  const [teamIdx, setTeamIdx] = useState(0);
-  const [teamAnimated, setTeamAnimated] = useState(true);
-  const TEAM_STEP = 501 + 24;
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTeamAnimated(true);
-      setTeamIdx((i) => i + 1);
-    }, 3500);
-    return () => clearInterval(interval);
-  }, []);
-
-  const handleTeamTransitionEnd = () => {
-    if (teamIdx >= teamMembers.length) {
-      setTeamAnimated(false);
-      setTeamIdx((i) => i - teamMembers.length);
-    }
-  };
 
   return (
     <>
@@ -143,13 +121,7 @@ export default function AboutClient() {
       <AwardsSection awardsSectionRef={awardsSectionRef} />
 
       {/* SECTION 5 · OUR TEAM */}
-      <TeamSection
-        teamTrackRef={teamTrackRef}
-        teamIdx={teamIdx}
-        teamAnimated={teamAnimated}
-        TEAM_STEP={TEAM_STEP}
-        handleTeamTransitionEnd={handleTeamTransitionEnd}
-      />
+      <TeamSection />
 
       {/* SECTION 6 · JOIN OUR JOURNEY */}
       <section className="relative overflow-hidden bg-[#fafafa]">

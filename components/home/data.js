@@ -7,9 +7,9 @@ export const fintechSlides = [
 
 export const clients = [
   { logo: "bankislamiLogo.webp", alt: "BankIslami", logoW: 162, logoH: 35, desc: "Cutting-edge tech solutions that keep your business ahead of the curve." },
-  { logo: "jsLogo.webp", alt: "JS Bank", logoW: 140, logoH: 24, desc: "A leading commercial bank delivering innovative financial services across Pakistan." },
+  { logo: "jsLogo.webp", alt: "JS Bank", logoW: 140, logoH: 24, desc: "A leading commercial bank delivering innovative financial services." },
   { logo: "zindagiLogo.webp", alt: "Zindigi", logoW: 135, logoH: 28, desc: "JS Bank's digital banking super-app redefining fintech for a new generation." },
-  { logo: "bokLogo.webp", alt: "Bank of Khyber", logoW: 155, logoH: 32, desc: "The provincial bank of KPK, serving public and private sectors with trusted banking." },
+  { logo: "bokLogo.webp", alt: "Bank of Khyber", logoW: 155, logoH: 32, desc: "The provincial bank, serving public and private sectors with trusted banking." },
 ];
 
 

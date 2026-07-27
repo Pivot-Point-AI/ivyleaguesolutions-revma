@@ -63,6 +63,11 @@ export default function ApiIntegrationPage() {
         heroHeading="Connect every system with reliable, secure API integrations"
         bannerHeading="Seamless Integration Services"
         bannerBody="We connect your applications, data sources, and third-party services into a unified ecosystem. From building custom APIs to integrating enterprise platforms, we make sure your systems talk to each other reliably and securely."
+        heroStats={[
+          { value: "200+", label: "Integrations Delivered", icon: "layers" },
+          { value: "99.9%", label: "API Uptime", icon: "shield" },
+          { value: "<200ms", label: "Average Response Time", icon: "clock" },
+        ]}
         sectionsAsCards
         sections={[
           {

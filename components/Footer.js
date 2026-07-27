@@ -48,8 +48,8 @@ export default function Footer() {
         <div className="border-t border-[#8E8E8E] mb-5"></div>
 
         <div className="flex items-center justify-between gap-4">
-          <div className="relative w-[52px] h-[52px] sm:w-[70px] sm:h-[70px] lg:w-[87px] lg:h-[87px] flex-shrink-0">
-            <Image src="/assets/landingPage/logo-dark.webp" alt="Ivy League Solutions Logo" fill sizes="87px" className="object-contain block" />
+          <div className="relative w-[120px] h-[80px] sm:w-[160px] sm:h-[107px] lg:w-[200px] lg:h-[134px] flex-shrink-0">
+            <Image src="/assets/landingPage/ivy2-transparent-dark-bg.png" alt="Ivy League Solutions Logo" fill sizes="200px" className="object-contain object-left block" />
           </div>
 
           <div className="flex items-center gap-2 sm:gap-3 lg:gap-4 flex-wrap justify-end">

@@ -186,8 +186,8 @@ html, body {
    small, in which case a readable minimum is used instead.
    ============================================================ */
 @media (min-width: 1025px) and (max-width: 1919px) {
-  .site-header-inner { height: clamp(59px, 5.7292vw, 110px); }
-  .site-logo { height: clamp(50px, 4.8646vw, 93px); width: auto; }
+  .site-header-inner { height: clamp(85px, 8.2292vw, 158px); }
+  .site-logo { height: clamp(76px, 7.2917vw, 126px); width: auto; }
   .site-nav { gap: clamp(30px, 2.9167vw, 56px); }
   .site-nav-link { font-size: clamp(16px, 1.0417vw, 20px); }
   .site-book-btn,

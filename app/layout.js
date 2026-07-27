@@ -28,7 +28,9 @@ export const metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: absoluteUrl("/assets/landingPage/footerLogo.svg"),
+        url: absoluteUrl(siteConfig.ogImage),
+        width: 1200,
+        height: 630,
         alt: siteConfig.name,
       },
     ],
@@ -37,7 +39,12 @@ export const metadata = {
     card: "summary_large_image",
     title: siteConfig.defaultTitle,
     description: siteConfig.description,
-    images: [absoluteUrl("/assets/landingPage/footerLogo.svg")],
+    images: [absoluteUrl(siteConfig.ogImage)],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/assets/landingPage/ivy-square-512.png",
   },
   robots: {
     index: true,
@@ -113,7 +120,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="antialiased text-gray-900 overflow-x-hidden">
         <PageStoreProvider>
-          {/* <SiteLoader /> */}
+          <SiteLoader />
           <Header />
           <main>{children}</main>
           <Footer />

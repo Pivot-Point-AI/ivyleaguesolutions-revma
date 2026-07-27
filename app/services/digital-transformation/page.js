@@ -63,6 +63,11 @@ export default function DigitalTransformationPage() {
         heroHeading="Reinvent how your business operates in a digital-first world"
         bannerHeading="End-to-End Digital Transformation"
         bannerBody="We help organizations modernize processes, adopt new technologies, and build the digital foundations they need to compete. From strategy through execution, we turn transformation ambitions into measurable results."
+        heroStats={[
+          { value: "40+", label: "Transformation Projects Led", icon: "trending" },
+          { value: "45%", label: "Average Efficiency Gain", icon: "zap" },
+          { value: "12+", label: "Years Guiding Digital Change", icon: "clock" },
+        ]}
         sectionsAsCards
         sections={[
           {

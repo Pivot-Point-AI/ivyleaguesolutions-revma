@@ -16,8 +16,8 @@
     position: relative;   /* add this */
     overflow: hidden;     /* add this */
     background-color: #f8f8f8;
-    padding-top: 280px;
-    padding-bottom: 280px;
+    padding-top: 130px;
+    padding-bottom: 56px;
     padding-left: 140px;
     padding-right: 140px;
 }
@@ -595,8 +595,8 @@
    ============================================================ */
 @media (min-width: 1025px) and (max-width: 1919px) {
     .ind-hero-section {
-        padding-top: clamp(160px, 14.5833vw, 280px);
-        padding-bottom: clamp(80px, 14.5833vw, 280px);
+        padding-top: clamp(115px, 6.7708vw, 130px);
+        padding-bottom: clamp(40px, 2.9167vw, 56px);
         padding-left: clamp(40px, 7.2917vw, 140px);
         padding-right: clamp(40px, 7.2917vw, 140px);
     }

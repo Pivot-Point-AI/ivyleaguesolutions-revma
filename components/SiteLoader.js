@@ -45,7 +45,7 @@ export default function SiteLoader() {
         }`}
       >
         <img
-          src="/assets/landingPage/ivyleague.png"
+          src="/assets/landingPage/ivy-mark-transparent.png"
           alt="Loading..."
           className="site-logo-spin w-[140px] sm:w-[180px] lg:w-[220px] h-auto max-w-[60vw] select-none pointer-events-none"
           loading="eager"

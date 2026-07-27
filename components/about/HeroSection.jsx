@@ -6,6 +6,10 @@ export default function HeroSection() {
     <section className="relative overflow-hidden lg:min-h-[100svh]">
       <Image src="/assets/aboutPage/aboutHeader.webp" alt="" aria-hidden="true" fill sizes="100vw" preload={true} className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none" />
       <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/85 to-white/50 lg:hidden pointer-events-none" />
+      <div
+        className="absolute inset-0 hidden lg:block pointer-events-none"
+        style={{ background: "linear-gradient(90deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.88) 32%, rgba(255,255,255,0.55) 48%, rgba(255,255,255,0) 62%)" }}
+      />
       <div className="relative w-full px-6 sm:px-10 lg:pl-[140px] lg:pr-12 lg:flex lg:items-center lg:min-h-[100svh]">
         <div className="pt-24 pb-16 fade-up">
           <div className="overflow-hidden mb-2">

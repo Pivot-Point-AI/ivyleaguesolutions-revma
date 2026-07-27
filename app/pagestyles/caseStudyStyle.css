@@ -4,7 +4,7 @@
 .cs-hero-section {
     position: relative;   /* add this */
     overflow: hidden;     /* add this */
-    padding: 280px 140px 180px;
+    padding: 150px 140px 70px;
 }
 .ind-hero-bg {
     position: absolute;
@@ -1009,9 +1009,9 @@
    ============================================================ */
 @media (min-width: 1025px) and (max-width: 1919px) {
     .cs-hero-section {
-        padding-top: clamp(160px, 14.5833vw, 280px);
+        padding-top: clamp(120px, 7.8125vw, 150px);
         padding-right: clamp(40px, 7.2917vw, 140px);
-        padding-bottom: clamp(80px, 9.375vw, 180px);
+        padding-bottom: clamp(50px, 3.6458vw, 70px);
         padding-left: clamp(40px, 7.2917vw, 140px);
     }
     .ind-hero-bg {

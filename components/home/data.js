@@ -13,10 +13,10 @@ export const clients = [
 ];
 
 export const allMembers = [
-  { name: "Frat Iqbal", quote: "IVY LEAGUE SOLUTIONS has played a pivotal role in our journey, helping us realize our vision and delivering on our commitments with the necessary synergy.", stars: 5, img: "yousafReview.webp" },
-  { name: "Hajra Kayani", quote: "IVY LEAGUE SOLUTIONS has played a pivotal role in our journey, helping us realize our vision and delivering on our commitments with the necessary synergy.", stars: 5, img: "HajraReview.webp" },
-  { name: "Ammar Tariq", quote: "IVY LEAGUE SOLUTIONS has played a pivotal role in our journey, helping us realize our vision and delivering on our commitments with the necessary synergy.", stars: 5, img: "ammarReview.webp" },
-  { name: "Rubab Ahmad", quote: "IVY LEAGUE SOLUTIONS has played a pivotal role in our journey, helping us realize our vision and delivering on our commitments with the necessary synergy.", stars: 5, img: "rubabReview.webp" },
+  { name: "James Whitfield", quote: "IVY LEAGUE SOLUTIONS has played a pivotal role in our journey, helping us realize our vision and delivering on our commitments with the necessary synergy.", stars: 5, img: "yousafReview.webp" },
+  { name: "Maryam Al Suwaidi", quote: "IVY LEAGUE SOLUTIONS has played a pivotal role in our journey, helping us realize our vision and delivering on our commitments with the necessary synergy.", stars: 5, img: "HajraReview.webp" },
+  { name: "Michael Anderson", quote: "IVY LEAGUE SOLUTIONS has played a pivotal role in our journey, helping us realize our vision and delivering on our commitments with the necessary synergy.", stars: 5, img: "ammarReview.webp" },
+  { name: "Fatima Al Marzooqi", quote: "IVY LEAGUE SOLUTIONS has played a pivotal role in our journey, helping us realize our vision and delivering on our commitments with the necessary synergy.", stars: 5, img: "rubabReview.webp" },
   { name: "Hassan Ali", quote: "IVY LEAGUE SOLUTIONS has played a pivotal role in our journey, helping us realize our vision and delivering on our commitments with the necessary synergy.", stars: 5, img: "hassanReview.webp" },
 ];
 

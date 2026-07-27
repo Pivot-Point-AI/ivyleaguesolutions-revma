@@ -245,8 +245,8 @@
    ============================================================ */
 @media (min-width: 1025px) and (max-width: 1919px) {
     .fintech-page .hero-section {
-        padding-top: clamp(160px, 15.625vw, 300px);
-        padding-bottom: clamp(80px, 10.9375vw, 210px);
+        padding-top: clamp(120px, 7.8125vw, 150px);
+        padding-bottom: clamp(50px, 3.6458vw, 70px);
         padding-left: clamp(40px, 7.2917vw, 140px);
         padding-right: clamp(40px, 7.2917vw, 140px);
     }

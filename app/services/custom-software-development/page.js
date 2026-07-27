@@ -63,6 +63,11 @@ export default function CustomSoftwareDevelopmentPage() {
         heroHeading="Custom software built around your business, not the other way around"
         bannerHeading="Tailored Software Solutions"
         bannerBody="We design and build custom software that fits your exact workflows — from internal tools and automation to full-scale customer-facing platforms. Every solution is engineered for performance, scalability, and long-term maintainability."
+        heroStats={[
+          { value: "150+", label: "Custom Solutions Delivered", icon: "briefcase" },
+          { value: "98%", label: "On-Time Delivery Rate", icon: "clock" },
+          { value: "12+", label: "Years of Engineering Experience", icon: "trending" },
+        ]}
         sectionsAsCards
         sections={[
           {

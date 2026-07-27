@@ -1,10 +1,11 @@
 import Image from "next/image";
+import HeroStatIcon from "../shared/HeroStatIcon";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-[#f8f8f8] pt-[140px] pb-[60px] px-[20px]
-                 sm:pt-[120px] sm:pb-[100px] sm:px-[40px]
-                 lg:pt-[300px] lg:pb-[210px] lg:px-[140px]">
+    <section className="relative overflow-hidden bg-[#f8f8f8] pt-[120px] pb-[50px] px-[20px]
+                 sm:pt-[110px] sm:pb-[60px] sm:px-[40px]
+                 lg:pt-[150px] lg:pb-[70px] lg:px-[140px]">
     <Image
         src="/assets/industriesPage/herobgRight.webp"
         alt=""
@@ -15,13 +16,60 @@ export default function HeroSection() {
         preload={true}
     />
     <div className="relative z-[1] max-w-[992px]">
-        <h1 className="text-[#242424] font-normal
-                    text-[32px] leading-[33px]
-                    sm:text-[42px] sm:leading-[44px]
-                    lg:text-[63px] lg:leading-[58px]
+        <div className="mb-4">
+          <span className="block text-[13px] font-semibold text-[#4026B8] uppercase tracking-[0.12em] mb-2">
+            Enterprise Solutions
+          </span>
+          <span className="block w-8 h-[3px] bg-[#4026B8] rounded-full"></span>
+        </div>
+        <h1 className="text-[#242424] font-bold
+                    text-[32px] leading-[1.15]
+                    sm:text-[42px] sm:leading-[1.1]
+                    lg:text-[63px] lg:leading-[1.08]
                     tracking-normal m-0">
-            Powering your business with enterprise-grade applications
+            Powering your business with <span className="text-[#4026B8]">enterprise-grade</span> applications
         </h1>
+        <p className="font-normal text-[#6A6A6A] mt-5 text-[16px] sm:text-[18px] lg:text-[20px] leading-[1.5] max-w-[820px]">
+            We design and build enterprise-grade applications that streamline
+            operations, integrate seamlessly with your existing systems, and
+            scale with your organization as it grows.
+        </p>
+        <div className="flex items-stretch gap-6 sm:gap-8 mt-8 flex-wrap">
+            {[
+              { value: "40+", label: "Enterprise Clients", icon: "users" },
+              { value: "60%", label: "Faster Operations", icon: "zap" },
+              { value: "99.9%", label: "Platform Uptime", icon: "shield" },
+            ].map((stat, i) => (
+              <div key={stat.label} className="flex items-start">
+                {i > 0 && <div className="w-px bg-[#242424]/10 mr-6 sm:mr-8 self-stretch"></div>}
+                <div className="flex flex-col items-start">
+                  <div className="w-12 h-12 rounded-full bg-[#4026B8]/10 flex items-center justify-center mb-4">
+                    <HeroStatIcon name={stat.icon} />
+                  </div>
+                  <span className="font-bold text-[#242424] text-[26px] sm:text-[32px] leading-none">
+                    {stat.value}
+                  </span>
+                  <span className="font-normal text-[#6A6A6A] mt-2 text-[12px] sm:text-[13px] tracking-wide uppercase">
+                    {stat.label}
+                  </span>
+                </div>
+              </div>
+            ))}
+        </div>
+    </div>
+
+    <div className="absolute hidden lg:block w-[250px] top-[38%] right-[9%] rounded-2xl bg-white border border-black/5 shadow-[0_20px_45px_-15px_rgba(64,38,184,0.22)] p-6 z-[1]">
+      <div className="w-10 h-10 rounded-xl bg-[#4026B8] flex items-center justify-center mb-4">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M13 2L4.5 13.5H11L10 22L19.5 10.5H13L13 2Z" fill="white" />
+        </svg>
+      </div>
+      <span className="block text-[12px] font-semibold text-[#4026B8] uppercase tracking-[0.1em] mb-2">
+        Enterprise Ready
+      </span>
+      <p className="text-[14.5px] text-[#5A5A5A] leading-[1.55] m-0">
+        Applications built for scale, security, and seamless integration.
+      </p>
     </div>
 </section>
   );

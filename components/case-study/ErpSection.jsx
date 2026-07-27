@@ -39,7 +39,8 @@ export default function ErpSection() {
 
       <div className="erp-cs-banner">
         <Image src="/assets/caseStudy/bannerBackground.webp" alt="" aria-hidden="true" fill sizes="100vw" className="erp-cs-banner-bg" />
-        <div className="erp-cs-banner-inner">
+        <div className="absolute inset-0 z-[1] pointer-events-none" style={{ backgroundColor: "rgba(64,38,184,0.82)" }}></div>
+        <div className="erp-cs-banner-inner" style={{ zIndex: 2 }}>
           <div className="erp-cs-col erp-cs-col-left">
             <h3 className="erp-cs-heading">Challenge</h3>
             <p className="erp-cs-body">

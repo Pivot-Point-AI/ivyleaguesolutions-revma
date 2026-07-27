@@ -63,6 +63,11 @@ export default function AiSolutionsPage() {
         heroHeading="Build practical AI into your products and operations"
         bannerHeading="AI Solutions & Automation"
         bannerBody="We help businesses put AI to work where it actually moves the needle — inside products, workflows, and internal operations. From LLM-powered features to automation that eliminates manual work, we build AI systems that are reliable, secure, and scoped to real business outcomes."
+        heroStats={[
+          { value: "60%", label: "Reduction in Manual Work", icon: "zap" },
+          { value: "25+", label: "AI Systems Shipped to Production", icon: "layers" },
+          { value: "99.9%", label: "Model Uptime in Production", icon: "shield" },
+        ]}
         sectionsAsCards
         sections={[
           {

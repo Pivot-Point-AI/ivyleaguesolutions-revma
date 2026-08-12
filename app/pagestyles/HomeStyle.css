@@ -248,7 +248,7 @@ body[data-hero-slide="0"] [class*="nav"] svg *, body[data-hero-slide="0"] [id*="
 
 /* ── Typography helper (was repeated inline style="font-family:'Inter',sans-serif;") ── */
 .font-inter {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-inter), sans-serif;
 }
 .tracking-0 {
     letter-spacing: 0%;

@@ -6,7 +6,7 @@ import { breadcrumbJsonLd, serviceJsonLd, faqJsonLd } from "../../../lib/schema"
 export const metadata = {
   title: "E-Commerce Software Development",
   description:
-    "High-performance e-commerce platforms: multi-vendor marketplaces, inventory management, order processing systems, and personalized shopping experiences built by Ivy League Solutions.",
+    "High-performance e-commerce platforms: multi-vendor marketplaces, inventory management, order processing systems, and personalized shopping experiences.",
   alternates: canonicalAlternates("/industries/ecommerce"),
   openGraph: {
     title: "E-Commerce Software Development | Ivy League Solutions",
@@ -83,6 +83,7 @@ export default function EcommerceIndustry() {
         ctaBody="Let’s work together to build a shopping experience that delights your customers and drives growth."
         ctaButtonText="Discuss Your E-commerce Project"
         faqs={faqs}
+        currentIndustry="ecommerce"
       />
     </>
   );

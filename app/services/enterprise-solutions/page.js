@@ -20,11 +20,15 @@ import KeyBenefitsCrossLineSection from "../../../components/enterprise-solution
 import { absoluteUrl, canonicalAlternates } from "../../../lib/siteConfig";
 import { breadcrumbJsonLd, serviceJsonLd, faqJsonLd } from "../../../lib/schema";
 import FAQSection from "../../../components/ui/FAQSection";
+import RelatedLinks from "../../../components/shared/RelatedLinks";
+import { ALL_SERVICES } from "../../../components/shared/relatedLinksData";
+
+const otherServices = ALL_SERVICES.filter((s) => s.slug !== "enterprise-solutions");
 
 export const metadata = {
   title: "Enterprise Solutions & ERP",
   description:
-    "Enterprise application integration, ERP & CRM implementation (SAP, Oracle, Microsoft Dynamics), BI & analytics, custom development, and legacy modernization from Ivy League Solutions.",
+    "Enterprise application integration, ERP & CRM implementation (SAP, Oracle, Microsoft Dynamics), BI & analytics, custom development, and legacy modernization.",
   alternates: canonicalAlternates("/services/enterprise-solutions"),
   openGraph: {
     title: "Enterprise Solutions & ERP | Ivy League Solutions",
@@ -110,6 +114,8 @@ export default function EnterpriseSolutionsPage() {
     <UxDesignSection />
 
     <KeyBenefitsCrossLineSection />
+
+    <RelatedLinks heading="Explore Other Services" items={otherServices} basePath="/services" tone="muted" />
 
     <FAQSection items={faqs} />
 

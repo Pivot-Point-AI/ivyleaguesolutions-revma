@@ -6,7 +6,7 @@ import { breadcrumbJsonLd, serviceJsonLd, faqJsonLd } from "../../../lib/schema"
 export const metadata = {
   title: "Logistics & Supply Chain Software",
   description:
-    "Smart logistics platforms: fleet tracking, warehouse management, supply chain optimization, and delivery management systems built by Ivy League Solutions for logistics operators.",
+    "Smart logistics platforms: fleet tracking, warehouse management, supply chain optimization, and delivery management systems for logistics operators.",
   alternates: canonicalAlternates("/industries/logistics"),
   openGraph: {
     title: "Logistics & Supply Chain Software | Ivy League Solutions",
@@ -83,6 +83,7 @@ export default function LogisticsIndustry() {
         ctaBody="Let’s collaborate to build a more efficient, transparent, and responsive supply chain."
         ctaButtonText="Discuss Your Logistics Project"
         faqs={faqs}
+        currentIndustry="logistics"
       />
     </>
   );

@@ -10,7 +10,7 @@ import FAQSection from "../../components/ui/FAQSection";
 export const metadata = {
   title: "Industries We Serve",
   description:
-    "Ivy League Solutions builds software for fintech, healthcare, e-commerce, logistics, and academia — delivering industry-specific platforms that solve real operational challenges.",
+    "Ivy League Solutions builds industry-specific software for fintech, healthcare, e-commerce, logistics, and academia that solves real operational challenges.",
   alternates: canonicalAlternates("/industries"),
   openGraph: {
     title: "Industries We Serve | Ivy League Solutions",

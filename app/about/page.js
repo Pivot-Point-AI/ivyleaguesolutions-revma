@@ -8,7 +8,7 @@ import { faqJsonLd } from "../../lib/schema";
 export const metadata = {
   title: "About Us – Our Story, Team & Mission",
   description:
-    "Ivy League Solutions is a global software development company delivering enterprise systems, fintech platforms, and digital infrastructure. Learn about our team, mission, and track record across the USA, UAE, and Pakistan.",
+    "Ivy League Solutions delivers enterprise systems, fintech platforms, and digital infrastructure. Learn about our team, mission, and track record across the USA, UAE, and Pakistan.",
   alternates: canonicalAlternates("/about"),
   openGraph: {
     title: "About Ivy League Solutions",

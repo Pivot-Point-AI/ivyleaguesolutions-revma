@@ -11,11 +11,15 @@ import WhyChooseSection from "../../../components/fintech-digital-platforms/WhyC
 import { absoluteUrl, canonicalAlternates } from "../../../lib/siteConfig";
 import { breadcrumbJsonLd, serviceJsonLd, faqJsonLd } from "../../../lib/schema";
 import FAQSection from "../../../components/ui/FAQSection";
+import RelatedLinks from "../../../components/shared/RelatedLinks";
+import { ALL_SERVICES } from "../../../components/shared/relatedLinksData";
+
+const otherServices = ALL_SERVICES.filter((s) => s.slug !== "fintech-digital-platforms");
 
 export const metadata = {
   title: "Fintech & Digital Platforms",
   description:
-    "Digital banking, micro-bank platforms, wallet applications, digital lending, and core banking systems from Ivy League Solutions — built for security, compliance, and scale.",
+    "Digital banking, micro-bank platforms, wallet applications, digital lending, and core banking systems built for security, compliance, and scale.",
   alternates: canonicalAlternates("/services/fintech-digital-platforms"),
   openGraph: {
     title: "Fintech & Digital Platforms | Ivy League Solutions",
@@ -96,6 +100,9 @@ export default function FintechServicePage() {
 
       {/* WHY CHOOSE IVY LEAGUE SOLUTIONS */}
       <WhyChooseSection />
+
+      {/* RELATED SERVICES */}
+      <RelatedLinks heading="Explore Other Services" items={otherServices} basePath="/services" tone="muted" />
 
       {/* FAQ */}
       <FAQSection items={faqs} />

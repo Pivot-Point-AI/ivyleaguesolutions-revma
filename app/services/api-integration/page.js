@@ -5,7 +5,7 @@ import { breadcrumbJsonLd, serviceJsonLd, faqJsonLd } from "../../../lib/schema"
 export const metadata = {
   title: "API & Integration Services",
   description:
-    "Connect every system with reliable, secure API integrations. Custom REST/GraphQL API development, third-party integration, system orchestration, and data synchronization from Ivy League Solutions.",
+    "Custom REST/GraphQL API development, third-party integration, system orchestration, and data synchronization — connecting every system reliably and securely.",
   alternates: canonicalAlternates("/services/api-integration"),
   openGraph: {
     title: "API & Integration Services | Ivy League Solutions",
@@ -91,6 +91,7 @@ export default function ApiIntegrationPage() {
         whyBody="Our integration specialists bring deep experience across cloud platforms, enterprise systems, and modern API standards — delivering connected ecosystems that are secure, resilient, and built to scale."
         ctaLabel="Discuss Your Integration Needs"
         faqs={faqs}
+        currentService="api-integration"
       />
     </>
   );

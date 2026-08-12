@@ -89,7 +89,7 @@ export default function FintechTabs() {
             <div key={i} onClick={() => setActive(i)} className="cursor-pointer flex flex-col gap-2 sm:gap-3">
               <span
                 style={{
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "var(--font-inter), sans-serif",
                   fontWeight: 500,
                   fontSize: "clamp(16px, 2.2vw, 30px)",
                   lineHeight: 1.3,

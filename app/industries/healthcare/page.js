@@ -6,7 +6,7 @@ import { breadcrumbJsonLd, serviceJsonLd, faqJsonLd } from "../../../lib/schema"
 export const metadata = {
   title: "Healthcare Software Development",
   description:
-    "HIPAA-compliant healthcare technology: patient management systems, telemedicine platforms, health record systems, and clinic management software built by Ivy League Solutions.",
+    "HIPAA-compliant healthcare technology: patient management systems, telemedicine platforms, health record systems, and clinic management software.",
   alternates: canonicalAlternates("/industries/healthcare"),
   openGraph: {
     title: "Healthcare Software Development | Ivy League Solutions",
@@ -83,6 +83,7 @@ export default function HealthcareIndustry() {
         ctaBody="Let's work together to build a smarter, more connected health ecosystem."
         ctaButtonText="Discuss Your HealthTech Project"
         faqs={faqs}
+        currentIndustry="healthcare"
       />
     </>
   );

@@ -132,7 +132,7 @@ export default function AboutClient() {
           <p className="text-[#242424] text-[15px] sm:text-[18px] lg:text-[19px] font-normal leading-[160%] text-center mx-auto mb-8 lg:mb-10 max-w-[1200px]">
             If you&apos;re looking for a reliable technology partner that understands both technology and business, you&apos;re in the right place. Let&apos;s build something that moves your business forward.
           </p>
-          <Link href="/contact" className="inline-flex items-center justify-center px-8 h-[50px] lg:w-[272px] lg:h-[61px] bg-[#4026B8] hover:bg-[#3520a0] text-white rounded-[16px] lg:rounded-[20px] transition-all duration-200" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "22px", lineHeight: "100%" }}>
+          <Link href="/contact" className="inline-flex items-center justify-center px-8 h-[50px] lg:w-[272px] lg:h-[61px] bg-[#4026B8] hover:bg-[#3520a0] text-white rounded-[16px] lg:rounded-[20px] transition-all duration-200" style={{ fontFamily: "var(--font-inter), sans-serif", fontWeight: 400, fontSize: "22px", lineHeight: "100%" }}>
             Let&apos;s Build Together
           </Link>
         </div>

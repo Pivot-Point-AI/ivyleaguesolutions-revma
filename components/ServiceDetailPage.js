@@ -1,7 +1,10 @@
 import "../app/pagestyles/fintech.css";
 import Image from "next/image";
+import Link from "next/link";
 import FAQSection from "./ui/FAQSection";
 import HeroStatIcon from "./shared/HeroStatIcon";
+import RelatedLinks from "./shared/RelatedLinks";
+import { ALL_SERVICES } from "./shared/relatedLinksData";
 
 /**
  * Generic, fully-responsive service-detail page.
@@ -20,7 +23,9 @@ export default function ServiceDetailPage({
   whyBody,
   ctaLabel = "Discuss Your Project",
   faqs,
+  currentService,
 }) {
+  const otherServices = ALL_SERVICES.filter((s) => s.slug !== currentService);
   return (
     <div className="bg-[#f8f8f8] fintech-page">
       {/* HERO */}
@@ -125,13 +130,16 @@ export default function ServiceDetailPage({
             {whyHeading}
           </h2>
           <p className="body-22 text-black font-normal text-center m-0 max-w-[1082px]">{whyBody}</p>
-          <button className="cta-btn">
-            <span className="btn-label text-white font-normal text-center" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400 }}>
+          <Link href="/contact" className="cta-btn">
+            <span className="btn-label text-white font-normal text-center" style={{ fontFamily: "var(--font-inter), sans-serif", fontWeight: 400 }}>
               {ctaLabel}
             </span>
-          </button>
+          </Link>
         </div>
       </section>
+
+      {/* RELATED SERVICES */}
+      <RelatedLinks heading="Explore Other Services" items={otherServices} basePath="/services" tone="muted" />
 
       {/* FAQ */}
       <FAQSection items={faqs} />

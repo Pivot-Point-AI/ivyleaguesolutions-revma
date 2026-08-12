@@ -7,7 +7,7 @@ import { faqJsonLd } from "../../lib/schema";
 export const metadata = {
   title: "Contact Us – Get in Touch",
   description:
-    "Contact Ivy League Solutions to discuss your custom software, fintech, or digital infrastructure project. Call +1 845 300 2429 or email contact@ivyleaguesolutions.com. Offices in the USA, UAE, and Pakistan.",
+    "Contact Ivy League Solutions to discuss your custom software, fintech, or digital infrastructure project. Offices in the USA, UAE, and Pakistan.",
   alternates: canonicalAlternates("/contact"),
   openGraph: {
     title: "Contact Ivy League Solutions",

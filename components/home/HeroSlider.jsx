@@ -106,9 +106,9 @@ export default function HeroSlider() {
           <span className="font-inter font-medium text-[#a897ff] text-[clamp(.7rem,.9vw,13px)] tracking-[0.15em] uppercase mb-2">
             AI-Powered Banking
           </span>
-          <h1 className="font-inter tracking-0 font-semibold text-white leading-tight text-[clamp(1.4rem,2.4vw,32px)]">
+          <h2 className="font-inter tracking-0 font-semibold text-white leading-tight text-[clamp(1.4rem,2.4vw,32px)]">
             AXON: AI Voice Banking Assistant
-          </h1>
+          </h2>
           <p className="font-inter font-light text-white/80 mt-3 max-w-[380px] text-[clamp(.75rem,.95vw,15px)] leading-relaxed">
             Automating account inquiries and support with secure, intelligent conversations.
           </p>
@@ -138,9 +138,9 @@ export default function HeroSlider() {
           <span className="font-inter font-medium text-[#a897ff] text-[11px] tracking-[0.15em] uppercase mb-2">
             AI-Powered Banking
           </span>
-          <h1 className="font-inter tracking-0 font-semibold text-white leading-tight text-[clamp(1.4rem,5.5vw,2rem)] max-w-[92%]">
+          <h2 className="font-inter tracking-0 font-semibold text-white leading-tight text-[clamp(1.4rem,5.5vw,2rem)] max-w-[92%]">
             AXON: AI Voice Banking Assistant
-          </h1>
+          </h2>
           <p className="font-inter font-light text-white/70 mt-3 text-[clamp(.8rem,3vw,.95rem)] leading-relaxed max-w-[320px]">
             Automating account inquiries and support with secure, intelligent conversations.
           </p>

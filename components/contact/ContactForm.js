@@ -74,7 +74,7 @@ export default function ContactForm() {
             disabled={status === "sending"}
             className="inline-flex items-center justify-center w-[267px] h-[61px] bg-[#4026B8] hover:bg-[#3420a0] rounded-[20px] border-none cursor-pointer transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            <span className="text-white font-normal text-[19px] leading-none tracking-normal text-center w-[155px]" style={{ fontFamily: "'Inter', sans-serif" }}>
+            <span className="text-white font-normal text-[19px] leading-none tracking-normal text-center w-[155px]" style={{ fontFamily: "var(--font-inter), sans-serif" }}>
               {status === "sending" ? "Sending..." : "Send Message"}
             </span>
           </button>

@@ -6,7 +6,7 @@ import { breadcrumbJsonLd, serviceJsonLd, faqJsonLd } from "../../../lib/schema"
 export const metadata = {
   title: "Fintech Software Development",
   description:
-    "Secure, compliant fintech platforms: payment systems, mobile banking apps, lending systems, and compliance engines for banks and financial institutions, built by Ivy League Solutions.",
+    "Secure, compliant fintech platforms: payment systems, mobile banking apps, lending systems, and compliance engines for banks and financial institutions.",
   alternates: canonicalAlternates("/industries/fintech"),
   openGraph: {
     title: "Fintech Software Development | Ivy League Solutions",
@@ -83,6 +83,7 @@ export default function FintechIndustry() {
         ctaBody="From seamless digital onboarding to robust payment architectures, we provide the technical precision required to lead the next generation of finance. Let's build a faster, more secure future for your users."
         ctaButtonText="Discuss Your Fintech Project"
         faqs={faqs}
+        currentIndustry="fintech"
       />
     </>
   );

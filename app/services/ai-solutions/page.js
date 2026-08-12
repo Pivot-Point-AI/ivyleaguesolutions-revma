@@ -5,7 +5,7 @@ import { breadcrumbJsonLd, serviceJsonLd, faqJsonLd } from "../../../lib/schema"
 export const metadata = {
   title: "AI Solutions & Automation",
   description:
-    "Build practical AI into your products and operations. Custom LLM integrations, intelligent automation, predictive analytics, and AI-powered features from Ivy League Solutions.",
+    "Custom LLM integrations, intelligent automation, predictive analytics, and AI-powered features — built into your products and operations.",
   alternates: canonicalAlternates("/services/ai-solutions"),
   openGraph: {
     title: "AI Solutions & Automation | Ivy League Solutions",
@@ -99,6 +99,7 @@ export default function AiSolutionsPage() {
         whyBody="We treat AI as an engineering discipline, not a novelty — pairing modern AI capabilities with the same rigor around security, scalability, and maintainability we bring to every system we build."
         ctaLabel="Discuss Your AI Needs"
         faqs={faqs}
+        currentService="ai-solutions"
       />
     </>
   );

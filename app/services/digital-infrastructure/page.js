@@ -7,11 +7,15 @@ import WhyChooseUsSection from "../../../components/digital-infrastructure/WhyCh
 import { absoluteUrl, canonicalAlternates } from "../../../lib/siteConfig";
 import { breadcrumbJsonLd, serviceJsonLd, faqJsonLd } from "../../../lib/schema";
 import FAQSection from "../../../components/ui/FAQSection";
+import RelatedLinks from "../../../components/shared/RelatedLinks";
+import { ALL_SERVICES } from "../../../components/shared/relatedLinksData";
+
+const otherServices = ALL_SERVICES.filter((s) => s.slug !== "digital-infrastructure");
 
 export const metadata = {
-  title: "Digital Infrastructure & Cloud Services",
+  title: "Digital Infrastructure & Cloud",
   description:
-    "Cloud migration, managed infrastructure, and scalable architecture on AWS, Azure, and Google Cloud from Ivy League Solutions — built for reliability, security, and performance.",
+    "Cloud migration, managed infrastructure, and scalable architecture on AWS, Azure, and Google Cloud — built for reliability, security, and performance.",
   alternates: canonicalAlternates("/services/digital-infrastructure"),
   openGraph: {
     title: "Digital Infrastructure & Cloud Services | Ivy League Solutions",
@@ -80,6 +84,9 @@ export default function DigitalInfrastructurePage() {
 
       {/* WHY CHOOSE US */}
       <WhyChooseUsSection />
+
+      {/* RELATED SERVICES */}
+      <RelatedLinks heading="Explore Other Services" items={otherServices} basePath="/services" tone="muted" />
 
       {/* FAQ */}
       <FAQSection items={faqs} />

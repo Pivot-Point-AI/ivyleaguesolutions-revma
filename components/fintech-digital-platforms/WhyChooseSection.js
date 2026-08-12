@@ -11,7 +11,7 @@ export default function WhyChooseSection() {
           business stays viable and customer-focused.
         </p>
         <button className="cta-btn">
-          <span className="btn-label text-white font-normal text-center" style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400 }}>
+          <span className="btn-label text-white font-normal text-center" style={{ fontFamily: "var(--font-inter), sans-serif", fontWeight: 400 }}>
             Discuss Your Fintech Needs
           </span>
         </button>

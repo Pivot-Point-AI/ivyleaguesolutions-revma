@@ -12,14 +12,17 @@ import FAQSection from "../components/ui/FAQSection";
 import { faqJsonLd } from "../lib/schema";
 
 export const metadata = {
-  title: "Ivy League Solutions – Custom Software, Fintech & Digital Infrastructure Solutions",
+  // Bypasses the root layout's title template — this page's own title already
+  // carries the full brand name, so template stacking would duplicate it
+  // (e.g. "...Solutions | Ivy League Solutions").
+  title: { absolute: "Ivy League Solutions | Custom Software & Fintech Development" },
   description:
-    "Ivy League Solutions builds scalable custom software, fintech platforms, and digital infrastructure for mid-to-large businesses. Automate operations and accelerate growth with measurable ROI.",
+    "Ivy League Solutions builds custom software, fintech platforms, and digital infrastructure for mid-to-large businesses, with measurable ROI.",
   alternates: canonicalAlternates("/"),
   openGraph: {
     title: "Ivy League Solutions – Build Scalable Software",
     description:
-      "Ivy League Solutions builds scalable custom software, fintech platforms, and digital infrastructure for mid-to-large businesses. Automate operations and accelerate growth with measurable ROI.",
+      "Ivy League Solutions builds custom software, fintech platforms, and digital infrastructure for mid-to-large businesses, with measurable ROI.",
     url: absoluteUrl("/"),
   },
 };

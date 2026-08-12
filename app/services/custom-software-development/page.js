@@ -5,7 +5,7 @@ import { breadcrumbJsonLd, serviceJsonLd, faqJsonLd } from "../../../lib/schema"
 export const metadata = {
   title: "Custom Software Development",
   description:
-    "Custom software built around your business: bespoke development, web & mobile apps, product modernization, and ongoing partnership from Ivy League Solutions.",
+    "Custom software built around your business: bespoke development, web & mobile apps, product modernization, and ongoing partnership.",
   alternates: canonicalAlternates("/services/custom-software-development"),
   openGraph: {
     title: "Custom Software Development | Ivy League Solutions",
@@ -91,6 +91,7 @@ export default function CustomSoftwareDevelopmentPage() {
         whyBody="With deep engineering expertise, a proven delivery process, and a commitment to measurable outcomes, we turn complex challenges into reliable, scalable software that drives real business value."
         ctaLabel="Discuss Your Software Project"
         faqs={faqs}
+        currentService="custom-software-development"
       />
     </>
   );

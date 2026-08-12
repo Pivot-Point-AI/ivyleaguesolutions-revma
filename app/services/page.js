@@ -5,9 +5,9 @@ import FAQSection from "../../components/ui/FAQSection";
 import { faqJsonLd } from "../../lib/schema";
 
 export const metadata = {
-  title: "Our Services – Software, Fintech, Cloud & Integration",
+  title: "Custom Software, Fintech & Cloud Services",
   description:
-    "Explore Ivy League Solutions' services: custom software development, enterprise solutions & ERP, fintech & digital platforms, digital infrastructure & cloud, and API & integration services.",
+    "Custom software development, enterprise ERP, fintech & digital platforms, cloud infrastructure, and API integration services from Ivy League Solutions.",
   alternates: canonicalAlternates("/services"),
   openGraph: {
     title: "Our Services | Ivy League Solutions",

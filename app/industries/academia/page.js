@@ -6,7 +6,7 @@ import { breadcrumbJsonLd, serviceJsonLd, faqJsonLd } from "../../../lib/schema"
 export const metadata = {
   title: "EdTech & Academia Software Solutions",
   description:
-    "Digital learning solutions for education: learning management systems, student portals, virtual classrooms, and institution-wide digital transformation platforms built by Ivy League Solutions.",
+    "Digital learning solutions for education: learning management systems, student portals, virtual classrooms, and institution-wide transformation platforms.",
   alternates: canonicalAlternates("/industries/academia"),
   openGraph: {
     title: "EdTech & Academia Software Solutions | Ivy League Solutions",
@@ -83,6 +83,7 @@ export default function AcademiaIndustry() {
         ctaBody="Let’s work together to build digital learning experiences that engage students, empower educators, and drive educational excellence."
         ctaButtonText="Discuss Your EdTech Project"
         faqs={faqs}
+        currentIndustry="academia"
       />
     </>
   );

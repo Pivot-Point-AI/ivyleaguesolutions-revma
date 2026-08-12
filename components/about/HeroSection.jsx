@@ -25,7 +25,7 @@ export default function HeroSection() {
               Ivy League Solutions is a global software development company with offices in the USA, UAE, and Pakistan, delivering high-impact software, digital technology, and infrastructure solutions. We help businesses turn complex challenges into scalable digital opportunities.
             </p>
           </div>
-          <Link href="/contact" className="inline-flex items-center justify-center px-8 h-[50px] lg:w-[267px] lg:h-[61px] bg-[#4026B8] hover:bg-[#3520a0] text-white text-[17px] lg:text-[19px] leading-none font-normal rounded-[16px] lg:rounded-[20px] transition-all duration-200" style={{ fontFamily: "'Inter', sans-serif" }}>
+          <Link href="/contact" className="inline-flex items-center justify-center px-8 h-[50px] lg:w-[267px] lg:h-[61px] bg-[#4026B8] hover:bg-[#3520a0] text-white text-[17px] lg:text-[19px] leading-none font-normal rounded-[16px] lg:rounded-[20px] transition-all duration-200" style={{ fontFamily: "var(--font-inter), sans-serif" }}>
             Get In Touch
           </Link>
         </div>

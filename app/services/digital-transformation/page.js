@@ -5,7 +5,7 @@ import { breadcrumbJsonLd, serviceJsonLd, faqJsonLd } from "../../../lib/schema"
 export const metadata = {
   title: "Digital Transformation Services",
   description:
-    "End-to-end digital transformation: digital strategy, process automation, cloud adoption, and data & insights from Ivy League Solutions, turning transformation ambitions into measurable results.",
+    "End-to-end digital transformation: digital strategy, process automation, cloud adoption, and data & insights that turn ambitions into measurable results.",
   alternates: canonicalAlternates("/services/digital-transformation"),
   openGraph: {
     title: "Digital Transformation Services | Ivy League Solutions",
@@ -91,6 +91,7 @@ export default function DigitalTransformationPage() {
         whyBody="We combine strategic thinking with hands-on engineering to deliver transformation that sticks — modernizing your operations, empowering your teams, and positioning your business to lead in a fast-changing market."
         ctaLabel="Start Your Transformation"
         faqs={faqs}
+        currentService="digital-transformation"
       />
     </>
   );

@@ -78,7 +78,7 @@ export default function Header() {
                 heroDark ? "text-white hover:text-white/75" : "text-black hover:text-gray-700"
               }`}
               style={{
-                fontFamily: "'Inter', sans-serif",
+                fontFamily: "var(--font-inter), sans-serif",
                 fontWeight: 400,
                 WebkitFontSmoothing: "antialiased",
                 MozOsxFontSmoothing: "grayscale",
@@ -117,7 +117,7 @@ export default function Header() {
                 : "bg-[#4026B8] border-[#4026B8] text-white hover:bg-[#34209c]"
             }`}
             style={{
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "var(--font-inter), sans-serif",
               fontWeight: 400,
               WebkitFontSmoothing: "antialiased",
               MozOsxFontSmoothing: "grayscale",
@@ -136,7 +136,7 @@ export default function Header() {
                 : "bg-white border-gray-300 text-black hover:border-gray-500"
             }`}
             style={{
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "var(--font-inter), sans-serif",
               fontWeight: 400,
               WebkitFontSmoothing: "antialiased",
               MozOsxFontSmoothing: "grayscale",
@@ -180,7 +180,7 @@ export default function Header() {
               onClick={() => setOpen(false)}
               href={item.href}
               className="px-6 py-3 text-[16px] text-black hover:text-gray-700"
-              style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400 }}
+              style={{ fontFamily: "var(--font-inter), sans-serif", fontWeight: 400 }}
             >
               {item.label}
             </Link>
@@ -196,7 +196,7 @@ export default function Header() {
                 onClick={() => setOpen(false)}
                 href={item.href}
                 className="group flex items-center gap-3 py-3 text-[28px] text-[#242424] no-underline transition-colors duration-200 hover:text-[#4026B8]"
-                style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}
+                style={{ fontFamily: "var(--font-inter), sans-serif", fontWeight: 500 }}
               >
                 <span className="text-[13px] text-[#4026B8]/50 font-normal">{String(i + 1).padStart(2, "0")}</span>
                 {item.label}
@@ -218,7 +218,7 @@ export default function Header() {
               href="/contact"
               onClick={() => setOpen(false)}
               className="inline-flex items-center justify-center h-[54px] px-7 rounded-[16px] bg-[#4026B8] text-white text-[16px] no-underline hover:bg-[#34209c] transition-colors duration-200 w-fit"
-              style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400 }}
+              style={{ fontFamily: "var(--font-inter), sans-serif", fontWeight: 400 }}
             >
               Book A Strategy Call
             </Link>

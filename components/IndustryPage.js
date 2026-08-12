@@ -1,6 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import FAQSection from "./ui/FAQSection";
 import HeroStatIcon from "./shared/HeroStatIcon";
+import RelatedLinks from "./shared/RelatedLinks";
+import { ALL_INDUSTRIES } from "./shared/relatedLinksData";
 
 const HERO_STAT_ICONS = ["trending", "layers", "clock"];
 
@@ -29,8 +32,10 @@ export default function IndustryPage({
   ctaBody,
   ctaButtonText,
   faqs,
+  currentIndustry,
 }) {
   const heroStats = extractHeroStats(results);
+  const otherIndustries = ALL_INDUSTRIES.filter((i) => i.slug !== currentIndustry);
   return (
     <div className="ind-page">
       {/* HERO */}
@@ -143,10 +148,13 @@ export default function IndustryPage({
         <div className="ind-cta-body-w">
           <p className="ind-cta-body">{ctaBody}</p>
         </div>
-        <a href="#" className="ind-cta-btn">
+        <Link href="/contact" className="ind-cta-btn">
           <span className="ind-cta-btn-text">{ctaButtonText}</span>
-        </a>
+        </Link>
       </section>
+
+      {/* RELATED INDUSTRIES */}
+      <RelatedLinks heading="Explore Other Industries" items={otherIndustries} basePath="/industries" tone="light" />
 
       {/* FAQ */}
       <FAQSection items={faqs} />
